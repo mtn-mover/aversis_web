@@ -102,7 +102,7 @@ export default function About() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                The talented professionals behind Aversis's success.
+                The talented professionals behind Aversis&apos;s success.
               </p>
             </div>
 
