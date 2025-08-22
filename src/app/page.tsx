@@ -42,7 +42,7 @@ export default function Home() {
               Zwei Säulen für Ihren Erfolg
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Operative Exzellenz und Kulturentwicklung - Hand in Hand für nachhaltige Transformation
+              Operative Exzellenz und Kulturentwicklung - Hand in Hand für nachhaltige Entwicklung
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                 Menschen entwickeln, Teams stärken, Unternehmenskultur gestalten. 
-                Der Mensch im Zentrum der Transformation.
+                Der Mensch im Zentrum der Entwicklung.
               </p>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
@@ -140,7 +140,7 @@ export default function Home() {
                   Prozessverbesserung oberflächlich.
                 </p>
                 <div className="text-sm text-aversis-dark font-semibold">
-                  – Stephan Zahler, Geschäftsführer aversis
+                  – Stephan Zwahlen, Geschäftsführer aversis
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function Home() {
                 Über Stephan Zahler
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                «Mein Name ist Stephan Zahler. Ich glaube fest daran, dass jedes Unternehmen 
+                «Mein Name ist Stephan Zwahlen. Ich glaube fest daran, dass jedes Unternehmen 
                 das Potenzial hat, sowohl operativ exzellent als auch ein grossartiger Arbeitsplatz zu sein.»
               </p>
               
@@ -244,7 +244,7 @@ export default function Home() {
                   «Ich helfe Schweizer KMU-Inhabern dabei, Unternehmen zu schaffen, 
                   die sowohl wirtschaftlich erfolgreich als auch menschlich bereichernd sind.»
                 </p>
-                <div className="mt-3 text-sm text-gray-600">Stephan Zahler, Gründer & Geschäftsführer</div>
+                <div className="mt-3 text-sm text-gray-600">Stephan Zwahlen, Gründer & Geschäftsführer</div>
               </div>
             </div>
 
@@ -254,15 +254,15 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>MBA Executive Leadership</span>
+                    <span>Executive Leadership Erfahrung</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>Certified Change Manager</span>
+                    <span>Certified Coach</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>Lean Six Sigma Black Belt</span>
+                    <span>Certified Executive Coach</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
@@ -308,7 +308,7 @@ export default function Home() {
               <div className="bg-white bg-opacity-20 rounded-3xl p-8">
                 <div className="text-5xl font-bold text-aversis-orange mb-4">80%</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Umsatzwachstum</h3>
-                <p className="text-blue-100">
+                <p className="text-white">
                   Durchschnittliche Umsatzsteigerung unserer KMU-Kunden innerhalb von 18 Monaten
                 </p>
               </div>
@@ -318,7 +318,7 @@ export default function Home() {
               <div className="bg-white bg-opacity-20 rounded-3xl p-8">
                 <div className="text-5xl font-bold text-aversis-orange mb-4">95%</div>
                 <h3 className="text-xl font-semibold text-white mb-3">On-Time-Delivery</h3>
-                <p className="text-blue-100">
+                <p className="text-white">
                   Verbesserung der Liefertreue durch optimierte Prozesse und klare Verantwortlichkeiten
                 </p>
               </div>
@@ -328,7 +328,7 @@ export default function Home() {
               <div className="bg-white bg-opacity-20 rounded-3xl p-8">
                 <div className="text-5xl font-bold text-aversis-orange mb-4">4.8</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Mitarbeiterzufriedenheit</h3>
-                <p className="text-blue-100">
+                <p className="text-white">
                   Steigerung der Mitarbeiterzufriedenheit (Skala 1-5) durch authentische Kulturentwicklung
                 </p>
               </div>
@@ -341,25 +341,25 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-blue-100">
+                  <div className="text-white">
                     <strong className="text-white">Prozessoptimierung:</strong> 30-50% Reduktion von Durchlaufzeiten
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-blue-100">
+                  <div className="text-white">
                     <strong className="text-white">Qualitätssteigerung:</strong> 60% weniger Reklamationen und Nacharbeit
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-blue-100">
+                  <div className="text-white">
                     <strong className="text-white">Team-Performance:</strong> 40% höhere Produktivität durch bessere Zusammenarbeit
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-blue-100">
+                  <div className="text-white">
                     <strong className="text-white">Fluktuation:</strong> 70% weniger Personalwechsel in Schlüsselpositionen
                   </div>
                 </div>
@@ -408,7 +408,7 @@ export default function Home() {
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
               </svg>
-              <span>stephan.zahler@aversis.com</span>
+              <span>s.zwahlen@aversis.com</span>
             </div>
             <div className="flex items-center">
               <svg className="w-5 h-5 mr-2 text-aversis-orange" fill="currentColor" viewBox="0 0 20 20">
