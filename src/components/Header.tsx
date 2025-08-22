@@ -33,13 +33,19 @@ export default function Header() {
               Services
             </Link>
             <Link 
-              href="/about" 
+              href="/philosophie" 
               className="nav-link font-medium text-base"
             >
-              Über uns
+              Philosophie
             </Link>
             <Link 
-              href="/contact" 
+              href="/stephan" 
+              className="nav-link font-medium text-base"
+            >
+              Über Stephan
+            </Link>
+            <Link 
+              href="/kontakt" 
               className="nav-link font-medium text-base"
             >
               Kontakt
@@ -47,7 +53,7 @@ export default function Header() {
             
             {/* CTA Button */}
             <button className="btn-primary ml-4">
-              Beratungsgespräch
+              Erstgespräch
             </button>
           </nav>
 
@@ -84,21 +90,28 @@ export default function Header() {
                 Services
               </Link>
               <Link 
-                href="/about" 
+                href="/philosophie" 
                 className="nav-link font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Über uns
+                Philosophie
               </Link>
               <Link 
-                href="/contact" 
+                href="/stephan" 
+                className="nav-link font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Über Stephan
+              </Link>
+              <Link 
+                href="/kontakt" 
                 className="nav-link font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Kontakt
               </Link>
               <button className="btn-primary w-fit mt-4">
-                Beratungsgespräch
+                Erstgespräch
               </button>
             </div>
           </div>
