@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --aversis-blue: #1e5f99;
-  --aversis-orange: #ff7f00;
-  --aversis-dark: #374151;
+@theme {
+  --color-aversis-blue: #1e5f99;
+  --color-aversis-orange: #ff7f00;
+  --color-aversis-dark: #374151;
+  --color-blue-light: #3b82f6;
+  --color-blue-lighter: #93c5fd;
 }
 
 body {
@@ -39,14 +39,43 @@ body {
 
 /* Custom button styles */
 .btn-primary {
-  @apply bg-aversis-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  background-color: #ff7f00;
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.btn-primary:hover {
+  background-color: #e56b00;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  @apply border-2 border-aversis-blue text-aversis-blue hover:bg-aversis-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  border: 2px solid #1e5f99;
+  color: #1e5f99;
+  background-color: transparent;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #1e5f99;
+  color: white;
 }
 
 /* Link hover effects */
 .nav-link {
-  @apply text-aversis-dark hover:text-aversis-orange transition-colors duration-300;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff7f00;
 }
