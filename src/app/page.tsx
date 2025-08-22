@@ -308,7 +308,7 @@ export default function Home() {
               <div className="bg-white bg-opacity-20 rounded-3xl p-8">
                 <div className="text-5xl font-bold text-aversis-orange mb-4">80%</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Umsatzwachstum</h3>
-                <p className="text-white">
+                <p className="text-blue-900">
                   Durchschnittliche Umsatzsteigerung unserer KMU-Kunden innerhalb von 18 Monaten
                 </p>
               </div>
@@ -318,7 +318,7 @@ export default function Home() {
               <div className="bg-white bg-opacity-20 rounded-3xl p-8">
                 <div className="text-5xl font-bold text-aversis-orange mb-4">95%</div>
                 <h3 className="text-xl font-semibold text-white mb-3">On-Time-Delivery</h3>
-                <p className="text-white">
+                <p className="text-blue-900">
                   Verbesserung der Liefertreue durch optimierte Prozesse und klare Verantwortlichkeiten
                 </p>
               </div>
@@ -328,7 +328,7 @@ export default function Home() {
               <div className="bg-white bg-opacity-20 rounded-3xl p-8">
                 <div className="text-5xl font-bold text-aversis-orange mb-4">4.8</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Mitarbeiterzufriedenheit</h3>
-                <p className="text-white">
+                <p className="text-blue-900">
                   Steigerung der Mitarbeiterzufriedenheit (Skala 1-5) durch authentische Kulturentwicklung
                 </p>
               </div>
@@ -341,26 +341,26 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-white">
-                    <strong className="text-white">Prozessoptimierung:</strong> 30-50% Reduktion von Durchlaufzeiten
+                  <div className="text-blue-900">
+                    <strong className="text-blue-900">Prozessoptimierung:</strong> 30-50% Reduktion von Durchlaufzeiten
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-white">
-                    <strong className="text-white">Qualitätssteigerung:</strong> 60% weniger Reklamationen und Nacharbeit
+                  <div className="text-blue-900">
+                    <strong className="text-blue-900">Qualitätssteigerung:</strong> 60% weniger Reklamationen und Nacharbeit
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-white">
-                    <strong className="text-white">Team-Performance:</strong> 40% höhere Produktivität durch bessere Zusammenarbeit
+                  <div className="text-blue-900">
+                    <strong className="text-blue-900">Team-Performance:</strong> 40% höhere Produktivität durch bessere Zusammenarbeit
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div className="text-white">
-                    <strong className="text-white">Fluktuation:</strong> 70% weniger Personalwechsel in Schlüsselpositionen
+                  <div className="text-blue-900">
+                    <strong className="text-blue-900">Fluktuation:</strong> 70% weniger Personalwechsel in Schlüsselpositionen
                   </div>
                 </div>
               </div>
@@ -408,7 +408,7 @@ export default function Home() {
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
               </svg>
-              <span>s.zwahlen@aversis.com</span>
+              <span>info@aversis.com</span>
             </div>
             <div className="flex items-center">
               <svg className="w-5 h-5 mr-2 text-aversis-orange" fill="currentColor" viewBox="0 0 20 20">
