@@ -11,10 +11,11 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-600">Aversis</span>
+              Über <span className="text-blue-600">Aversis</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We are a team of passionate innovators dedicated to transforming businesses through cutting-edge technology solutions.
+              Erfahrenes Interim Management aus der Schweiz. Wir unterstützen Unternehmen mit professionellen 
+              Führungskräften in kritischen Phasen und bei strategischen Herausforderungen.
             </p>
           </div>
         </div>
@@ -26,22 +27,26 @@ export default function About() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Unsere Mission</h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  At Aversis, we believe in the power of technology to solve complex problems and create meaningful experiences. Our mission is to empower businesses with innovative solutions that drive growth, efficiency, and success.
+                  Bei Aversis glauben wir an die Kraft erfahrener Führung in kritischen Unternehmensphasen. 
+                  Unsere Mission ist es, Unternehmen mit erstklassigen Interim Managern zu unterstützen, 
+                  die nachhaltige Lösungen entwickeln und umsetzen.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  We combine technical expertise with creative thinking to deliver results that exceed expectations and create lasting impact.
+                  <strong>&quot;Gemeinsam wachsen und stärker werden!&quot;</strong> - Das ist unser Leitspruch. 
+                  Wir kombinieren langjährige Führungserfahrung mit strategischem Denken, um Herausforderungen 
+                  erfolgreich zu meistern.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-100 to-indigo-200 rounded-2xl p-8 text-center">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-                  <div className="text-gray-600 mb-4">Years of Excellence</div>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-                  <div className="text-gray-600 mb-4">Projects Delivered</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                  <div className="text-gray-600 mb-4">Jahre Erfahrung</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                  <div className="text-gray-600 mb-4">Erfolgreiche Projekte</div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                  <div className="text-gray-600">Happy Clients</div>
+                  <div className="text-gray-600">Zufriedene Kunden</div>
                 </div>
               </div>
             </div>
@@ -54,9 +59,9 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Unsere Werte</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                The principles that guide our work and define our culture.
+                Die Prinzipien, die unsere Arbeit leiten und unseren Erfolg ausmachen.
               </p>
             </div>
 
@@ -67,8 +72,8 @@ export default function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
-                <p className="text-gray-600">We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Schnelligkeit</h3>
+                <p className="text-gray-600">In kritischen Situationen zählt jeder Tag. Unsere Interim Manager sind kurzfristig verfügbar und handlungsbereit.</p>
               </div>
 
               <div className="text-center">
@@ -77,8 +82,8 @@ export default function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Quality</h3>
-                <p className="text-gray-600">Excellence is not negotiable. We deliver high-quality solutions that stand the test of time.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Qualität</h3>
+                <p className="text-gray-600">Schweizer Qualität und Präzision. Wir liefern nachhaltige Lösungen, die langfristig Wert schaffen.</p>
               </div>
 
               <div className="text-center">
@@ -87,8 +92,8 @@ export default function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Collaboration</h3>
-                <p className="text-gray-600">We work closely with our clients as partners to understand their needs and deliver tailored solutions.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Partnerschaft</h3>
+                <p className="text-gray-600">Wir arbeiten als Partner auf Augenhöhe und entwickeln gemeinsam maßgeschneiderte Lösungen für Ihr Unternehmen.</p>
               </div>
             </div>
           </div>

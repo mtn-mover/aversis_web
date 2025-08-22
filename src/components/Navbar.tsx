@@ -21,16 +21,16 @@ export default function Navbar() {
               Home
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-              About
+              Über uns
             </Link>
             <Link href="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-              Services
+              Leistungen
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-              Contact
+              Kontakt
             </Link>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200">
-              Get Started
+              Beratung anfragen
             </button>
           </div>
 
@@ -57,16 +57,16 @@ export default function Navbar() {
                 Home
               </Link>
               <Link href="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
-                About
+                Über uns
               </Link>
               <Link href="/services" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
-                Services
+                Leistungen
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
-                Contact
+                Kontakt
               </Link>
               <button className="w-full text-left bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 text-base font-medium">
-                Get Started
+                Beratung anfragen
               </button>
             </div>
           </div>
