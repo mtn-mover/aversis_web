@@ -212,7 +212,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-                Über Stephan Zahler
+                Über Stephan Zwahlen
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 «Mein Name ist Stephan Zwahlen. Ich glaube fest daran, dass jedes Unternehmen 
