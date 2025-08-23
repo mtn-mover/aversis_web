@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-aversis-dark text-white">
+    <footer className="bg-gray-100 text-aversis-dark">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Main Footer Content */}
@@ -11,14 +11,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="text-3xl font-bold mb-6">
-              <span className="text-white">aversis</span>
+              <span className="text-aversis-blue">aversis</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
+            <p className="text-gray-600 mb-6 max-w-md leading-relaxed">
               Professionelles Interim Management und Executive Transformation für nachhaltigen Unternehmenserfolg. 
               Ihre Schweizer Partner für kritische Führungsaufgaben.
             </p>
             
-            <div className="space-y-3 text-gray-300">
+            <div className="space-y-3 text-gray-600">
               <div className="flex items-center">
                 <svg className="w-5 h-5 mr-3 text-aversis-orange" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
@@ -47,8 +47,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Leistungen</h4>
-            <ul className="space-y-3 text-gray-300">
+            <h4 className="text-lg font-semibold mb-6 text-aversis-dark">Leistungen</h4>
+            <ul className="space-y-3 text-gray-600">
               <li>
                 <Link href="/services" className="hover:text-aversis-orange transition-colors">
                   Interim Management
@@ -79,8 +79,8 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Unternehmen</h4>
-            <ul className="space-y-3 text-gray-300">
+            <h4 className="text-lg font-semibold mb-6 text-aversis-dark">Unternehmen</h4>
+            <ul className="space-y-3 text-gray-600">
               <li>
                 <Link href="/about" className="hover:text-aversis-orange transition-colors">
                   Über uns
@@ -111,12 +111,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Border */}
-        <div className="border-t border-gray-600 py-8">
+        <div className="border-t border-gray-300 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-300 text-sm mb-4 md:mb-0">
+            <div className="text-gray-600 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Aversis GmbH. Alle Rechte vorbehalten.
             </div>
-            <div className="flex items-center text-gray-300 text-sm">
+            <div className="flex items-center text-gray-600 text-sm">
               <span className="mr-4">Schweizweit verfügbar</span>
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-red-600 rounded-sm mr-1"></div>

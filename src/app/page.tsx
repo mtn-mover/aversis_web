@@ -370,19 +370,19 @@ export default function Home() {
       </section>
 
       {/* Contact CTA Section - Swiss SME Focus */}
-      <section className="py-20 lg:py-28 bg-gradient-to-r from-slate-800 to-aversis-dark">
+      <section className="py-20 lg:py-28 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
             Bereit für operative Exzellenz & eine stärkere Unternehmenskultur?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
             Als Schweizer KMU-Inhaber verdienen Sie einen Partner, der sowohl Ihre operativen Herausforderungen versteht 
             als auch weiss, wie wichtig eine authentische Unternehmenskultur für nachhaltigen Erfolg ist.
           </p>
           
-          <div className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12 max-w-3xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 mb-12 max-w-3xl mx-auto shadow-lg">
             <h3 className="text-lg font-semibold text-aversis-orange mb-4">Kostenloses Erstgespräch - Speziell für KMU-Inhaber</h3>
-            <p className="text-gray-200 mb-6">
+            <p className="text-aversis-blue mb-6">
               In 30 Minuten analysieren wir gemeinsam Ihre grössten operativen Herausforderungen 
               und zeigen Ihnen konkrete Ansatzpunkte für mehr Effizienz und eine stärkere Unternehmenskultur.
             </p>
@@ -390,13 +390,13 @@ export default function Home() {
               <button className="bg-aversis-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Jetzt Erstgespräch vereinbaren
               </button>
-              <button className="border-2 border-aversis-orange text-aversis-orange hover:bg-aversis-orange hover:text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300">
+              <button className="border-2 border-aversis-blue text-aversis-blue hover:bg-aversis-blue hover:text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300">
                 Mehr über unseren Ansatz
               </button>
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center text-gray-300">
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center text-gray-600">
             <div className="flex items-center">
               <svg className="w-5 h-5 mr-2 text-aversis-orange" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
@@ -418,7 +418,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-8 text-sm text-gray-400">
+          <div className="mt-8 text-sm text-gray-500">
             Exklusiv für Schweizer KMU mit 20-500 Mitarbeitenden
           </div>
         </div>
