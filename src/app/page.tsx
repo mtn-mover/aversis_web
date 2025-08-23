@@ -29,9 +29,11 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-10 w-20 h-20 bg-aversis-orange opacity-10 rounded-full"></div>
-        <div className="absolute bottom-20 left-10 w-32 h-32 bg-aversis-blue opacity-10 rounded-full"></div>
+        {/* Decorative Elements - Logo Theme */}
+        <div className="absolute top-16 right-16 w-12 h-12 bg-aversis-orange opacity-20 rounded-full"></div>
+        <div className="absolute top-8 right-32 w-8 h-8 bg-aversis-blue opacity-30 rounded-full"></div>
+        <div className="absolute bottom-24 left-16 w-16 h-16 bg-aversis-blue opacity-15 rounded-full"></div>
+        <div className="absolute bottom-16 left-8 w-10 h-10 bg-aversis-orange opacity-25 rounded-full"></div>
       </section>
 
       {/* Services Section - 2 Pillars */}
@@ -187,8 +189,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+          <div className="text-center relative">
+            <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto relative">
+              {/* Subtle logo theme dots */}
+              <div className="absolute top-4 right-4 w-3 h-3 bg-aversis-orange rounded-full opacity-30"></div>
+              <div className="absolute top-2 right-8 w-2 h-2 bg-aversis-blue rounded-full opacity-40"></div>
+              
               <h3 className="text-xl font-bold text-aversis-dark mb-4">Unser einzigartiger Ansatz</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 «Wir verbinden operative Exzellenz mit authentischer Kulturentwicklung. 
@@ -283,9 +289,11 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-aversis-orange rounded-full opacity-20"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-aversis-blue rounded-full opacity-30"></div>
+              {/* Decorative elements - Logo Theme */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-aversis-orange rounded-full opacity-40"></div>
+              <div className="absolute -top-8 -right-12 w-6 h-6 bg-aversis-blue rounded-full opacity-50"></div>
+              <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-aversis-blue rounded-full opacity-35"></div>
+              <div className="absolute -bottom-8 -left-12 w-7 h-7 bg-aversis-orange rounded-full opacity-45"></div>
             </div>
           </div>
         </div>

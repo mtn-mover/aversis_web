@@ -13,9 +13,11 @@ export default function Header() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="text-3xl font-bold">
-              <span className="text-aversis-blue">aversis</span>
-            </div>
+            <img 
+              src="/images/aversis-logo.jpg" 
+              alt="aversis Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

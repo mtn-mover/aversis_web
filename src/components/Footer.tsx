@@ -10,8 +10,12 @@ export default function Footer() {
           
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="text-3xl font-bold mb-6">
-              <span className="text-aversis-blue">aversis</span>
+            <div className="mb-6">
+              <img 
+                src="/images/aversis-logo.jpg" 
+                alt="aversis Logo" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-600 mb-6 max-w-md leading-relaxed">
               Professionelles Interim Management und Executive Transformation für nachhaltigen Unternehmenserfolg. 
