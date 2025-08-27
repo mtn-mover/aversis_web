@@ -49,17 +49,17 @@ export default function Header() {
             >
               Über Stephan
             </Link>
-            <Link 
-              href="/kontakt" 
+            <a 
+              href="#footer" 
               className="nav-link font-medium text-base"
             >
               Kontakt
-            </Link>
+            </a>
             
             {/* CTA Button */}
-            <button className="btn-primary ml-4">
+            <Link href="/kontakt" className="btn-primary ml-4">
               Erstgespräch
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -108,16 +108,20 @@ export default function Header() {
               >
                 Über Stephan
               </Link>
-              <Link 
-                href="/kontakt" 
+              <a 
+                href="#footer" 
                 className="nav-link font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Kontakt
-              </Link>
-              <button className="btn-primary w-fit mt-4">
+              </a>
+              <Link 
+                href="/kontakt" 
+                className="btn-primary w-fit mt-4 inline-block"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Erstgespräch
-              </button>
+              </Link>
             </div>
           </div>
         )}
