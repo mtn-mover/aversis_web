@@ -46,7 +46,7 @@ export default function Home() {
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">80%</div>
-                <div className="text-sm text-gray-600">Umsatzwachstum bei swissplast</div>
+                <div className="text-sm text-gray-600">Durchschnittl. Umsatzwachstum</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">#1</div>
@@ -155,7 +155,7 @@ export default function Home() {
                 <li className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-aversis-orange">Bircher America:</strong><br/>
+                    <strong className="text-aversis-orange">US-Niederlassung:</strong><br/>
                     <span className="text-gray-600">Zur profitabelsten Niederlassung weltweit entwickelt</span>
                   </div>
                 </li>
@@ -358,15 +358,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Case Study Section - Bircher America Success Story */}
+      {/* Case Study Section - US Manufacturing Success Story */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-              Bewährt: Bircher America zur profitabelsten Niederlassung weltweit
+              Bewährt: US-Expansion zur profitabelsten Niederlassung weltweit
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Von der Vision zur realisierten #1 Performance - so entstand die profitabelste Niederlassung in der Bircher-Firmengeschichte
+              Von der Vision zur realisierten #1 Performance - so entstand eine der erfolgreichsten US-Expansionen in der Schweizer Fertigungsbranche
             </p>
           </div>
 
@@ -386,13 +386,13 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <h3 className="text-3xl font-bold mb-6">Erfolgsgeschichte Bircher America</h3>
+                <h3 className="text-3xl font-bold mb-6">Erfolgsgeschichte US-Expansion</h3>
                 <p className="text-xl text-blue-100 mb-6 leading-relaxed">
-                  &laquo;Als General Manager bei Bircher Reglomat AG durfte ich den US-Marktaufbau von Grund auf leiten 
-                  und die amerikanische Niederlassung zur profitabelsten weltweit entwickeln.&raquo;
+                  &laquo;Als General Manager für US-Operations durfte ich den amerikanischen Marktaufbau von Grund auf leiten 
+                  und die US-Niederlassung zur profitabelsten des Unternehmens entwickeln.&raquo;
                 </p>
                 <div className="text-lg text-blue-200 font-medium">
-                  — Stephan Zwahlen, damals General Manager US Operations
+                  — Stephan Zwahlen, Interim Manager US-Expansion
                 </div>
               </div>
               
@@ -503,8 +503,8 @@ export default function Home() {
               </p>
               <div className="flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-lg font-semibold text-aversis-dark">Management Team</div>
-                  <div className="text-sm text-gray-600">Bircher Reglomat AG</div>
+                  <div className="text-lg font-semibold text-aversis-dark">Schweizer Fertigungsunternehmen</div>
+                  <div className="text-sm text-gray-600">Präzisionsteile-Hersteller</div>
                 </div>
               </div>
             </div>
