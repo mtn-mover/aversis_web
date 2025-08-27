@@ -46,7 +46,7 @@ export default function Kontakt() {
     if (!formData.email.trim()) newErrors.email = 'E-Mail ist erforderlich'
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Gültige E-Mail-Adresse erforderlich'
     if (!formData.phone.trim()) newErrors.phone = 'Telefonnummer ist erforderlich'
-    if (!formData.usInterest.trim()) newErrors.usInterest = 'Bitte beschreiben Sie Ihr US-Interesse'
+    if (!formData.usInterest.trim()) newErrors.usInterest = 'Bitte beschreiben Sie Ihr U.S.-Interesse'
     
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -135,14 +135,14 @@ export default function Kontakt() {
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden bei Ihnen. 
-                Unser Team bereitet bereits eine erste Einschätzung für Ihr US-Marktaufbau-Projekt vor.
+                Unser Team bereitet bereits eine erste Einschätzung für Ihr U.S.-Marktaufbau-Projekt vor.
               </p>
               <div className="bg-blue-50 border-l-4 border-aversis-blue p-6 mb-8 text-left">
                 <h3 className="font-semibold text-aversis-dark mb-2">Was passiert als Nächstes?</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Analyse Ihrer US-Marktaufbau-Anfrage</span>
+                    <span>Analyse Ihrer U.S.-Marktaufbau-Anfrage</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -194,7 +194,7 @@ export default function Kontakt() {
                 <div className="relative">
                   <Image 
                     src="/images/us_flag.svg" 
-                    alt="US-Amerikanische Fahne" 
+                    alt="U.S.-Amerikanische Fahne" 
                     width={60}
                     height={40}
                     className="rounded-sm shadow-sm"
@@ -208,7 +208,7 @@ export default function Kontakt() {
               <span className="text-aversis-orange">Erstgespräch</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Besprechen Sie Ihre US-Marktaufbau-Pläne mit einem erfahrenen Interim Manager. 
+              Besprechen Sie Ihre U.S.-Marktaufbau-Pläne mit einem erfahrenen Interim Manager. 
               Kostenlose Erstberatung mit konkreten Empfehlungen für Ihren nächsten Schritt.
             </p>
           </div>
@@ -307,7 +307,7 @@ export default function Kontakt() {
                     
                     <div>
                       <label htmlFor="usExport" className="block text-sm font-medium text-gray-700 mb-2">
-                        Aktueller US-Bezug
+                        Aktueller U.S.-Bezug
                       </label>
                       <select
                         id="usExport"
@@ -317,10 +317,10 @@ export default function Kontakt() {
                         className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aversis-blue focus:border-aversis-blue"
                       >
                         <option value="">Bitte wählen</option>
-                        <option value="Kein US-Export">Kein US-Export</option>
-                        <option value="< 10% US-Export">&lt; 10% US-Export</option>
-                        <option value="10-30% US-Export">10-30% US-Export</option>
-                        <option value="> 30% US-Export">&gt; 30% US-Export</option>
+                        <option value="Kein U.S.-Export">Kein U.S.-Export</option>
+                        <option value="< 10% U.S.-Export">&lt; 10% U.S.-Export</option>
+                        <option value="10-30% U.S.-Export">10-30% U.S.-Export</option>
+                        <option value="> 30% U.S.-Export">&gt; 30% U.S.-Export</option>
                       </select>
                     </div>
                   </div>
@@ -371,10 +371,10 @@ export default function Kontakt() {
 
               {/* US Interest */}
               <div>
-                <h2 className="text-2xl font-bold text-aversis-dark mb-8">Ihr US-Projekt</h2>
+                <h2 className="text-2xl font-bold text-aversis-dark mb-8">Ihr U.S.-Projekt</h2>
                 <div>
                   <label htmlFor="usInterest" className="block text-sm font-medium text-gray-700 mb-2">
-                    Ihr US-Interesse *
+                    Ihr U.S.-Interesse *
                   </label>
                   <textarea
                     id="usInterest"
@@ -385,7 +385,7 @@ export default function Kontakt() {
                     className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-aversis-blue focus:border-aversis-blue resize-vertical ${
                       errors.usInterest ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="Beschreiben Sie kurz Ihre Pläne oder Fragen zum US-Marktaufbau..."
+                    placeholder="Beschreiben Sie kurz Ihre Pläne oder Fragen zum U.S.-Marktaufbau..."
                   />
                   {showValidationErrors && errors.usInterest && <p className="mt-1 text-sm text-red-600">{errors.usInterest}</p>}
                 </div>

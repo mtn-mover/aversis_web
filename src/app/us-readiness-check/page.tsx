@@ -30,7 +30,7 @@ const questions: Question[] = [
   },
   {
     id: 'us_exposure',
-    text: 'Welcher Anteil Ihres Umsatzes kommt aus dem US-Markt?',
+    text: 'Welcher Anteil Ihres Umsatzes kommt aus dem U.S.-Markt?',
     category: 'Marktexposure',
     weight: 4,
     options: [
@@ -42,7 +42,7 @@ const questions: Question[] = [
   },
   {
     id: 'tariff_impact',
-    text: 'Wie stark sind Sie von US-Importzöllen betroffen?',
+    text: 'Wie stark sind Sie von U.S.-Importzöllen betroffen?',
     category: 'Tariff-Risiko',
     weight: 5,
     options: [
@@ -79,7 +79,7 @@ const questions: Question[] = [
   },
   {
     id: 'financial_readiness',
-    text: 'Welches Investment können Sie für US-Setup bereitstellen?',
+    text: 'Welches Investment können Sie für U.S.-Setup bereitstellen?',
     category: 'Finanzielle Bereitschaft',
     weight: 4,
     options: [
@@ -103,14 +103,14 @@ const questions: Question[] = [
   },
   {
     id: 'us_experience',
-    text: 'Haben Sie bereits Erfahrung mit dem US-Markt?',
+    text: 'Haben Sie bereits Erfahrung mit dem U.S.-Markt?',
     category: 'Markterfahrung',
     weight: 2,
     options: [
       { text: 'Keine', score: 1 },
       { text: 'Verkauf über Distributoren', score: 3 },
-      { text: 'Eigene US-Sales', score: 4 },
-      { text: 'US-Operations vorhanden', score: 5 }
+      { text: 'Eigene U.S.-Sales', score: 4 },
+      { text: 'U.S.-Operations vorhanden', score: 5 }
     ]
   }
 ]
@@ -122,8 +122,8 @@ const getRecommendation = (score: number, maxScore: number) => {
     return {
       level: 'Sofort bereit',
       color: 'green',
-      title: '🚀 Hervorragend positioniert für US-Expansion',
-      description: 'Sie erfüllen alle Voraussetzungen für eine erfolgreiche US-Produktionsstätte. Mit Ihrer starken Marktposition und finanziellen Basis können Sie den Zoll-Herausforderungen erfolgreich begegnen.',
+      title: '🚀 Hervorragend positioniert für U.S.-Expansion',
+      description: 'Sie erfüllen alle Voraussetzungen für eine erfolgreiche U.S.-Produktionsstätte. Mit Ihrer starken Marktposition und finanziellen Basis können Sie den Zoll-Herausforderungen erfolgreich begegnen.',
       action: 'Kostenlose Machbarkeitsstudie anfordern',
       urgency: 'Starten Sie noch 2025 - begrenzte Plätze für 2026-Projekte!'
     }
@@ -132,7 +132,7 @@ const getRecommendation = (score: number, maxScore: number) => {
       level: 'Gut positioniert',
       color: 'blue',
       title: '✅ Starke Ausgangslage mit Optimierungsbedarf',
-      description: 'Sie haben eine solide Basis für US-Expansion. Mit gezielten Vorbereitungen können Sie die Tariff-Risiken erfolgreich minimieren und neues Wachstum erschließen.',
+      description: 'Sie haben eine solide Basis für U.S.-Expansion. Mit gezielten Vorbereitungen können Sie die Tariff-Risiken erfolgreich minimieren und neues Wachstum erschließen.',
       action: 'Strategiegespräch vereinbaren',
       urgency: 'Nutzen Sie die Planungsphase 2025 für optimalen 2026-Start'
     }
@@ -141,7 +141,7 @@ const getRecommendation = (score: number, maxScore: number) => {
       level: 'Vorbereitung nötig',
       color: 'orange',
       title: '⚠️ Grundlagen vorhanden, Entwicklung erforderlich',
-      description: 'Ihre Situation zeigt Potenzial, jedoch sind wichtige Vorbereitungen nötig. Ein strukturierter Aufbauplan kann Sie erfolgreich zu einer US-Präsenz führen.',
+      description: 'Ihre Situation zeigt Potenzial, jedoch sind wichtige Vorbereitungen nötig. Ein strukturierter Aufbauplan kann Sie erfolgreich zu einer U.S.-Präsenz führen.',
       action: 'Entwicklungsplan erstellen lassen',
       urgency: '2027-Timeline realistisch bei sofortigem Start der Vorbereitung'
     }
@@ -150,7 +150,7 @@ const getRecommendation = (score: number, maxScore: number) => {
       level: 'Fundamentale Vorbereitung',
       color: 'red',
       title: '🔄 Strategische Neuausrichtung empfohlen',
-      description: 'Eine US-Expansion erfordert in Ihrer Situation grundlegende strategische Vorbereitungen. Konzentrieren Sie sich zunächst auf die Stärkung der Basis.',
+      description: 'Eine U.S.-Expansion erfordert in Ihrer Situation grundlegende strategische Vorbereitungen. Konzentrieren Sie sich zunächst auf die Stärkung der Basis.',
       action: 'Strategische Beratung buchen',
       urgency: 'Langfristige Planung ab 2028 mit intensiver Vorbereitung'
     }
@@ -164,7 +164,7 @@ export default function USReadinessCheck() {
 
   // Set page title
   useEffect(() => {
-    document.title = '🇨🇭🇺🇸 US-Readiness Check - Aversis'
+    document.title = 'U.S.-Readiness Check - Aversis'
   }, [])
 
   const maxScore = questions.reduce((sum, q) => sum + (q.weight * 5), 0)
@@ -201,11 +201,11 @@ export default function USReadinessCheck() {
       <section className="bg-gradient-to-r from-aversis-blue to-blue-700 py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            🇨🇭🇺🇸 US-Readiness Check
+            U.S.-Readiness Check
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Ermitteln Sie in 8 Fragen, wie bereit Ihr Schweizer Fertigungsunternehmen 
-            für eine erfolgreiche US-Produktionsstätte ist.
+            für eine erfolgreiche U.S.-Produktionsstätte ist.
           </p>
         </div>
       </section>
@@ -281,7 +281,7 @@ export default function USReadinessCheck() {
                   {recommendation.level}
                 </div>
                 <div className="text-lg opacity-90">
-                  US-Readiness Score: {currentScore} von {maxScore} Punkten
+                  U.S.-Readiness Score: {currentScore} von {maxScore} Punkten
                 </div>
               </div>
 

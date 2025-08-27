@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
     const contactContent = formatContactEmail(formData)
     const notificationResult = await sendEmail({
       to: 'info@aversis.com',
-      subject: `Anfrage US-Marktaufbau - ${formData.company}`,
+      subject: `Anfrage U.S.-Marktaufbau - ${formData.company}`,
       text: contactContent.text,
       html: contactContent.html
     })
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
     const confirmationContent = formatConfirmationEmail(formData)
     const confirmationResult = await sendEmail({
       to: formData.email,
-      subject: 'Bestätigung Ihrer US-Marktaufbau Anfrage - aversis',
+      subject: 'Bestätigung Ihrer U.S.-Marktaufbau Anfrage - aversis',
       text: confirmationContent.text,
       html: confirmationContent.html
     })

@@ -32,7 +32,7 @@ export default function Home() {
                 <div className="relative">
                   <Image 
                     src="/images/us_flag.svg" 
-                    alt="US-Amerikanische Fahne" 
+                    alt="U.S.-Amerikanische Fahne" 
                     width={60}
                     height={40}
                     className="rounded-sm shadow-sm"
@@ -42,19 +42,19 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-aversis-dark mb-8 leading-tight">
-              <span className="text-aversis-blue">US-Marktaufbau für</span><br/>
+              <span className="text-aversis-blue">U.S.-Marktaufbau für</span><br/>
               <span className="text-aversis-orange">Schweizer KMU&apos;s</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-600 mb-6 leading-relaxed max-w-4xl mx-auto">
               <strong>Machbarkeitsstudie, Standortwahl, Aufbau und Betriebsführung</strong><br/>
-              Strukturierte Projektbegleitung mit praktischer US-Erfahrung - von der Marktanalyse über Standortaufbau bis zur operativen Selbstständigkeit
+              Strukturierte Projektbegleitung mit praktischer U.S.-Erfahrung - von der Marktanalyse über Standortaufbau bis zur operativen Selbstständigkeit
             </p>
             
             {/* Key Credibility Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-10 max-w-4xl mx-auto">
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">12 Jahre</div>
-                <div className="text-sm text-gray-600">US-Marktaufbau Erfahrung</div>
+                <div className="text-sm text-gray-600">U.S.-Marktaufbau Erfahrung</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">#1</div>
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
-                <div className="text-sm text-gray-600">US-Partnernetzwerk</div>
+                <div className="text-sm text-gray-600">U.S.-Partnernetzwerk</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">Dual</div>
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-              US-Marktchancen strategisch nutzen
+              U.S.-Marktchancen strategisch nutzen
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               39% Zölle verwandeln sich in 52 Milliarden CHF Marktpotenzial - wenn Sie es richtig angehen
@@ -134,7 +134,7 @@ export default function Home() {
                   <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
                     <strong className="text-green-800">Skalierungsvorteile:</strong><br/>
-                    <span className="text-gray-600">US-Produktionskapazitäten für kontinentale Expansion</span>
+                    <span className="text-gray-600">U.S.-Produktionskapazitäten für kontinentale Expansion</span>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -161,7 +161,7 @@ export default function Home() {
                 <li className="flex items-start">
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-aversis-orange">US-Niederlassung:</strong><br/>
+                    <strong className="text-aversis-orange">U.S.-Niederlassung:</strong><br/>
                     <span className="text-gray-600">Zur profitabelsten Niederlassung weltweit entwickelt</span>
                   </div>
                 </li>
@@ -169,7 +169,7 @@ export default function Home() {
                   <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
                     <strong className="text-aversis-orange">Krisenerprobt:</strong><br/>
-                    <span className="text-gray-600">Erfolgreiche US-Marktführung durch Finanzkrise 2008/09</span>
+                    <span className="text-gray-600">Erfolgreiche U.S.-Marktführung durch Finanzkrise 2008/09</span>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -197,7 +197,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-              Ihr erfahrener Partner für US-Marktaufbau
+              Ihr erfahrener Partner für U.S.-Marktaufbau
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Strukturierter Interim-Ansatz mit definierten Projektphasen und klaren Erfolgsmeilensteinen
@@ -243,7 +243,7 @@ export default function Home() {
               </ul>
               <div className="mt-6 p-4 bg-green-50 rounded-lg">
                 <div className="text-sm font-semibold text-green-800">Ziel: Go/No-Go Entscheidung</div>
-                <div className="text-xs text-green-600 mt-1">Fundierte Basis für US-Investment</div>
+                <div className="text-xs text-green-600 mt-1">Fundierte Basis für U.S.-Investment</div>
               </div>
             </div>
 
@@ -288,7 +288,7 @@ export default function Home() {
               </ul>
               <div className="mt-6 p-4 bg-orange-50 rounded-lg">
                 <div className="text-sm font-semibold text-orange-800">Ziel: Produktionsstart</div>
-                <div className="text-xs text-orange-600 mt-1">Schweizer Qualität in US-Produktion</div>
+                <div className="text-xs text-orange-600 mt-1">Schweizer Qualität in U.S.-Produktion</div>
               </div>
             </div>
 
@@ -339,7 +339,7 @@ export default function Home() {
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-aversis-dark">Strukturierter Interim-Ansatz</h3>
-              <p className="text-gray-600 mt-2">Von der Machbarkeitsstudie bis zur profitablen US-Produktion</p>
+              <p className="text-gray-600 mt-2">Von der Machbarkeitsstudie bis zur profitablen U.S.-Produktion</p>
             </div>
             <div className="flex items-center justify-between">
               <div className="text-center flex-1">
@@ -369,10 +369,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-              Bewährt: US-Expansion zur profitabelsten Niederlassung weltweit
+              Bewährt: U.S.-Expansion zur profitabelsten Niederlassung weltweit
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Von der Vision zur realisierten #1 Performance - so entstand eine der erfolgreichsten US-Expansionen in der Schweizer Fertigungsbranche
+              Von der Vision zur realisierten #1 Performance - so entstand eine der erfolgreichsten U.S.-Expansionen in der Schweizer Fertigungsbranche
             </p>
           </div>
 
@@ -392,13 +392,13 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <h3 className="text-3xl font-bold mb-6">Erfolgsgeschichte US-Expansion</h3>
+                <h3 className="text-3xl font-bold mb-6">Erfolgsgeschichte U.S.-Expansion</h3>
                 <p className="text-xl text-blue-100 mb-6 leading-relaxed">
-                  &laquo;Als General Manager für US-Operations durfte ich den amerikanischen Marktaufbau von Grund auf leiten 
-                  und die US-Niederlassung zur profitabelsten des Unternehmens entwickeln.&raquo;
+                  &laquo;Als General Manager für U.S.-Operations durfte ich den amerikanischen Marktaufbau von Grund auf leiten 
+                  und die U.S.-Niederlassung zur profitabelsten des Unternehmens entwickeln.&raquo;
                 </p>
                 <div className="text-lg text-blue-200 font-medium">
-                  — Stephan Zwahlen, Interim Manager US-Expansion
+                  — Stephan Zwahlen, Interim Manager U.S.-Expansion
                 </div>
               </div>
               
@@ -411,7 +411,7 @@ export default function Home() {
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-aversis-orange mb-2">12+</div>
-                    <div className="text-sm text-blue-100">Jahre US-Marktaufbau-Erfahrung</div>
+                    <div className="text-sm text-blue-100">Jahre U.S.-Marktaufbau-Erfahrung</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-aversis-orange mb-2">50+</div>
@@ -438,7 +438,7 @@ export default function Home() {
               <ul className="space-y-3 text-gray-700 text-sm">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Systematische US-Marktanalyse und Zielkundenidentifikation</span>
+                  <span>Systematische U.S.-Marktanalyse und Zielkundenidentifikation</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -465,7 +465,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Bikulturelle Führung: Schweizer Präzision + US-Agilität</span>
+                  <span>Bikulturelle Führung: Schweizer Präzision + U.S.-Agilität</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -742,12 +742,12 @@ export default function Home() {
               🚨 TARIFF IMPACT: 39% auf Schweizer Produkte
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Starten Sie Ihre US-Expansion<br/>
+              Starten Sie Ihre U.S.-Expansion<br/>
               <span className="text-yellow-300">mit bewährter Expertise</span>
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Während Ihre Konkurrenz noch zögert, sichern Sie sich Ihren Wettbewerbsvorteil im US-Markt. 
-              Mit 12 Jahren bewährter US-Marktaufbau-Erfahrung und limitierter Verfügbarkeit.
+              Während Ihre Konkurrenz noch zögert, sichern Sie sich Ihren Wettbewerbsvorteil im U.S.-Markt. 
+              Mit 12 Jahren bewährter U.S.-Marktaufbau-Erfahrung und limitierter Verfügbarkeit.
             </p>
           </div>
 
@@ -770,7 +770,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Limitierte Verfügbarkeit</h3>
-              <p className="text-blue-100 text-sm">Max. 3 parallele US-Setup-Mandate für Qualitätssicherung</p>
+              <p className="text-blue-100 text-sm">Max. 3 parallele U.S.-Setup-Mandate für Qualitätssicherung</p>
             </div>
             
             <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
@@ -780,7 +780,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Bewährte Methodik</h3>
-              <p className="text-blue-100 text-sm">Erprobte Playbooks aus 12 Jahren US-Marktaufbau</p>
+              <p className="text-blue-100 text-sm">Erprobte Playbooks aus 12 Jahren U.S.-Marktaufbau</p>
             </div>
           </div>
 
@@ -789,10 +789,10 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-left">
                 <h3 className="text-3xl font-bold text-aversis-dark mb-6">
-                  Kostenlose US-Markt Machbarkeitsstudie
+                  Kostenlose U.S.-Markt Machbarkeitsstudie
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  <strong className="text-aversis-orange">90 Minuten strategische US-Marktbewertung</strong><br/>
+                  <strong className="text-aversis-orange">90 Minuten strategische U.S.-Marktbewertung</strong><br/>
                   Exklusiv für Schweizer Fertigungsunternehmen ab 20 Mitarbeitern
                 </p>
                 
@@ -804,7 +804,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <strong className="text-aversis-dark">US-Marktpotenzial Assessment:</strong><br/>
+                      <strong className="text-aversis-dark">U.S.-Marktpotenzial Assessment:</strong><br/>
                       <span className="text-gray-600 text-sm">Analyse Ihrer spezifischen Marktchancen</span>
                     </div>
                   </div>
@@ -827,7 +827,7 @@ export default function Home() {
                     </div>
                     <div>
                       <strong className="text-aversis-dark">Nächste Schritte Roadmap:</strong><br/>
-                      <span className="text-gray-600 text-sm">Konkreter Zeitplan für Ihren US-Markteintritt</span>
+                      <span className="text-gray-600 text-sm">Konkreter Zeitplan für Ihren U.S.-Markteintritt</span>
                     </div>
                   </div>
                 </div>

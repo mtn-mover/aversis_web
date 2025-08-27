@@ -23,6 +23,11 @@ export default function ROICalculator() {
     timeframe: 3
   })
 
+  // Set page title
+  useEffect(() => {
+    document.title = 'U.S.-Produktions ROI Calculator - Aversis'
+  }, [])
+
   const [results, setResults] = useState<any>(null)
 
   const calculateROI = useCallback(() => {
@@ -79,11 +84,11 @@ export default function ROICalculator() {
       <section className="bg-gradient-to-r from-aversis-blue to-blue-700 py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            US-Produktions ROI Calculator
+            U.S.-Produktions ROI Calculator
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Berechnen Sie das Potenzial einer US-Produktionsstätte für Ihr Schweizer Fertigungsunternehmen. 
-            Basierend auf 12 Jahren Erfahrung im US-Marktaufbau.
+            Berechnen Sie das Potenzial einer U.S.-Produktionsstätte für Ihr Schweizer Fertigungsunternehmen. 
+            Basierend auf 12 Jahren Erfahrung im U.S.-Marktaufbau.
           </p>
         </div>
       </section>
@@ -141,7 +146,7 @@ export default function ROICalculator() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Erwartetes US-Wachstum (%)
+                    Erwartetes U.S.-Wachstum (%)
                   </label>
                   <input
                     type="number"
@@ -201,7 +206,7 @@ export default function ROICalculator() {
                       <div className="text-2xl font-bold text-green-600">
                         {formatCurrency(results.annualBenefit)}
                       </div>
-                      <div className="text-sm text-green-700">Jährlicher Nutzen US-Produktion</div>
+                      <div className="text-sm text-green-700">Jährlicher Nutzen U.S.-Produktion</div>
                     </div>
                   </div>
 
@@ -221,7 +226,7 @@ export default function ROICalculator() {
                     </div>
                     
                     <div className="flex justify-between items-center py-2 border-b">
-                      <span className="text-gray-600">Potenzieller US-Zusatzumsatz:</span>
+                      <span className="text-gray-600">Potenzieller U.S.-Zusatzumsatz:</span>
                       <span className="font-semibold text-green-600">{formatCurrency(results.potentialUSRevenue)}</span>
                     </div>
                     

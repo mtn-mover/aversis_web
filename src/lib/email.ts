@@ -84,7 +84,7 @@ export function formatContactEmail(formData: any) {
       </head>
       <body>
         <div class="header">
-          <h2>🇨🇭🇺🇸 Neue US-Marktaufbau Anfrage</h2>
+          <h2>🇨🇭🇺🇸 Neue U.S.-Marktaufbau Anfrage</h2>
         </div>
         
         <div class="content">
@@ -100,11 +100,11 @@ export function formatContactEmail(formData: any) {
           <div class="section">
             <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">Unternehmensdaten</h3>
             <div class="value"><span class="label">Unternehmensgröße:</span> ${formData.companySize || 'Nicht angegeben'}</div>
-            <div class="value"><span class="label">Aktueller US-Bezug:</span> ${formData.usExport || 'Nicht angegeben'}</div>
+            <div class="value"><span class="label">Aktueller U.S.-Bezug:</span> ${formData.usExport || 'Nicht angegeben'}</div>
           </div>
           
           <div class="section">
-            <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">US-Interesse</h3>
+            <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">U.S.-Interesse</h3>
             <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #ff7f00; white-space: pre-wrap;">${formData.usInterest}</div>
           </div>
         </div>
@@ -118,7 +118,7 @@ export function formatContactEmail(formData: any) {
   `
   
   const textContent = `
-Neue Anfrage für US-Marktaufbau
+Neue Anfrage für U.S.-Marktaufbau
 
 KONTAKTDATEN:
 Name: ${formData.name}
@@ -129,9 +129,9 @@ Telefon: ${formData.phone}
 
 UNTERNEHMENSDATEN:
 Unternehmensgröße: ${formData.companySize || 'Nicht angegeben'}
-Aktueller US-Bezug: ${formData.usExport || 'Nicht angegeben'}
+Aktueller U.S.-Bezug: ${formData.usExport || 'Nicht angegeben'}
 
-US-INTERESSE:
+U.S.-INTERESSE:
 ${formData.usInterest}
 
 ---
@@ -163,13 +163,13 @@ export function formatConfirmationEmail(formData: any) {
       </head>
       <body>
         <div class="header">
-          <h2>🇨🇭🇺🇸 Vielen Dank für Ihre US-Marktaufbau Anfrage!</h2>
+          <h2>🇨🇭🇺🇸 Vielen Dank für Ihre U.S.-Marktaufbau Anfrage!</h2>
         </div>
         
         <div class="content">
           <p>Liebe(r) <strong>${formData.name}</strong>,</p>
           
-          <p>herzlichen Dank für Ihr Interesse an unserem US-Marktaufbau-Service!</p>
+          <p>herzlichen Dank für Ihr Interesse an unserem U.S.-Marktaufbau-Service!</p>
           
           <div class="highlight-box">
             <p><strong>✅ Ihre Anfrage wurde erfolgreich übermittelt</strong></p>
@@ -179,7 +179,7 @@ export function formatConfirmationEmail(formData: any) {
           <h3 style="color: #1e5f99;">Was passiert als Nächstes?</h3>
           <div class="steps">
             <p><strong>1. Analyse Ihrer Anfrage</strong><br>
-            Unser Team prüft Ihre spezifischen US-Marktaufbau-Anforderungen</p>
+            Unser Team prüft Ihre spezifischen U.S.-Marktaufbau-Anforderungen</p>
             
             <p><strong>2. Persönliche Kontaktaufnahme</strong><br>
             Stephan Zwahlen meldet sich persönlich bei Ihnen</p>
@@ -192,13 +192,13 @@ export function formatConfirmationEmail(formData: any) {
           <ul>
             <li><strong>Unternehmen:</strong> ${formData.company}</li>
             <li><strong>Position:</strong> ${formData.position}</li>
-            <li><strong>US-Interesse:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
+            <li><strong>U.S.-Interesse:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
           </ul>
           
           <div class="signature">
             <p>Mit besten Grüssen aus der Schweiz</p>
             <p><strong>Stephan Zwahlen</strong><br>
-            Interim Manager für US-Marktaufbau<br>
+            Interim Manager für U.S.-Marktaufbau<br>
             aversis GmbH</p>
             
             <p>
@@ -218,7 +218,7 @@ export function formatConfirmationEmail(formData: any) {
   const textContent = `
 Liebe(r) ${formData.name},
 
-vielen Dank für Ihr Interesse an unserem US-Marktaufbau-Service!
+vielen Dank für Ihr Interesse an unserem U.S.-Marktaufbau-Service!
 
 ✅ Ihre Anfrage wurde erfolgreich übermittelt
 Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.
@@ -226,7 +226,7 @@ Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.
 Was passiert als Nächstes?
 
 1. Analyse Ihrer Anfrage
-   Unser Team prüft Ihre spezifischen US-Marktaufbau-Anforderungen
+   Unser Team prüft Ihre spezifischen U.S.-Marktaufbau-Anforderungen
 
 2. Persönliche Kontaktaufnahme  
    Stephan Zwahlen meldet sich persönlich bei Ihnen
@@ -237,11 +237,11 @@ Was passiert als Nächstes?
 Ihre Angaben im Überblick:
 - Unternehmen: ${formData.company}
 - Position: ${formData.position}  
-- US-Interesse: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
+- U.S.-Interesse: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
 
 Mit besten Grüssen aus der Schweiz
 Stephan Zwahlen
-Interim Manager für US-Marktaufbau
+Interim Manager für U.S.-Marktaufbau
 aversis GmbH
 
 📧 info@aversis.com
