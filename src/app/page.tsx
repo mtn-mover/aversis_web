@@ -64,19 +64,19 @@ export default function Home() {
             
             {/* Key Credibility Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-10 max-w-4xl mx-auto">
-              <div className="bg-gray-100 p-4 rounded-lg shadow">
+              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">12 Jahre</div>
                 <div className="text-sm text-gray-800">U.S.-Marktaufbau Erfahrung</div>
               </div>
-              <div className="bg-gray-100 p-4 rounded-lg shadow">
+              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">#1</div>
                 <div className="text-sm text-gray-800">Profitabelste Niederlassung ausgebaut</div>
               </div>
-              <div className="bg-gray-100 p-4 rounded-lg shadow">
+              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
                 <div className="text-sm text-gray-800">U.S.-Partnernetzwerk</div>
               </div>
-              <div className="bg-gray-100 p-4 rounded-lg shadow">
+              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">Dual</div>
                 <div className="text-sm text-gray-800">Schweiz-USA Staatsbürger</div>
               </div>
