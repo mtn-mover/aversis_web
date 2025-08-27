@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -13,44 +14,29 @@ export default function Home() {
             <div className="flex justify-center items-center mb-8">
               {/* Swiss to US Flag Animation */}
               <div className="flex items-center gap-4 bg-white px-6 py-3 rounded-full shadow-lg">
-                {/* Swiss Flag */}
-                <div className="w-10 h-7 bg-red-600 rounded-sm relative shadow-sm">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex flex-col items-center">
-                      <div className="w-4 h-1 bg-white rounded-sm"></div>
-                      <div className="w-1 h-4 bg-white rounded-sm -mt-2"></div>
-                    </div>
-                  </div>
+                {/* Swiss Flag - Quadratisch */}
+                <div className="relative">
+                  <Image 
+                    src="/images/swiss_flag.jpg" 
+                    alt="Schweizer Fahne" 
+                    width={40}
+                    height={40}
+                    className="rounded-sm shadow-sm"
+                  />
                 </div>
                 {/* Arrow */}
                 <svg className="w-6 h-6 text-aversis-blue animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
-                {/* US Flag */}
-                <div className="w-10 h-7 bg-blue-800 rounded-sm relative shadow-sm">
-                  <div className="absolute inset-0">
-                    {/* Blue canton with stars */}
-                    <div className="w-4 h-4 bg-blue-900 rounded-sm">
-                      <div className="absolute top-0.5 left-0.5 grid grid-cols-3 gap-0.5">
-                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    {/* Red and white stripes */}
-                    <div className="absolute top-0 right-0 w-6 h-7 flex flex-col">
-                      <div className="h-0.5 bg-red-600"></div>
-                      <div className="h-0.5 bg-white"></div>
-                      <div className="h-0.5 bg-red-600"></div>
-                      <div className="h-0.5 bg-white"></div>
-                      <div className="h-0.5 bg-red-600"></div>
-                      <div className="h-0.5 bg-white"></div>
-                      <div className="h-0.5 bg-red-600"></div>
-                    </div>
-                  </div>
+                {/* US Flag - Rechteckig */}
+                <div className="relative">
+                  <Image 
+                    src="/images/us_flag.svg" 
+                    alt="US-Amerikanische Fahne" 
+                    width={60}
+                    height={40}
+                    className="rounded-sm shadow-sm"
+                  />
                 </div>
               </div>
             </div>
