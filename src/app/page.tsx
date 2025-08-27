@@ -11,31 +11,57 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             <div className="flex justify-center items-center mb-8">
-              {/* Swiss-US Flag Elements */}
+              {/* Swiss to US Flag Animation */}
               <div className="flex items-center gap-4 bg-white px-6 py-3 rounded-full shadow-lg">
-                <div className="w-8 h-6 bg-red-600 rounded-sm relative">
-                  <div className="absolute inset-1 bg-white rounded-sm flex items-center justify-center">
-                    <div className="w-2 h-2 bg-red-600"></div>
+                {/* Swiss Flag */}
+                <div className="w-10 h-7 bg-red-600 rounded-sm relative shadow-sm">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="w-4 h-1 bg-white rounded-sm"></div>
+                      <div className="w-1 h-4 bg-white rounded-sm -mt-2"></div>
+                    </div>
                   </div>
                 </div>
-                <svg className="w-6 h-6 text-aversis-blue" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 16l-4-4 4-4v3h4v2h-4v3z"/>
+                {/* Arrow */}
+                <svg className="w-6 h-6 text-aversis-blue animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
-                <div className="w-8 h-6 bg-blue-600 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-xs">★</div>
+                {/* US Flag */}
+                <div className="w-10 h-7 bg-blue-800 rounded-sm relative shadow-sm">
+                  <div className="absolute inset-0">
+                    {/* Blue canton with stars */}
+                    <div className="w-4 h-4 bg-blue-900 rounded-sm">
+                      <div className="absolute top-0.5 left-0.5 grid grid-cols-3 gap-0.5">
+                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
+                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
+                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
+                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
+                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
+                        <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
+                      </div>
+                    </div>
+                    {/* Red and white stripes */}
+                    <div className="absolute top-0 right-0 w-6 h-7 flex flex-col">
+                      <div className="h-0.5 bg-red-600"></div>
+                      <div className="h-0.5 bg-white"></div>
+                      <div className="h-0.5 bg-red-600"></div>
+                      <div className="h-0.5 bg-white"></div>
+                      <div className="h-0.5 bg-red-600"></div>
+                      <div className="h-0.5 bg-white"></div>
+                      <div className="h-0.5 bg-red-600"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-aversis-dark mb-8 leading-tight">
-              <span className="text-aversis-blue">US-Produktionsaufbau</span><br/>
-              <span className="text-aversis-orange">mit bewährter Expertise</span>
+              <span className="text-aversis-blue">US-Marktaufbau für</span><br/>
+              <span className="text-aversis-orange">Schweizer KMU's</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-600 mb-6 leading-relaxed max-w-4xl mx-auto">
-              <strong>Der bewährte Interim Manager für US-Produktionsaufbau</strong><br/>
-              Interim Management für Schweizer Fertigungsunternehmen - von der Machbarkeitsstudie bis zur laufenden Produktion
+              <strong>Machbarkeitsstudie, Standortwahl, Aufbau und Betriebsführung</strong><br/>
+              Strukturierte Projektbegleitung mit praktischer US-Erfahrung - von der Marktanalyse über Standortaufbau bis zur operativen Selbstständigkeit
             </p>
             
             {/* Key Credibility Stats */}
