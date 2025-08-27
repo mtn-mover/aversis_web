@@ -410,39 +410,13 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-aversis-blue to-blue-600 rounded-3xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-6">Qualifikationen & Erfahrung</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>Executive Leadership Erfahrung</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>Certified Coach</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>Certified Executive Coach</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-aversis-orange rounded-full mr-3"></div>
-                    <span>Systemischer Business Coach</span>
-                  </div>
-                </div>
-                
-                <div className="mt-8 pt-6 border-t border-blue-400">
-                  <h4 className="text-lg font-semibold mb-4">Branchen-Expertise</h4>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div>Produktion</div>
-                    <div>Technologie</div>
-                    <div>Gesundheit</div>
-                    <div>Handel</div>
-                    <div>Logistik</div>
-                    <div>Dienstleistung</div>
-                  </div>
-                </div>
-              </div>
+              <Image 
+                src="/images/Steph_low res.jpg"
+                alt="Stephan Zwahlen"
+                width={600}
+                height={600}
+                className="rounded-2xl shadow-xl object-cover"
+              />
               
               {/* Decorative elements - Logo Theme */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-aversis-orange rounded-full opacity-40"></div>
