@@ -53,7 +53,7 @@ export default function Home() {
               </div>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg bg-black/60 px-6 py-4 rounded-lg inline-block">
               <span className="text-aversis-blue">U.S.-Marktaufbau für</span><br/>
               <span className="text-aversis-orange">Schweizer KMU&apos;s</span>
             </h1>
@@ -97,11 +97,6 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Swiss-US Theme Decorative Elements */}
-        <div className="absolute top-16 right-16 w-12 h-12 bg-red-600 opacity-20 rounded-full"></div>
-        <div className="absolute top-8 right-32 w-8 h-8 bg-blue-600 opacity-30 rounded-full"></div>
-        <div className="absolute bottom-24 left-16 w-16 h-16 bg-aversis-blue opacity-15 rounded-full"></div>
-        <div className="absolute bottom-16 left-8 w-10 h-10 bg-red-600 opacity-25 rounded-full"></div>
       </section>
 
       {/* Problem/Opportunity Section */}
