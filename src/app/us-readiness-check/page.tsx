@@ -337,23 +337,23 @@ export default function USReadinessCheck() {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="space-y-4">
-                  <button className="w-full bg-aversis-orange text-white py-4 px-8 rounded-lg text-lg font-semibold hover:bg-orange-600 transition">
-                    🚀 {recommendation.action}
-                  </button>
-                  <button 
-                    onClick={restartAssessment}
-                    className="w-full border-2 border-aversis-blue text-aversis-blue py-3 px-6 rounded-lg font-semibold hover:bg-aversis-blue hover:text-white transition"
-                  >
-                    🔄 Assessment wiederholen
-                  </button>
+                {/* Action Button */}
+                <div className="text-center">
                   <a 
-                    href="/roi-calculator"
-                    className="w-full bg-gray-100 text-aversis-dark py-3 px-6 rounded-lg font-semibold hover:bg-gray-200 transition text-center block"
+                    href="/kontakt"
+                    className="btn-primary text-lg px-12 py-4 inline-block"
                   >
-                    📊 ROI Calculator verwenden
+                    Kostenloses Erstgespräch anfragen
                   </a>
+                  
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <button 
+                      onClick={restartAssessment}
+                      className="text-aversis-blue hover:text-aversis-orange transition font-medium"
+                    >
+                      🔄 Assessment wiederholen
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
