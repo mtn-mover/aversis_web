@@ -276,10 +276,10 @@ export default function Kontakt() {
                         className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aversis-blue focus:border-aversis-blue"
                       >
                         <option value="">Bitte wählen</option>
-                        <option value="< 10 Mitarbeiter">< 10 Mitarbeiter</option>
+                        <option value="< 10 Mitarbeiter">&lt; 10 Mitarbeiter</option>
                         <option value="10-50 Mitarbeiter">10-50 Mitarbeiter</option>
                         <option value="50-200 Mitarbeiter">50-200 Mitarbeiter</option>
-                        <option value="> 200 Mitarbeiter">> 200 Mitarbeiter</option>
+                        <option value="> 200 Mitarbeiter">&gt; 200 Mitarbeiter</option>
                       </select>
                     </div>
                     
@@ -296,9 +296,9 @@ export default function Kontakt() {
                       >
                         <option value="">Bitte wählen</option>
                         <option value="Kein US-Export">Kein US-Export</option>
-                        <option value="< 10% US-Export">< 10% US-Export</option>
+                        <option value="< 10% US-Export">&lt; 10% US-Export</option>
                         <option value="10-30% US-Export">10-30% US-Export</option>
-                        <option value="> 30% US-Export">> 30% US-Export</option>
+                        <option value="> 30% US-Export">&gt; 30% US-Export</option>
                       </select>
                     </div>
                   </div>
