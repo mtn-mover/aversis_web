@@ -25,7 +25,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="flex justify-center items-center mb-8">
               {/* Swiss to US Flag Animation */}
-              <div className="flex items-center gap-4 bg-white px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-4 bg-gray-100 px-6 py-3 rounded-full shadow-lg">
                 {/* Swiss Flag - Quadratisch */}
                 <div className="relative">
                   <Image 
@@ -91,7 +91,7 @@ export default function Home() {
               </a>
             </div>
             
-            <p className="mt-6 text-sm text-gray-500">
+            <p className="mt-6 text-sm text-white drop-shadow-md">
               Limitierte Verfügbarkeit - Hands-on Begleitung mit intensiver Betreuung - kontaktieren Sie uns frühzeitig!
             </p>
           </div>
@@ -471,17 +471,17 @@ export default function Home() {
               <p className="text-blue-100 text-sm">Definierte Projektphasen mit klaren Erfolgsmeilensteinen</p>
             </div>
             
-            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300">
               <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Limitierte Verfügbarkeit</h3>
-              <p className="text-blue-100 text-sm">Max. 3 parallele U.S.-Setup-Mandate für Qualitätssicherung</p>
+              <p className="text-blue-100 text-sm">Hands-on Begleitung mit intensiver Betreuung</p>
             </div>
             
-            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300">
               <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
