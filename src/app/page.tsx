@@ -53,7 +53,7 @@ export default function Home() {
               </div>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg bg-black/60 px-6 py-4 rounded-lg inline-block">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg bg-black/50 px-6 py-4 rounded-lg inline-block">
               <span className="text-aversis-blue">U.S.-Marktaufbau für</span><br/>
               <span className="text-aversis-orange">Schweizer KMU&apos;s</span>
             </h1>
