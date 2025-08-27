@@ -200,7 +200,7 @@ export default function Home() {
               Ihr erfahrener Partner für U.S.-Marktaufbau
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Strukturierter Interim-Ansatz mit definierten Projektphasen und klaren Erfolgsmeilensteinen
+              U.S.-Erfolg braucht mehr als gute Produkte - kulturelles Verständnis und lokales Know-how machen den Unterschied
             </p>
           </div>
 
