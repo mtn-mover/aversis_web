@@ -71,9 +71,9 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <button className="btn-primary text-lg px-8 py-4">
+              <a href="/kontakt" className="btn-primary text-lg px-8 py-4 text-center">
                 Unverbindliches Erstgespräch
-              </button>
+              </a>
               <a href="/us-readiness-check" className="btn-secondary text-lg px-8 py-4 text-center">
                 Expansions-Readiness Check
               </a>
