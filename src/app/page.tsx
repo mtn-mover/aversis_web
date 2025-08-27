@@ -57,16 +57,16 @@ export default function Home() {
                 <div className="text-sm text-gray-600">US-Marktaufbau Erfahrung</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-blue">80%</div>
-                <div className="text-sm text-gray-600">Durchschnittl. Umsatzwachstum</div>
+                <div className="text-2xl font-bold text-aversis-blue">#1</div>
+                <div className="text-sm text-gray-600">Profitabelste Niederlassung ausgebaut</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-orange">#1</div>
-                <div className="text-sm text-gray-600">Profitabelste Niederlassung</div>
+                <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
+                <div className="text-sm text-gray-600">US-Partnernetzwerk</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-blue">4x</div>
-                <div className="text-sm text-gray-600">Post-Merger Integrationen</div>
+                <div className="text-2xl font-bold text-aversis-blue">Dual</div>
+                <div className="text-sm text-gray-600">Schweiz-USA Staatsbürger</div>
               </div>
             </div>
 
