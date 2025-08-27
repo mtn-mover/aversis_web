@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 interface FormData {
   name: string
@@ -32,6 +33,9 @@ export default function Kontakt() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string>('')
+  const [showValidationErrors, setShowValidationErrors] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
 
   const validateForm = () => {
     const newErrors: Partial<FormData> = {}
@@ -50,10 +54,20 @@ export default function Kontakt() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setShowValidationErrors(true)
     
-    if (!validateForm()) return
+    if (!validateForm()) {
+      setErrorMessage('Bitte füllen Sie alle Pflichtfelder aus.')
+      return
+    }
+    
+    if (!captchaToken) {
+      setErrorMessage('Bitte bestätigen Sie, dass Sie kein Roboter sind.')
+      return
+    }
     
     setIsSubmitting(true)
+    setErrorMessage('')
     
     try {
       const response = await fetch('/api/contact', {
@@ -61,7 +75,7 @@ export default function Kontakt() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, captchaToken }),
       })
       
       if (response.ok) {
@@ -77,6 +91,9 @@ export default function Kontakt() {
           companySize: '',
           usExport: ''
         })
+        setCaptchaToken(null)
+        recaptchaRef.current?.reset()
+        setShowValidationErrors(false)
         setErrorMessage('')
       } else {
         const errorData = await response.json().catch(() => ({ error: 'Unbekannter Fehler' }))
@@ -223,7 +240,7 @@ export default function Kontakt() {
                       }`}
                       placeholder="Ihr vollständiger Name"
                     />
-                    {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
+                    {showValidationErrors && errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
                   </div>
                   
                   <div>
@@ -241,7 +258,7 @@ export default function Kontakt() {
                       }`}
                       placeholder="Geschäftsführer, CEO, etc."
                     />
-                    {errors.position && <p className="mt-1 text-sm text-red-600">{errors.position}</p>}
+                    {showValidationErrors && errors.position && <p className="mt-1 text-sm text-red-600">{errors.position}</p>}
                   </div>
                 </div>
               </div>
@@ -265,7 +282,7 @@ export default function Kontakt() {
                       }`}
                       placeholder="Ihr Firmenname"
                     />
-                    {errors.company && <p className="mt-1 text-sm text-red-600">{errors.company}</p>}
+                    {showValidationErrors && errors.company && <p className="mt-1 text-sm text-red-600">{errors.company}</p>}
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-6">
@@ -329,7 +346,7 @@ export default function Kontakt() {
                       }`}
                       placeholder="ihre.email@unternehmen.ch"
                     />
-                    {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+                    {showValidationErrors && errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                   </div>
                   
                   <div>
@@ -347,7 +364,7 @@ export default function Kontakt() {
                       }`}
                       placeholder="+41 XX XXX XX XX"
                     />
-                    {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
+                    {showValidationErrors && errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
                   </div>
                 </div>
               </div>
@@ -370,11 +387,20 @@ export default function Kontakt() {
                     }`}
                     placeholder="Beschreiben Sie kurz Ihre Pläne oder Fragen zum US-Marktaufbau..."
                   />
-                  {errors.usInterest && <p className="mt-1 text-sm text-red-600">{errors.usInterest}</p>}
+                  {showValidationErrors && errors.usInterest && <p className="mt-1 text-sm text-red-600">{errors.usInterest}</p>}
                 </div>
               </div>
 
-              {/* Submit Button */}
+              {/* reCAPTCHA */}
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
+                  onChange={(token) => setCaptchaToken(token)}
+                  onExpired={() => setCaptchaToken(null)}
+                />
+              </div>
+
               {/* Error Message */}
               {errorMessage && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
@@ -382,6 +408,7 @@ export default function Kontakt() {
                 </div>
               )}
 
+              {/* Submit Button */}
               <div className="text-center pt-6">
                 <button
                   type="submit"

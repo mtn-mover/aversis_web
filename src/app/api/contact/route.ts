@@ -5,6 +5,33 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.json()
     
+    // CAPTCHA validation
+    if (!formData.captchaToken) {
+      return NextResponse.json(
+        { success: false, error: 'CAPTCHA-Verifizierung erforderlich' },
+        { status: 400 }
+      )
+    }
+
+    // Verify CAPTCHA with Google
+    const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${formData.captchaToken}`
+    })
+
+    const captchaResult = await captchaResponse.json()
+    
+    if (!captchaResult.success) {
+      console.error('CAPTCHA verification failed:', captchaResult)
+      return NextResponse.json(
+        { success: false, error: 'CAPTCHA-Verifizierung fehlgeschlagen' },
+        { status: 400 }
+      )
+    }
+    
     // Basic validation
     const requiredFields = ['name', 'position', 'company', 'email', 'phone', 'usInterest']
     const missingFields = requiredFields.filter(field => !formData[field]?.trim())
