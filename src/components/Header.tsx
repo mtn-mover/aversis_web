@@ -43,12 +43,12 @@ export default function Header() {
             >
               Philosophie
             </Link>
-            <Link 
-              href="/stephan" 
+            <a 
+              href="/#uber-stephan" 
               className="nav-link font-medium text-base"
             >
               Über Stephan
-            </Link>
+            </a>
             <a 
               href="#footer" 
               className="nav-link font-medium text-base"
@@ -101,13 +101,13 @@ export default function Header() {
               >
                 Philosophie
               </Link>
-              <Link 
-                href="/stephan" 
+              <a 
+                href="/#uber-stephan" 
                 className="nav-link font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Über Stephan
-              </Link>
+              </a>
               <a 
                 href="#footer" 
                 className="nav-link font-medium py-2"

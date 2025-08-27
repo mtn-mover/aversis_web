@@ -366,7 +366,7 @@ export default function Home() {
 
 
       {/* Über Stephan Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section id="uber-stephan" className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
