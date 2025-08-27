@@ -397,9 +397,28 @@ export default function Kontakt() {
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                    onChange={(token) => setCaptchaToken(token)}
-                    onExpired={() => setCaptchaToken(null)}
+                    onChange={(token) => {
+                      console.log('reCAPTCHA token received:', token ? 'Valid' : 'Null')
+                      setCaptchaToken(token)
+                    }}
+                    onExpired={() => {
+                      console.log('reCAPTCHA expired')
+                      setCaptchaToken(null)
+                    }}
+                    onError={(error) => {
+                      console.error('reCAPTCHA error:', error)
+                      setErrorMessage('reCAPTCHA-Fehler. Bitte Seite neu laden.')
+                    }}
                   />
+                </div>
+              )}
+              
+              {/* Debug Info */}
+              {process.env.NODE_ENV === 'development' && (
+                <div className="text-xs text-gray-500 text-center">
+                  reCAPTCHA Site Key: {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? 'Konfiguriert' : 'Nicht gesetzt'}
+                  <br />
+                  Domain: {typeof window !== 'undefined' ? window.location.hostname : 'Server'}
                 </div>
               )}
 
