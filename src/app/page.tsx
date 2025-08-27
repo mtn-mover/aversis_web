@@ -80,7 +80,7 @@ export default function Home() {
             </div>
             
             <p className="mt-6 text-sm text-gray-500">
-              Limitierte Verfügbarkeit - Hands-on Begleitung bedeutet fokussierte Projektarbeit
+              Limitierte Verfügbarkeit - Hands-on Begleitung mit intensiver Betreuung - kontaktieren Sie uns frühzeitig!
             </p>
           </div>
         </div>
