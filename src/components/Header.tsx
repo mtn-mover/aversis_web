@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,9 +14,11 @@ export default function Header() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img 
+            <Image 
               src="/images/aversis-logo.jpg" 
               alt="aversis Logo" 
+              width={120}
+              height={48}
               className="h-12 w-auto"
             />
           </Link>

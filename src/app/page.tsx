@@ -388,8 +388,8 @@ export default function Home() {
                 
                 <h3 className="text-3xl font-bold mb-6">Erfolgsgeschichte Bircher America</h3>
                 <p className="text-xl text-blue-100 mb-6 leading-relaxed">
-                  «Als General Manager bei Bircher Reglomat AG durfte ich den US-Marktaufbau von Grund auf leiten 
-                  und die amerikanische Niederlassung zur profitabelsten weltweit entwickeln.»
+                  &laquo;Als General Manager bei Bircher Reglomat AG durfte ich den US-Marktaufbau von Grund auf leiten 
+                  und die amerikanische Niederlassung zur profitabelsten weltweit entwickeln.&raquo;
                 </p>
                 <div className="text-lg text-blue-200 font-medium">
                   — Stephan Zwahlen, damals General Manager US Operations
@@ -497,9 +497,9 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <div className="text-6xl text-aversis-orange mb-6">"</div>
               <p className="text-2xl text-gray-700 leading-relaxed mb-8 italic">
-                «Stephans einzigartige Kombination aus Schweizer Präzision und amerikanischer Marktkenntnis war 
+                &laquo;Stephans einzigartige Kombination aus Schweizer Präzision und amerikanischer Marktkenntnis war 
                 der Schlüssel zum Erfolg. Er hat nicht nur eine profitable Niederlassung aufgebaut, 
-                sondern ein nachhaltiges Geschäftsmodell geschaffen, das bis heute Bestand hat.»
+                sondern ein nachhaltiges Geschäftsmodell geschaffen, das bis heute Bestand hat.&raquo;
               </p>
               <div className="flex items-center justify-center">
                 <div className="text-center">
@@ -564,8 +564,8 @@ export default function Home() {
                 Über Stephan Zwahlen
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                «Mein Name ist Stephan Zwahlen. Ich glaube fest daran, dass jedes Unternehmen 
-                das Potenzial hat, sowohl operativ exzellent als auch ein grossartiger Arbeitsplatz zu sein.»
+                &laquo;Mein Name ist Stephan Zwahlen. Ich glaube fest daran, dass jedes Unternehmen 
+                das Potenzial hat, sowohl operativ exzellent als auch ein grossartiger Arbeitsplatz zu sein.&raquo;
               </p>
               
               <div className="space-y-6">
@@ -580,8 +580,8 @@ export default function Home() {
                 <div className="border-l-4 border-aversis-blue pl-6">
                   <h3 className="text-lg font-semibold text-aversis-dark mb-2">Meine Überzeugung</h3>
                   <p className="text-gray-600">
-                    «Unternehmen sind erfolgreicher, wenn Menschen gern zur Arbeit kommen. 
-                    Deshalb entwickle ich nicht nur Prozesse, sondern auch die Kultur, die sie zum Leben erweckt.»
+                    &laquo;Unternehmen sind erfolgreicher, wenn Menschen gern zur Arbeit kommen. 
+                    Deshalb entwickle ich nicht nur Prozesse, sondern auch die Kultur, die sie zum Leben erweckt.&raquo;
                   </p>
                 </div>
 
@@ -596,8 +596,8 @@ export default function Home() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl">
                 <p className="text-aversis-dark font-medium italic">
-                  «Ich helfe Schweizer KMU-Inhabern dabei, Unternehmen zu schaffen, 
-                  die sowohl wirtschaftlich erfolgreich als auch menschlich bereichernd sind.»
+                  &laquo;Ich helfe Schweizer KMU-Inhabern dabei, Unternehmen zu schaffen, 
+                  die sowohl wirtschaftlich erfolgreich als auch menschlich bereichernd sind.&raquo;
                 </p>
                 <div className="mt-3 text-sm text-gray-600">Stephan Zwahlen, Gründer & Geschäftsführer</div>
               </div>
@@ -838,7 +838,7 @@ export default function Home() {
                 </button>
                 
                 <div className="text-xs text-gray-500 mb-4">
-                  Wert: CHF 2'500 • Heute kostenlos
+                  Wert: CHF 2&apos;500 • Heute kostenlos
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">

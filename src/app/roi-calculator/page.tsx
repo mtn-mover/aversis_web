@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -25,11 +25,7 @@ export default function ROICalculator() {
 
   const [results, setResults] = useState<any>(null)
 
-  useEffect(() => {
-    calculateROI()
-  }, [inputs])
-
-  const calculateROI = () => {
+  const calculateROI = useCallback(() => {
     // Current situation with tariffs
     const revenueAtRisk = inputs.currentRevenue * (inputs.tariffImpact / 100)
     const marginLoss = revenueAtRisk * (inputs.currentMargin / 100)
@@ -55,7 +51,12 @@ export default function ROICalculator() {
       breakEvenTime,
       netGain: totalBenefit - inputs.setupCosts
     })
-  }
+  }, [inputs])
+
+  useEffect(() => {
+    calculateROI()
+  }, [calculateROI])
+
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('de-CH', {

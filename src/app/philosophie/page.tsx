@@ -34,7 +34,7 @@ export default function Philosophie() {
               <div className="absolute top-4 right-4 w-3 h-3 bg-aversis-orange rounded-full opacity-30"></div>
               <div className="absolute top-2 right-8 w-2 h-2 bg-aversis-blue rounded-full opacity-40"></div>
               
-              <div className="text-6xl text-aversis-orange mb-6">"</div>
+              <div className="text-6xl text-aversis-orange mb-6">&ldquo;</div>
               <p className="text-2xl text-gray-600 leading-relaxed mb-6 italic">
                 Erfolgreiche Unternehmen haben eine Kultur, die operativ exzellente Leistung nicht nur ermöglicht, 
                 sondern als Selbstverständlichkeit lebt. Ohne diese kulturelle Basis bleibt jede 

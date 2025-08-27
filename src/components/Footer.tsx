@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -11,9 +12,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <img 
+              <Image 
                 src="/images/aversis-logo.jpg" 
                 alt="aversis Logo" 
+                width={100}
+                height={40}
                 className="h-10 w-auto"
               />
             </div>
