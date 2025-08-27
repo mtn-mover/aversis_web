@@ -8,8 +8,20 @@ export default function Home() {
       <Header />
       
       {/* Hero Section - US Manufacturing Focus */}
-      <section className="relative bg-gradient-to-r from-slate-50 to-blue-50 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative py-20 lg:py-32">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/countryside_lowres.jpg"
+            alt="Countryside Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             <div className="flex justify-center items-center mb-8">
               {/* Swiss to US Flag Animation */}
@@ -41,11 +53,11 @@ export default function Home() {
               </div>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold text-aversis-dark mb-8 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
               <span className="text-aversis-blue">U.S.-Marktaufbau für</span><br/>
               <span className="text-aversis-orange">Schweizer KMU&apos;s</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-6 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl lg:text-2xl text-white mb-6 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
               <strong>Machbarkeitsstudie, Standortwahl, Aufbau und Betriebsführung</strong><br/>
               Strukturierte Projektbegleitung mit praktischer U.S.-Erfahrung - von der Marktanalyse über Standortaufbau bis zur operativen Selbstständigkeit
             </p>
@@ -54,19 +66,19 @@ export default function Home() {
             <div className="grid md:grid-cols-4 gap-6 mb-10 max-w-4xl mx-auto">
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">12 Jahre</div>
-                <div className="text-sm text-gray-600">U.S.-Marktaufbau Erfahrung</div>
+                <div className="text-sm text-white">U.S.-Marktaufbau Erfahrung</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">#1</div>
-                <div className="text-sm text-gray-600">Profitabelste Niederlassung ausgebaut</div>
+                <div className="text-sm text-white">Profitabelste Niederlassung ausgebaut</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
-                <div className="text-sm text-gray-600">U.S.-Partnernetzwerk</div>
+                <div className="text-sm text-white">U.S.-Partnernetzwerk</div>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">Dual</div>
-                <div className="text-sm text-gray-600">Schweiz-USA Staatsbürger</div>
+                <div className="text-sm text-white">Schweiz-USA Staatsbürger</div>
               </div>
             </div>
 
