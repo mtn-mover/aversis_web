@@ -402,10 +402,9 @@ export default function Home() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl">
                 <p className="text-aversis-dark font-medium italic">
-                  &laquo;Ich helfe Schweizer KMU-Inhabern dabei, Unternehmen zu schaffen, 
-                  die sowohl wirtschaftlich erfolgreich als auch menschlich bereichernd sind.&raquo;
+                  &laquo;Ich helfe Schweizer KMU&apos;s dabei, nachhaltig und erfolgreich den amerikanischen Markt zu erschliessen - mit strukturierter Begleitung und kultureller Kompetenz.&raquo;
                 </p>
-                <div className="mt-3 text-sm text-gray-600">Stephan Zwahlen, Gründer & Geschäftsführer</div>
+                <div className="mt-3 text-sm text-gray-600">Stephan Zwahlen, U.S.-Marktaufbau-Spezialist</div>
               </div>
             </div>
 
