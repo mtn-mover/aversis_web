@@ -37,7 +37,11 @@ export async function POST(request: NextRequest) {
     if (!notificationResult.success) {
       console.error('Failed to send notification email:', notificationResult.error)
       return NextResponse.json(
-        { success: false, error: 'Fehler beim Senden der E-Mail. Bitte versuchen Sie es später erneut.' },
+        { 
+          success: false, 
+          error: 'Fehler beim Senden der E-Mail: ' + notificationResult.error,
+          details: notificationResult.error
+        },
         { status: 500 }
       )
     }

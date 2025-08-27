@@ -34,6 +34,11 @@ interface EmailOptions {
 
 export async function sendEmail({ to, subject, text, html }: EmailOptions) {
   try {
+    // Check if email configuration is available
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      throw new Error('Email configuration missing: EMAIL_USER and EMAIL_PASS required')
+    }
+
     const transporter = createTransporter()
     
     const mailOptions = {
@@ -44,8 +49,10 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
       html: html || text
     }
     
+    console.log('Attempting to send email to:', to, 'from:', mailOptions.from)
+    
     const info = await transporter.sendMail(mailOptions)
-    console.log('Email sent:', info.messageId)
+    console.log('Email sent successfully:', info.messageId, 'to:', to)
     
     return {
       success: true,
@@ -53,6 +60,12 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
     }
   } catch (error) {
     console.error('Email sending error:', error)
+    console.error('Email config check:', {
+      EMAIL_USER: !!process.env.EMAIL_USER,
+      EMAIL_PASS: !!process.env.EMAIL_PASS,
+      EMAIL_SERVICE: process.env.EMAIL_SERVICE
+    })
+    
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error'

@@ -31,6 +31,7 @@ export default function Kontakt() {
   const [errors, setErrors] = useState<Partial<FormData>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [debugInfo, setDebugInfo] = useState<string>('')
 
   const validateForm = () => {
     const newErrors: Partial<FormData> = {}
@@ -64,6 +65,8 @@ export default function Kontakt() {
       })
       
       if (response.ok) {
+        const result = await response.json()
+        setDebugInfo(`Erfolg: ${JSON.stringify(result)}`)
         setIsSubmitted(true)
         // Reset form
         setFormData({
@@ -77,11 +80,14 @@ export default function Kontakt() {
           usExport: ''
         })
       } else {
-        alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.')
+        const errorData = await response.text()
+        setDebugInfo(`HTTP ${response.status}: ${errorData}`)
+        alert(`Fehler beim Senden der Nachricht. Status: ${response.status}. Details in der Konsole.`)
       }
     } catch (error) {
       console.error('Error:', error)
-      alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.')
+      setDebugInfo(`Network Error: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      alert(`Network Fehler: ${error instanceof Error ? error.message : 'Unknown error'}`)
     } finally {
       setIsSubmitting(false)
     }
@@ -370,6 +376,13 @@ export default function Kontakt() {
               </div>
 
               {/* Submit Button */}
+              {/* Debug Info */}
+              {debugInfo && (
+                <div className="bg-gray-100 p-4 rounded-lg text-sm font-mono text-gray-700">
+                  <strong>Debug Info:</strong> {debugInfo}
+                </div>
+              )}
+
               <div className="text-center pt-6">
                 <button
                   type="submit"
