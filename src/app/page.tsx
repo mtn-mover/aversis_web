@@ -374,32 +374,28 @@ export default function Home() {
                 Über Stephan Zwahlen
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                &laquo;Mein Name ist Stephan Zwahlen. Ich glaube fest daran, dass jedes Unternehmen 
-                das Potenzial hat, sowohl operativ exzellent als auch ein grossartiger Arbeitsplatz zu sein.&raquo;
+                &laquo;Mein Name ist Stephan Zwahlen. In 12 Jahren habe ich in den USA gelernt: U.S.-Erfolg braucht mehr als gute Produkte - kulturelle Brücken und lokales Verständnis sind entscheidend.&raquo;
               </p>
               
               <div className="space-y-6">
                 <div className="border-l-4 border-aversis-orange pl-6">
                   <h3 className="text-lg font-semibold text-aversis-dark mb-2">Mein Werdegang</h3>
                   <p className="text-gray-600">
-                    15+ Jahre Führungserfahrung in verschiedenen Branchen, von Start-ups bis zu internationalen Konzernen. 
-                    Spezialisiert auf die Verbindung von operativer Exzellenz und authentischer Kulturentwicklung.
+                    12 Jahre U.S.-Marktaufbau-Erfahrung in verschiedenen Funktionen - von Product Manager über Area Sales Manager bis Managing Director. Aufbau von Distributorennetzwerken und Führung amerikanischer Teams. Duale Schweiz-USA Staatsbürgerschaft ermöglicht perfekte kulturelle Brückenfunktion.
                   </p>
                 </div>
 
                 <div className="border-l-4 border-aversis-blue pl-6">
-                  <h3 className="text-lg font-semibold text-aversis-dark mb-2">Meine Überzeugung</h3>
+                  <h3 className="text-lg font-semibold text-aversis-dark mb-2">Meine Erfahrung</h3>
                   <p className="text-gray-600">
-                    &laquo;Unternehmen sind erfolgreicher, wenn Menschen gern zur Arbeit kommen. 
-                    Deshalb entwickle ich nicht nur Prozesse, sondern auch die Kultur, die sie zum Leben erweckt.&raquo;
+                    &laquo;Ich habe Schweizer Unternehmen in den USA scheitern sehen - meist weil Produkte nicht für den amerikanischen Markt adaptiert wurden. Erfolgreiche U.S.-Expansion braucht strukturierte Herangehensweise.&raquo;
                   </p>
                 </div>
 
                 <div className="border-l-4 border-gray-300 pl-6">
                   <h3 className="text-lg font-semibold text-aversis-dark mb-2">Mein Ansatz</h3>
                   <p className="text-gray-600">
-                    Hands-on Mentalität gepaart mit empathischer Führung. 
-                    Ich arbeite nicht über, sondern mit Ihren Teams - für Veränderungen, die nachhaltig wirken.
+                    Projektbasierte Begleitung von der Machbarkeitsstudie bis zur operativen Selbstständigkeit. Hands-on Umsetzung kombiniert mit Wissenstransfer für nachhaltige lokale Führung.
                   </p>
                 </div>
               </div>
