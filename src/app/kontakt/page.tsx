@@ -31,7 +31,7 @@ export default function Kontakt() {
   const [errors, setErrors] = useState<Partial<FormData>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [debugInfo, setDebugInfo] = useState<string>('')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   const validateForm = () => {
     const newErrors: Partial<FormData> = {}
@@ -65,8 +65,6 @@ export default function Kontakt() {
       })
       
       if (response.ok) {
-        const result = await response.json()
-        setDebugInfo(`Erfolg: ${JSON.stringify(result)}`)
         setIsSubmitted(true)
         // Reset form
         setFormData({
@@ -79,15 +77,16 @@ export default function Kontakt() {
           companySize: '',
           usExport: ''
         })
+        setErrorMessage('')
       } else {
-        const errorData = await response.text()
-        setDebugInfo(`HTTP ${response.status}: ${errorData}`)
-        alert(`Fehler beim Senden der Nachricht. Status: ${response.status}. Details in der Konsole.`)
+        const errorData = await response.json().catch(() => ({ error: 'Unbekannter Fehler' }))
+        const message = errorData.error || 'Fehler beim Senden der Nachricht'
+        setErrorMessage(message)
+        console.error('API Error:', response.status, errorData)
       }
     } catch (error) {
-      console.error('Error:', error)
-      setDebugInfo(`Network Error: ${error instanceof Error ? error.message : 'Unknown error'}`)
-      alert(`Network Fehler: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      console.error('Network Error:', error)
+      setErrorMessage('Netzwerkfehler. Bitte überprüfen Sie Ihre Internetverbindung.')
     } finally {
       setIsSubmitting(false)
     }
@@ -376,10 +375,10 @@ export default function Kontakt() {
               </div>
 
               {/* Submit Button */}
-              {/* Debug Info */}
-              {debugInfo && (
-                <div className="bg-gray-100 p-4 rounded-lg text-sm font-mono text-gray-700">
-                  <strong>Debug Info:</strong> {debugInfo}
+              {/* Error Message */}
+              {errorMessage && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+                  <strong>Fehler:</strong> {errorMessage}
                 </div>
               )}
 
