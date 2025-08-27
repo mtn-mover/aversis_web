@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendEmail, formatContactEmail, formatConfirmationEmail } from '@/lib/email'
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,71 +25,46 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create email content
-    const subject = `Anfrage US-Marktaufbau - ${formData.company}`
-    
-    const emailBody = `
-Neue Anfrage für US-Marktaufbau
+    // Send notification email to aversis
+    const contactContent = formatContactEmail(formData)
+    const notificationResult = await sendEmail({
+      to: 'info@aversis.com',
+      subject: `Anfrage US-Marktaufbau - ${formData.company}`,
+      text: contactContent.text,
+      html: contactContent.html
+    })
 
-KONTAKTDATEN:
-Name: ${formData.name}
-Position: ${formData.position}
-Unternehmen: ${formData.company}
-E-Mail: ${formData.email}
-Telefon: ${formData.phone}
+    if (!notificationResult.success) {
+      console.error('Failed to send notification email:', notificationResult.error)
+      return NextResponse.json(
+        { success: false, error: 'Fehler beim Senden der E-Mail. Bitte versuchen Sie es später erneut.' },
+        { status: 500 }
+      )
+    }
 
-UNTERNEHMENSDATEN:
-Unternehmensgröße: ${formData.companySize || 'Nicht angegeben'}
-Aktueller US-Bezug: ${formData.usExport || 'Nicht angegeben'}
+    // Send confirmation email to user
+    const confirmationContent = formatConfirmationEmail(formData)
+    const confirmationResult = await sendEmail({
+      to: formData.email,
+      subject: 'Bestätigung Ihrer US-Marktaufbau Anfrage - aversis',
+      text: confirmationContent.text,
+      html: confirmationContent.html
+    })
 
-US-INTERESSE:
-${formData.usInterest}
+    // Even if confirmation email fails, we still consider it a success
+    // since the main notification was sent
+    if (!confirmationResult.success) {
+      console.error('Failed to send confirmation email:', confirmationResult.error)
+    }
 
----
-Diese Anfrage wurde über das Kontaktformular auf aversis-web.vercel.app gesendet.
-Zeitpunkt: ${new Date().toLocaleString('de-CH')}
-    `.trim()
-
-    // Here you would normally send the email using a service like:
-    // - Resend
-    // - SendGrid
-    // - Nodemailer with SMTP
-    // - AWS SES
-    
-    // For now, we'll log the email and return success
-    console.log('Email to send to info@aversis.com:')
-    console.log('Subject:', subject)
-    console.log('Body:', emailBody)
-    
-    // Simulate sending confirmation email to user
-    const confirmationSubject = 'Bestätigung Ihrer US-Marktaufbau Anfrage'
-    const confirmationBody = `
-Liebe(r) ${formData.name},
-
-vielen Dank für Ihr Interesse an unserem US-Marktaufbau-Service!
-
-Wir haben Ihre Anfrage erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
-
-Ihre Angaben im Überblick:
-- Unternehmen: ${formData.company}
-- US-Interesse: ${formData.usInterest.substring(0, 100)}${formData.usInterest.length > 100 ? '...' : ''}
-
-Mit besten Grüssen
-Stephan Zwahlen
-aversis GmbH
-
----
-Diese E-Mail wurde automatisch generiert. Bitte antworten Sie nicht auf diese E-Mail.
-    `.trim()
-
-    console.log('Confirmation email to send to', formData.email)
-    console.log('Subject:', confirmationSubject)
-    console.log('Body:', confirmationBody)
+    console.log(`Contact form submission from ${formData.company} (${formData.name}) processed successfully`)
 
     // Return success response
     return NextResponse.json({
       success: true,
-      message: 'Anfrage erfolgreich versendet'
+      message: 'Anfrage erfolgreich versendet',
+      notificationSent: notificationResult.success,
+      confirmationSent: confirmationResult.success
     })
 
   } catch (error) {
