@@ -25,7 +25,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="flex justify-center items-center mb-8">
               {/* Swiss to US Flag Animation */}
-              <div className="flex items-center gap-4 bg-gray-100 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-4 bg-gray-100/80 px-6 py-3 rounded-full shadow-lg">
                 {/* Swiss Flag - Quadratisch */}
                 <div className="relative">
                   <Image 
