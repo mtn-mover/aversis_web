@@ -119,29 +119,29 @@ export default function Home() {
                 <li className="flex items-start">
                   <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-green-800">Wachstumspotenzial:</strong><br/>
-                    <span className="text-gray-600">CHF 52 Mrd. Opportunity für Schweizer Fertiger</span>
+                    <strong className="text-green-800">Marktposition:</strong><br/>
+                    <span className="text-gray-600">Von Exporteur zu lokalem Anbieter - nachhaltiger Wettbewerbsvorteil</span>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
                     <strong className="text-green-800">Lokale Präsenz:</strong><br/>
-                    <span className="text-gray-600">Näher zu amerikanischen Kunden und Supply Chains</span>
+                    <span className="text-gray-600">Amerikanische Kunden bevorzugen U.S.-basierte Lieferanten</span>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
                     <strong className="text-green-800">Skalierungsvorteile:</strong><br/>
-                    <span className="text-gray-600">U.S.-Produktionskapazitäten für kontinentale Expansion</span>
+                    <span className="text-gray-600">Nordamerikanische Expansion von zentralem U.S.-Standort</span>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-green-800">First-Mover-Vorteil:</strong><br/>
-                    <span className="text-gray-600">Competitive Advantage gegenüber zögerlicher Konkurrenz</span>
+                    <strong className="text-green-800">Marktvorsprung:</strong><br/>
+                    <span className="text-gray-600">Etablierung während Konkurrenz noch zögert</span>
                   </div>
                 </li>
               </ul>
