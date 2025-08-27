@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -161,6 +161,11 @@ export default function USReadinessCheck() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<Record<string, number>>({})
   const [showResults, setShowResults] = useState(false)
+
+  // Set page title
+  useEffect(() => {
+    document.title = '🇨🇭🇺🇸 US-Readiness Check - Aversis'
+  }, [])
 
   const maxScore = questions.reduce((sum, q) => sum + (q.weight * 5), 0)
   const currentScore = Object.entries(answers).reduce((sum, [questionId, score]) => {
