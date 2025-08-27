@@ -2,25 +2,17 @@ import nodemailer from 'nodemailer'
 
 // Create reusable transporter object using SMTP transport
 const createTransporter = () => {
-  // For Gmail/Google Workspace (recommended)
-  if (process.env.EMAIL_SERVICE === 'gmail') {
-    return nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER, // your gmail address
-        pass: process.env.EMAIL_PASS  // your gmail app password
-      }
-    })
-  }
-  
-  // For other SMTP providers (like your hosting provider)
+  // Always use explicit SMTP settings for better compatibility
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: false, // true for 465, false for other ports
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports like 587
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
+    },
+    tls: {
+      rejectUnauthorized: false // Accept self-signed certificates if needed
     }
   })
 }
