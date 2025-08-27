@@ -57,7 +57,7 @@ export default function Home() {
             
             <h1 className="text-4xl lg:text-6xl font-bold text-aversis-dark mb-8 leading-tight">
               <span className="text-aversis-blue">US-Marktaufbau für</span><br/>
-              <span className="text-aversis-orange">Schweizer KMU's</span>
+              <span className="text-aversis-orange">Schweizer KMU&apos;s</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-600 mb-6 leading-relaxed max-w-4xl mx-auto">
               <strong>Machbarkeitsstudie, Standortwahl, Aufbau und Betriebsführung</strong><br/>
