@@ -495,7 +495,7 @@ export default function Home() {
           {/* Testimonial */}
           <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 lg:p-12">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="text-6xl text-aversis-orange mb-6">"</div>
+              <div className="text-6xl text-aversis-orange mb-6">&ldquo;</div>
               <p className="text-2xl text-gray-700 leading-relaxed mb-8 italic">
                 &laquo;Stephans einzigartige Kombination aus Schweizer Präzision und amerikanischer Marktkenntnis war 
                 der Schlüssel zum Erfolg. Er hat nicht nur eine profitable Niederlassung aufgebaut, 
