@@ -70,23 +70,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 justify-center max-w-2xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
               <button className="btn-primary text-lg px-8 py-4">
-                Kostenlose Machbarkeitsstudie (90 Min)
+                Unverbindliches Erstgespräch
               </button>
-              <button className="btn-secondary text-lg px-8 py-4">
-                US-Setup Playbook anfordern
-              </button>
-              <a href="/roi-calculator" className="w-full bg-green-600 text-white py-4 px-6 rounded-lg text-center font-semibold hover:bg-green-700 transition">
-                📊 ROI Calculator
-              </a>
-              <a href="/us-readiness-check" className="w-full border-2 border-green-600 text-green-600 py-3 px-6 rounded-lg text-center font-semibold hover:bg-green-600 hover:text-white transition">
-                ✅ US-Readiness Check
+              <a href="/us-readiness-check" className="btn-secondary text-lg px-8 py-4 text-center">
+                Expansions-Readiness Check
               </a>
             </div>
             
             <p className="mt-6 text-sm text-gray-500">
-              🚨 Limitierte Verfügbarkeit: Max. 3 parallele US-Setup-Mandate • Starttermine 2026
+              Limitierte Verfügbarkeit - Hands-on Begleitung bedeutet fokussierte Projektarbeit
             </p>
           </div>
         </div>
