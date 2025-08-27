@@ -64,19 +64,19 @@ export default function Home() {
             
             {/* Key Credibility Stats */}
             <div className="grid md:grid-cols-4 gap-6 mb-10 max-w-4xl mx-auto">
-              <div className="bg-white p-4 rounded-lg shadow">
+              <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">12 Jahre</div>
                 <div className="text-sm text-white">U.S.-Marktaufbau Erfahrung</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow">
+              <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">#1</div>
                 <div className="text-sm text-white">Profitabelste Niederlassung ausgebaut</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow">
+              <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
                 <div className="text-sm text-white">U.S.-Partnernetzwerk</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow">
+              <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">Dual</div>
                 <div className="text-sm text-white">Schweiz-USA Staatsbürger</div>
               </div>
@@ -86,7 +86,7 @@ export default function Home() {
               <a href="/kontakt" className="btn-primary text-lg px-8 py-4 text-center">
                 Unverbindliches Erstgespräch
               </a>
-              <a href="/us-readiness-check" className="btn-secondary text-lg px-8 py-4 text-center">
+              <a href="/us-readiness-check" className="bg-aversis-blue text-white hover:bg-blue-700 font-semibold px-8 py-4 rounded-lg transition text-center inline-block text-lg">
                 Expansions-Readiness Check
               </a>
             </div>
@@ -218,7 +218,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Phase 1: Market Entry Assessment */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,7 +260,7 @@ export default function Home() {
             </div>
 
             {/* Phase 2: Manufacturing Setup */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-aversis-orange text-white px-4 py-1 rounded-full text-xs font-semibold">
                 KERN-EXPERTISE
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
             </div>
 
             {/* Phase 3: Operations Scaling */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-aversis-blue rounded-xl flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -348,7 +348,7 @@ export default function Home() {
           </div>
 
           {/* Success Timeline */}
-          <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+          <div className="mt-16 bg-gray-50 rounded-2xl p-8 shadow-lg">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-aversis-dark">Strukturierter Interim-Ansatz</h3>
               <p className="text-gray-600 mt-2">Von der Machbarkeitsstudie bis zur profitablen U.S.-Produktion</p>
@@ -493,7 +493,7 @@ export default function Home() {
           </div>
 
           {/* Main CTA */}
-          <div className="bg-white rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto shadow-2xl">
+          <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-left">
                 <h3 className="text-3xl font-bold text-aversis-dark mb-6">
@@ -559,7 +559,7 @@ export default function Home() {
                   <a href="/roi-calculator" className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold px-4 py-3 rounded-lg transition text-center text-sm">
                     📊 ROI Calculator
                   </a>
-                  <a href="/us-readiness-check" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-4 py-3 rounded-lg transition text-center text-sm">
+                  <a href="/us-readiness-check" className="bg-aversis-blue text-white hover:bg-blue-700 font-semibold px-4 py-3 rounded-lg transition text-center text-sm inline-block">
                     ✅ Readiness Check
                   </a>
                 </div>
