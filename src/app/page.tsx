@@ -66,27 +66,27 @@ export default function Home() {
             <div className="grid md:grid-cols-4 gap-6 mb-10 max-w-4xl mx-auto">
               <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">12 Jahre</div>
-                <div className="text-sm text-white">U.S.-Marktaufbau Erfahrung</div>
+                <div className="text-sm text-gray-800">U.S.-Marktaufbau Erfahrung</div>
               </div>
               <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">#1</div>
-                <div className="text-sm text-white">Profitabelste Niederlassung ausgebaut</div>
+                <div className="text-sm text-gray-800">Profitabelste Niederlassung ausgebaut</div>
               </div>
               <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
-                <div className="text-sm text-white">U.S.-Partnernetzwerk</div>
+                <div className="text-sm text-gray-800">U.S.-Partnernetzwerk</div>
               </div>
               <div className="bg-gray-100 p-4 rounded-lg shadow">
                 <div className="text-2xl font-bold text-aversis-blue">Dual</div>
-                <div className="text-sm text-white">Schweiz-USA Staatsbürger</div>
+                <div className="text-sm text-gray-800">Schweiz-USA Staatsbürger</div>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <a href="/kontakt" className="btn-primary text-lg px-8 py-4 text-center">
+              <a href="/kontakt" className="btn-primary text-lg px-8 py-4 text-center flex items-center justify-center">
                 Unverbindliches Erstgespräch
               </a>
-              <a href="/us-readiness-check" className="bg-aversis-blue text-white hover:bg-blue-700 font-semibold px-8 py-4 rounded-lg transition text-center inline-block text-lg">
+              <a href="/us-readiness-check" className="bg-aversis-blue text-white hover:bg-blue-700 font-semibold px-8 py-4 rounded-lg transition text-center inline-block text-lg hover:-translate-y-0.5 hover:shadow-lg">
                 Expansions-Readiness Check
               </a>
             </div>
