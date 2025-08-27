@@ -100,7 +100,7 @@ export default function Home() {
               U.S.-Marktchancen strategisch nutzen
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              39% Zölle verwandeln sich in 52 Milliarden CHF Marktpotenzial - wenn Sie es richtig angehen
+              Lokale Präsenz schafft Vertrauen - amerikanische Kunden kaufen von amerikanischen Standorten
             </p>
           </div>
 
