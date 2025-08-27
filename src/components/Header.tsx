@@ -43,18 +43,28 @@ export default function Header() {
             >
               Philosophie
             </Link>
-            <a 
-              href="/#uber-stephan" 
-              className="nav-link font-medium text-base"
+            <button 
+              onClick={() => {
+                const element = document.getElementById('uber-stephan')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
               Über Stephan
-            </a>
-            <a 
-              href="#footer" 
-              className="nav-link font-medium text-base"
+            </button>
+            <button 
+              onClick={() => {
+                const element = document.getElementById('footer')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
               Kontakt
-            </a>
+            </button>
             
             {/* CTA Button */}
             <Link href="/kontakt" className="btn-primary ml-4">
@@ -101,20 +111,30 @@ export default function Header() {
               >
                 Philosophie
               </Link>
-              <a 
-                href="/#uber-stephan" 
-                className="nav-link font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
+              <button 
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  const element = document.getElementById('uber-stephan')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+                className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
                 Über Stephan
-              </a>
-              <a 
-                href="#footer" 
-                className="nav-link font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
+              </button>
+              <button 
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  const element = document.getElementById('footer')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+                className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
                 Kontakt
-              </a>
+              </button>
               <Link 
                 href="/kontakt" 
                 className="btn-primary w-fit mt-4 inline-block"
