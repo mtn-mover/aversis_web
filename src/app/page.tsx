@@ -467,12 +467,13 @@ export default function Home() {
           {/* Main CTA */}
           <div className="bg-gray-100/80 rounded-3xl p-8 lg:p-12 mb-12 max-w-4xl mx-auto shadow-lg backdrop-blur-sm">
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-white mb-4 drop-shadow-lg">
-                Kostenloses Assessment
+              <h3 className="text-3xl font-bold text-aversis-dark mb-4">
+                Kostenloses Erstgespräch
               </h3>
-              <p className="text-xl text-white mb-8 leading-relaxed drop-shadow-md">
-                <strong>Ihre Marktchancen, Aufwand und nächste Schritte</strong><br/>
-                Exklusiv für Schweizer KMU
+              <p className="text-xl text-gray-800 mb-8 leading-relaxed">
+                <strong>Verstehen wir Ihre U.S.-Expansionsziele</strong><br/>
+                Erste Einschätzung zu Machbarkeit, Aufwand und Zeitrahmen<br/>
+                <span className="text-lg">Exklusiv für Schweizer KMU</span>
               </p>
               
               <a href="/kontakt" className="bg-aversis-orange hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block">
