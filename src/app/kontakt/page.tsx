@@ -80,6 +80,8 @@ export default function Kontakt() {
       
       if (response.ok) {
         setIsSubmitted(true)
+        // Scroll to top to show success message
+        window.scrollTo({ top: 0, behavior: 'smooth' })
         // Reset form
         setFormData({
           name: '',
