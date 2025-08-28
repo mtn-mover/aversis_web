@@ -436,7 +436,7 @@ export default function Home() {
 
 
       {/* Urgency CTA Section - US Manufacturing Setup */}
-      <section id="projektablauf" className="relative py-20 lg:py-28">
+      <section className="relative py-20 lg:py-28">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
