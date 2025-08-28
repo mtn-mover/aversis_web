@@ -16,7 +16,7 @@ export default function AGB() {
             <div>
               <h2 className="text-2xl font-semibold text-aversis-dark mb-4">§ 1 Geltungsbereich</h2>
               <p className="mb-4">
-                (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Geschäftsbeziehungen zwischen der aversis GmbH, Untere Bönigstrasse 20, 3800 Interlaken, Schweiz (nachfolgend "aversis") und ihren Kunden (nachfolgend "Auftraggeber").
+                (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend &ldquo;AGB&rdquo;) gelten für alle Geschäftsbeziehungen zwischen der aversis GmbH, Untere Bönigstrasse 20, 3800 Interlaken, Schweiz (nachfolgend &ldquo;aversis&rdquo;) und ihren Kunden (nachfolgend &ldquo;Auftraggeber&rdquo;).
               </p>
               <p>
                 (2) Abweichende, entgegenstehende oder ergänzende Allgemeine Geschäftsbedingungen werden, selbst bei Kenntnis, nicht Vertragsbestandteil, es sei denn, ihrer Geltung wird ausdrücklich schriftlich zugestimmt.

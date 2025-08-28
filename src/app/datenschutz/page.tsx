@@ -117,7 +117,7 @@ export default function Datenschutz() {
               
               <h3 className="text-lg font-semibold text-aversis-dark mb-2">Google reCAPTCHA</h3>
               <p className="mb-4">
-                Wir nutzen "Google reCAPTCHA" (im Folgenden "reCAPTCHA") auf dieser Website. Anbieter ist die Google Ireland Limited ("Google"), Gordon House, Barrow Street, Dublin 4, Irland.
+                Wir nutzen &ldquo;Google reCAPTCHA&rdquo; (im Folgenden &ldquo;reCAPTCHA&rdquo;) auf dieser Website. Anbieter ist die Google Ireland Limited (&ldquo;Google&rdquo;), Gordon House, Barrow Street, Dublin 4, Irland.
               </p>
               
               <p className="mb-4">

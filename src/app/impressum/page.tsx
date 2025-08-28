@@ -31,7 +31,8 @@ export default function Impressum() {
             <div>
               <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Kontakt</h2>
               <p>
-                Telefon: +41 33 823 05 09<response clipped><NOTE>To save on context length, I've clipped this response to just the last 20% of total text</NOTE>l: info@aversis.com<br/>
+                Telefon: +41 33 823 05 09<br/>
+                E-Mail: info@aversis.com<br/>
                 Website: www.aversis.com
               </p>
             </div>
