@@ -455,7 +455,7 @@ export default function Home() {
           <div className="mb-12">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Starten Sie Ihre U.S.-Expansion<br/>
-              <span className="text-aversis-orange">mit bewährter Expertise</span>
+              <span className="text-yellow-300">mit bewährter Expertise</span>
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
               Während Ihre Konkurrenz noch zögert, sichern Sie sich Ihren Wettbewerbsvorteil im U.S.-Markt. 
@@ -465,12 +465,12 @@ export default function Home() {
 
 
           {/* Main CTA */}
-          <div className="bg-gray-100/80 rounded-3xl p-8 lg:p-12 mb-12 max-w-4xl mx-auto shadow-lg backdrop-blur-sm">
+          <div className="bg-gray-100/80 rounded-2xl p-6 lg:p-8 mb-12 max-w-3xl mx-auto shadow-lg backdrop-blur-sm">
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-aversis-dark mb-4">
+              <h3 className="text-2xl font-bold text-aversis-dark mb-3">
                 Kostenloses Erstgespräch
               </h3>
-              <p className="text-xl text-gray-800 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
                 <strong>Verstehen wir Ihre U.S.-Expansionsziele</strong><br/>
                 Erste Einschätzung zu Machbarkeit, Aufwand und Zeitrahmen<br/>
                 <span className="text-lg">Exklusiv für Schweizer KMU</span>
