@@ -99,7 +99,7 @@ export function formatContactEmail(formData: any) {
           
           <div class="section">
             <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">Unternehmensdaten</h3>
-            <div class="value"><span class="label">Unternehmensgröße:</span> ${formData.companySize || 'Nicht angegeben'}</div>
+            <div class="value"><span class="label">Unternehmensgrösse:</span> ${formData.companySize || 'Nicht angegeben'}</div>
             <div class="value"><span class="label">Aktueller U.S.-Bezug:</span> ${formData.usExport || 'Nicht angegeben'}</div>
           </div>
           
@@ -128,7 +128,7 @@ E-Mail: ${formData.email}
 Telefon: ${formData.phone}
 
 UNTERNEHMENSDATEN:
-Unternehmensgröße: ${formData.companySize || 'Nicht angegeben'}
+Unternehmensgrösse: ${formData.companySize || 'Nicht angegeben'}
 Aktueller U.S.-Bezug: ${formData.usExport || 'Nicht angegeben'}
 
 U.S.-INTERESSE:

@@ -290,7 +290,7 @@ export default function Kontakt() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 mb-2">
-                        Unternehmensgröße
+                        Unternehmensgrösse
                       </label>
                       <select
                         id="companySize"

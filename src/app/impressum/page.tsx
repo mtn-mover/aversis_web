@@ -61,7 +61,7 @@ export default function Impressum() {
 
 
             <div>
-              <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+              <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Verantwortlich für den Inhalt nach Art. 55 Abs. 2 RStV</h2>
               <p>
                 Stephan Zwahlen<br/>
                 Untere Bönigstrasse 20<br/>
@@ -75,7 +75,7 @@ export default function Impressum() {
               
               <h3 className="text-lg font-semibold text-aversis-dark mb-2 mt-4">Haftung für Inhalte</h3>
               <p className="mb-4">
-                Als Diensteanbieter sind wir gemäss § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                Als Diensteanbieter sind wir gemäss Art. 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach Art.Art. 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
               </p>
               
               <h3 className="text-lg font-semibold text-aversis-dark mb-2">Haftung für Links</h3>
