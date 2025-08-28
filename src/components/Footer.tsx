@@ -125,16 +125,9 @@ export default function Footer() {
 
         {/* Bottom Border */}
         <div className="border-t border-gray-300 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-600 text-sm mb-4 md:mb-0">
+          <div className="flex justify-center">
+            <div className="text-gray-600 text-sm">
               © {new Date().getFullYear()} aversis GmbH. Alle Rechte vorbehalten.
-            </div>
-            <div className="flex items-center text-gray-600 text-sm">
-              <span className="mr-4">Schweizweit verfügbar</span>
-              <div className="flex items-center">
-                <div className="w-4 h-4 bg-red-600 rounded-sm mr-1"></div>
-                <span className="text-xs">Made in Switzerland</span>
-              </div>
             </div>
           </div>
         </div>
