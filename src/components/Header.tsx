@@ -3,9 +3,12 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isEnglish = pathname.startsWith('/en')
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
@@ -26,10 +29,10 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/" 
+              href={isEnglish ? "/en" : "/"} 
               className="nav-link font-medium text-base"
             >
-              Home
+              {isEnglish ? "Home" : "Home"}
             </Link>
             <button 
               onClick={() => {
@@ -40,7 +43,7 @@ export default function Header() {
               }}
               className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              U.S.-Marktaufbau
+              {isEnglish ? "U.S. Market Entry" : "U.S.-Marktaufbau"}
             </button>
             <button 
               onClick={() => {
@@ -51,7 +54,7 @@ export default function Header() {
               }}
               className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              Projektablauf
+              {isEnglish ? "Process" : "Projektablauf"}
             </button>
             <button 
               onClick={() => {
@@ -62,7 +65,7 @@ export default function Header() {
               }}
               className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              Über uns
+              {isEnglish ? "About Us" : "Über uns"}
             </button>
             <button 
               onClick={() => {
@@ -73,12 +76,28 @@ export default function Header() {
               }}
               className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              Kontakt
+              {isEnglish ? "Contact" : "Kontakt"}
             </button>
             
+            {/* Language Switcher */}
+            <div className="flex items-center space-x-2 ml-4">
+              <Link 
+                href={pathname.replace(/^\/en/, '') || '/'}
+                className={`px-3 py-1 rounded transition-colors ${!isEnglish ? 'bg-aversis-orange text-white' : 'text-gray-600 hover:text-aversis-orange'}`}
+              >
+                DE
+              </Link>
+              <Link 
+                href={pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`}
+                className={`px-3 py-1 rounded transition-colors ${isEnglish ? 'bg-aversis-orange text-white' : 'text-gray-600 hover:text-aversis-orange'}`}
+              >
+                EN
+              </Link>
+            </div>
+            
             {/* CTA Button */}
-            <Link href="/kontakt" className="btn-primary ml-4">
-              Erstgespräch
+            <Link href={isEnglish ? "/en/kontakt" : "/kontakt"} className="btn-primary ml-4">
+              {isEnglish ? "Initial Consultation" : "Erstgespräch"}
             </Link>
           </nav>
 
@@ -101,11 +120,11 @@ export default function Header() {
           <div className="md:hidden border-t border-gray-100 py-4 bg-white">
             <div className="flex flex-col space-y-4">
               <Link 
-                href="/" 
+                href={isEnglish ? "/en" : "/"} 
                 className="nav-link font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                {isEnglish ? "Home" : "Home"}
               </Link>
               <button 
                 onClick={() => {
@@ -117,7 +136,7 @@ export default function Header() {
                 }}
                 className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                U.S.-Marktaufbau
+                {isEnglish ? "U.S. Market Entry" : "U.S.-Marktaufbau"}
               </button>
               <button 
                 onClick={() => {
@@ -129,7 +148,7 @@ export default function Header() {
                 }}
                 className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                Projektablauf
+                {isEnglish ? "Process" : "Projektablauf"}
               </button>
               <button 
                 onClick={() => {
@@ -141,7 +160,7 @@ export default function Header() {
                 }}
                 className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                Über uns
+                {isEnglish ? "About Us" : "Über uns"}
               </button>
               <button 
                 onClick={() => {
@@ -153,14 +172,32 @@ export default function Header() {
                 }}
                 className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                Kontakt
+                {isEnglish ? "Contact" : "Kontakt"}
               </button>
+              {/* Language Switcher Mobile */}
+              <div className="flex items-center space-x-2 mt-4">
+                <Link 
+                  href={pathname.replace(/^\/en/, '') || '/'}
+                  className={`px-3 py-1 rounded transition-colors ${!isEnglish ? 'bg-aversis-orange text-white' : 'text-gray-600 hover:text-aversis-orange'}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  DE
+                </Link>
+                <Link 
+                  href={pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`}
+                  className={`px-3 py-1 rounded transition-colors ${isEnglish ? 'bg-aversis-orange text-white' : 'text-gray-600 hover:text-aversis-orange'}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  EN
+                </Link>
+              </div>
+              
               <Link 
-                href="/kontakt" 
+                href={isEnglish ? "/en/kontakt" : "/kontakt"} 
                 className="btn-primary w-fit mt-4 inline-block"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Erstgespräch
+                {isEnglish ? "Initial Consultation" : "Erstgespräch"}
               </Link>
             </div>
           </div>
