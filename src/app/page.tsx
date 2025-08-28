@@ -469,48 +469,12 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-left">
                 <h3 className="text-3xl font-bold text-aversis-dark mb-6">
-                  Kostenlose U.S.-Markt Machbarkeitsstudie
+                  Kostenloses Assessment
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  <strong className="text-aversis-orange">90 Minuten strategische U.S.-Marktbewertung</strong><br/>
-                  Exklusiv für Schweizer Fertigungsunternehmen ab 20 Mitarbeitern
+                  <strong className="text-aversis-orange">Ihre Marktchancen, Aufwand und nächste Schritte</strong><br/>
+                  Exklusiv für Schweizer KMU
                 </p>
-                
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <strong className="text-aversis-dark">U.S.-Marktpotenzial Assessment:</strong><br/>
-                      <span className="text-gray-600 text-sm">Analyse Ihrer spezifischen Marktchancen</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <strong className="text-aversis-dark">ROI-Schnellberechnung:</strong><br/>
-                      <span className="text-gray-600 text-sm">Kostenschätzung vs. erwartete Erträge</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center mr-3 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <strong className="text-aversis-dark">Nächste Schritte Roadmap:</strong><br/>
-                      <span className="text-gray-600 text-sm">Konkreter Zeitplan für Ihren U.S.-Markteintritt</span>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div className="text-center lg:border-l lg:border-gray-200 lg:pl-12">
@@ -519,9 +483,9 @@ export default function Home() {
                   <div className="text-sm text-red-700">für Starttermine 2026 verfügbar</div>
                 </div>
 
-                <button className="bg-gradient-to-r from-aversis-orange to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full mb-4">
-                  🚀 Machbarkeitsstudie sichern (90 Min)
-                </button>
+                <a href="/kontakt" className="bg-gradient-to-r from-aversis-orange to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full mb-4 inline-block">
+                  Erstgespräch buchen
+                </a>
                 
                 <div className="text-xs text-gray-500 mb-4">
                   Wert: CHF 2&apos;500 • Heute kostenlos
