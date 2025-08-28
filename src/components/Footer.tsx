@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-600 mb-6 max-w-md leading-relaxed" itemProp="description">
-              Spezialist für US-Marktaufbau Schweizer KMU. Projektbasierte Begleitung von der Machbarkeitsstudie bis zur operativen Selbstständigkeit in Amerika.
+              Spezialist für U.S.-Marktaufbau Schweizer KMU. Projektbasierte Begleitung von der Machbarkeitsstudie bis zur operativen Selbstständigkeit in Amerika.
             </p>
             
             <div className="space-y-3 text-gray-600">
@@ -63,27 +63,27 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-aversis-dark">Leistungen</h4>
             <ul className="space-y-3 text-gray-600">
               <li>
-                <Link href="/services" className="hover:text-aversis-orange transition-colors">
-                  US-Machbarkeitsstudien
+                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
+                  U.S.-Machbarkeitsstudien
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-aversis-orange transition-colors">
+                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
                   Standortwahl & Setup
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-aversis-orange transition-colors">
+                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
                   Marktaufbau & Expansion
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-aversis-orange transition-colors">
+                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
                   Betriebsführung & Übergabe
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-aversis-orange transition-colors">
+                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
                   Kulturelle Integration
                 </Link>
               </li>
@@ -95,12 +95,12 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-aversis-dark">Unternehmen</h4>
             <ul className="space-y-3 text-gray-600">
               <li>
-                <Link href="/about" className="hover:text-aversis-orange transition-colors">
-                  Über uns
+                <Link href="/#uber-stephan" className="hover:text-aversis-orange transition-colors">
+                  Über Stephan Zwahlen
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-aversis-orange transition-colors">
+                <Link href="/#footer" className="hover:text-aversis-orange transition-colors">
                   Kontakt
                 </Link>
               </li>
