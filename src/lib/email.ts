@@ -33,7 +33,7 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: `"Aversis Kontaktformular" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
+      from: `"aversis Kontaktformular" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
       to,
       subject,
       text,
