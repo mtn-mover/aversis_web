@@ -59,13 +59,6 @@ export default function Impressum() {
               </p>
             </div>
 
-            <div>
-              <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Umsatzsteuer-ID</h2>
-              <p>
-                Umsatzsteuer-Identifikationsnummer gemäss §27a Umsatzsteuergesetz:<br/>
-                CHE-109.706.696 MWST
-              </p>
-            </div>
 
             <div>
               <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
