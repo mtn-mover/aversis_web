@@ -196,7 +196,7 @@ export function formatConfirmationEmail(formData: any) {
           </ul>
           
           <div class="signature">
-            <p>Mit besten Grüssen aus der Schweiz</p>
+            <p>Freundliche Grüsse</p>
             <p><strong>Stephan Zwahlen</strong><br>
             Interim Manager für U.S.-Marktaufbau<br>
             aversis GmbH</p>
@@ -239,7 +239,7 @@ Ihre Angaben im Überblick:
 - Position: ${formData.position}  
 - U.S.-Interesse: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
 
-Mit besten Grüssen aus der Schweiz
+Freundliche Grüsse
 Stephan Zwahlen
 Interim Manager für U.S.-Marktaufbau
 aversis GmbH
