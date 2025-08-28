@@ -1,3 +1,5 @@
+'use client'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -8,6 +10,17 @@ export default function Impressum() {
       
       <section className="py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-8">
+            <button 
+              onClick={() => window.history.back()}
+              className="flex items-center text-aversis-orange hover:text-orange-600 transition-colors mb-6"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Zurück
+            </button>
+          </div>
           <h1 className="text-4xl font-bold text-aversis-dark mb-12">Impressum</h1>
           
           <div className="space-y-8 text-gray-600 leading-relaxed">
@@ -40,8 +53,9 @@ export default function Impressum() {
             <div>
               <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Unternehmensregistereintrag</h2>
               <p>
-                Handelsregister: Kanton Bern<br/>
-                Registernummer: CHE-XXX.XXX.XXX
+                UID: CHE-109.706.696<br/>
+                CH-ID: CH-092-4015601-0<br/>
+                EHRA-ID: 684592
               </p>
             </div>
 
@@ -49,7 +63,7 @@ export default function Impressum() {
               <h2 className="text-2xl font-semibold text-aversis-dark mb-4">Umsatzsteuer-ID</h2>
               <p>
                 Umsatzsteuer-Identifikationsnummer gemäss §27a Umsatzsteuergesetz:<br/>
-                CHE-XXX.XXX.XXX MWST
+                CHE-109.706.696 MWST
               </p>
             </div>
 
