@@ -100,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* Problem/Opportunity Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section id="services" className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
@@ -436,7 +436,7 @@ export default function Home() {
 
 
       {/* Urgency CTA Section - US Manufacturing Setup */}
-      <section className="relative py-20 lg:py-28">
+      <section id="projektablauf" className="relative py-20 lg:py-28">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 

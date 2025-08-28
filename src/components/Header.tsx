@@ -31,18 +31,28 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link 
-              href="/services" 
-              className="nav-link font-medium text-base"
+            <button 
+              onClick={() => {
+                const element = document.getElementById('services')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              Services
-            </Link>
-            <Link 
-              href="/philosophie" 
-              className="nav-link font-medium text-base"
+              U.S.-Marktaufbau
+            </button>
+            <button 
+              onClick={() => {
+                const element = document.getElementById('projektablauf')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+              className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              Philosophie
-            </Link>
+              Projektablauf
+            </button>
             <button 
               onClick={() => {
                 const element = document.getElementById('uber-stephan')
@@ -52,7 +62,7 @@ export default function Header() {
               }}
               className="nav-link font-medium text-base bg-transparent border-none cursor-pointer"
             >
-              Über Stephan
+              Über uns
             </button>
             <button 
               onClick={() => {
@@ -97,20 +107,30 @@ export default function Header() {
               >
                 Home
               </Link>
-              <Link 
-                href="/services" 
-                className="nav-link font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
+              <button 
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  const element = document.getElementById('services')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+                className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                Services
-              </Link>
-              <Link 
-                href="/philosophie" 
-                className="nav-link font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
+                U.S.-Marktaufbau
+              </button>
+              <button 
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  const element = document.getElementById('projektablauf')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+                className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                Philosophie
-              </Link>
+                Projektablauf
+              </button>
               <button 
                 onClick={() => {
                   setIsMenuOpen(false)
@@ -121,7 +141,7 @@ export default function Header() {
                 }}
                 className="nav-link font-medium py-2 bg-transparent border-none cursor-pointer text-left"
               >
-                Über Stephan
+                Über uns
               </button>
               <button 
                 onClick={() => {
