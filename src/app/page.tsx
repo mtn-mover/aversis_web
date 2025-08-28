@@ -436,8 +436,20 @@ export default function Home() {
 
 
       {/* Urgency CTA Section - US Manufacturing Setup */}
-      <section className="py-20 lg:py-28 bg-gradient-to-r from-red-600 via-blue-600 to-blue-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <section className="relative py-20 lg:py-28">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/industrial_building.jpg"
+            alt="Industrial Building Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           
           {/* Urgency Header */}
           <div className="mb-12">
