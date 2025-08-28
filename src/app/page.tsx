@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Services Section - Interim Management Packages */}
-      <section className="py-20 lg:py-28 bg-gradient-to-r from-gray-50 to-slate-100">
+      <section id="projektablauf" className="py-20 lg:py-28 bg-gradient-to-r from-gray-50 to-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
