@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import CookieBanner from '@/components/CookieBanner'
 
 export const metadata: Metadata = {
   title: 'Aversis GmbH - U.S.-Marktaufbau für Schweizer KMU',
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="de">
       <body className="antialiased">
         {children}
+        <CookieBanner />
       </body>
     </html>
   )
