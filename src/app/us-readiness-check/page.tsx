@@ -19,7 +19,7 @@ const questions: Question[] = [
   {
     id: 'revenue',
     text: 'Wie hoch ist Ihr aktueller Jahresumsatz?',
-    category: 'Unternehmensgröße',
+    category: 'Unternehmensgrösse',
     weight: 3,
     options: [
       { text: 'Unter CHF 5M', score: 1 },
