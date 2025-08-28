@@ -1,7 +1,12 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+  const isEnglish = pathname.startsWith('/en')
   return (
     <footer id="footer" className="bg-gray-100 text-aversis-dark" itemScope itemType="http://schema.org/LocalBusiness">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -22,7 +27,10 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-600 mb-6 max-w-md leading-relaxed" itemProp="description">
-              Spezialist für U.S.-Marktaufbau Schweizer KMU. Projektbasierte Begleitung von der Machbarkeitsstudie bis zur operativen Selbstständigkeit in Amerika.
+              {isEnglish 
+                ? "Specialist for U.S. market entry of Swiss SMEs. Project-based support from feasibility study to operational independence in America."
+                : "Spezialist für U.S.-Marktaufbau Schweizer KMU. Projektbasierte Begleitung von der Machbarkeitsstudie bis zur operativen Selbstständigkeit in Amerika."
+              }
             </p>
             
             <div className="space-y-3 text-gray-600">
@@ -60,31 +68,33 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-aversis-dark">Leistungen</h4>
+            <h4 className="text-lg font-semibold mb-6 text-aversis-dark">
+              {isEnglish ? "Services" : "Leistungen"}
+            </h4>
             <ul className="space-y-3 text-gray-600">
               <li>
-                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
-                  U.S.-Machbarkeitsstudien
+                <Link href={isEnglish ? "/en#services" : "/#services"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "U.S. Feasibility Studies" : "U.S.-Machbarkeitsstudien"}
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
-                  Standortwahl & Setup
+                <Link href={isEnglish ? "/en#services" : "/#services"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "Location Selection & Setup" : "Standortwahl & Setup"}
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
-                  Marktaufbau & Expansion
+                <Link href={isEnglish ? "/en#services" : "/#services"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "Market Development & Expansion" : "Marktaufbau & Expansion"}
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
-                  Betriebsführung & Übergabe
+                <Link href={isEnglish ? "/en#services" : "/#services"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "Operations Management & Handover" : "Betriebsführung & Übergabe"}
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-aversis-orange transition-colors">
-                  Kulturelle Integration
+                <Link href={isEnglish ? "/en#services" : "/#services"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "Cultural Integration" : "Kulturelle Integration"}
                 </Link>
               </li>
             </ul>
@@ -92,16 +102,18 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-aversis-dark">Unternehmen</h4>
+            <h4 className="text-lg font-semibold mb-6 text-aversis-dark">
+              {isEnglish ? "Company" : "Unternehmen"}
+            </h4>
             <ul className="space-y-3 text-gray-600">
               <li>
-                <Link href="/#uber-stephan" className="hover:text-aversis-orange transition-colors">
-                  Über uns
+                <Link href={isEnglish ? "/en#uber-stephan" : "/#uber-stephan"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "About Us" : "Über uns"}
                 </Link>
               </li>
               <li>
-                <Link href="/#footer" className="hover:text-aversis-orange transition-colors">
-                  Kontakt
+                <Link href={isEnglish ? "/en#footer" : "/#footer"} className="hover:text-aversis-orange transition-colors">
+                  {isEnglish ? "Contact" : "Kontakt"}
                 </Link>
               </li>
               <li>
@@ -111,12 +123,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/datenschutz" className="hover:text-aversis-orange transition-colors">
-                  Datenschutz
+                  {isEnglish ? "Privacy Policy" : "Datenschutz"}
                 </Link>
               </li>
               <li>
                 <Link href="/agb" className="hover:text-aversis-orange transition-colors">
-                  AGB
+                  {isEnglish ? "Terms & Conditions" : "AGB"}
                 </Link>
               </li>
             </ul>
@@ -127,7 +139,7 @@ export default function Footer() {
         <div className="border-t border-gray-300 py-8">
           <div className="flex justify-center">
             <div className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} aversis GmbH. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} aversis GmbH. {isEnglish ? "All rights reserved." : "Alle Rechte vorbehalten."}
             </div>
           </div>
         </div>
