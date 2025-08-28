@@ -441,9 +441,6 @@ export default function Home() {
           
           {/* Urgency Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center bg-red-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              🚨 TARIFF IMPACT: 39% auf Schweizer Produkte
-            </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Starten Sie Ihre U.S.-Expansion<br/>
               <span className="text-yellow-300">mit bewährter Expertise</span>
@@ -454,38 +451,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Value Propositions Grid */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Strukturierter Interim-Ansatz</h3>
-              <p className="text-blue-100 text-sm">Definierte Projektphasen mit klaren Erfolgsmeilensteinen</p>
-            </div>
-            
-            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Limitierte Verfügbarkeit</h3>
-              <p className="text-blue-100 text-sm">Hands-on Begleitung mit intensiver Betreuung</p>
-            </div>
-            
-            <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Bewährte Methodik</h3>
-              <p className="text-blue-100 text-sm">Erprobte Playbooks aus 12 Jahren U.S.-Marktaufbau</p>
-            </div>
-          </div>
 
           {/* Main CTA */}
           <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto shadow-2xl">
@@ -564,31 +529,8 @@ export default function Home() {
 
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center items-center gap-8 text-blue-100 opacity-80">
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
-              <span>+41 33 823 05 09</span>
-            </div>
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-              </svg>
-              <span>stephan@aversis.com</span>
-            </div>
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-              </svg>
-              <span>Schweiz-USA Doppelbürger</span>
-            </div>
           </div>
 
-          {/* Final Urgency Message */}
-          <div className="mt-12 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-2xl inline-block font-bold">
-            ⏰ Frühe Reservierung für optimale Projektplanung • Wissenstransfer inklusive
-          </div>
         </div>
       </section>
 
