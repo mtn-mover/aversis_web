@@ -96,7 +96,7 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-600">
               <li>
                 <Link href="/#uber-stephan" className="hover:text-aversis-orange transition-colors">
-                  Über Stephan Zwahlen
+                  Über uns
                 </Link>
               </li>
               <li>
