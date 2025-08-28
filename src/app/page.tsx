@@ -455,7 +455,7 @@ export default function Home() {
           <div className="mb-12">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Starten Sie Ihre U.S.-Expansion<br/>
-              <span className="text-yellow-300">mit bewährter Expertise</span>
+              <span className="text-aversis-orange">mit bewährter Expertise</span>
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
               Während Ihre Konkurrenz noch zögert, sichern Sie sich Ihren Wettbewerbsvorteil im U.S.-Markt. 
@@ -465,41 +465,19 @@ export default function Home() {
 
 
           {/* Main CTA */}
-          <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto shadow-2xl">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-left">
-                <h3 className="text-3xl font-bold text-aversis-dark mb-6">
-                  Kostenloses Assessment
-                </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  <strong className="text-aversis-orange">Ihre Marktchancen, Aufwand und nächste Schritte</strong><br/>
-                  Exklusiv für Schweizer KMU
-                </p>
-              </div>
-
-              <div className="text-center lg:border-l lg:border-gray-200 lg:pl-12">
-                <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 mb-6">
-                  <div className="text-3xl font-bold text-red-600 mb-2">Nur noch 2 Plätze</div>
-                  <div className="text-sm text-red-700">für Starttermine 2026 verfügbar</div>
-                </div>
-
-                <a href="/kontakt" className="bg-gradient-to-r from-aversis-orange to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full mb-4 inline-block">
-                  Erstgespräch buchen
-                </a>
-                
-                <div className="text-xs text-gray-500 mb-4">
-                  Wert: CHF 2&apos;500 • Heute kostenlos
-                </div>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <a href="/roi-calculator" className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold px-4 py-3 rounded-lg transition text-center text-sm">
-                    📊 ROI Calculator
-                  </a>
-                  <a href="/us-readiness-check" className="bg-aversis-blue text-white hover:bg-blue-700 font-semibold px-4 py-3 rounded-lg transition text-center text-sm inline-block">
-                    ✅ Readiness Check
-                  </a>
-                </div>
-              </div>
+          <div className="bg-gray-100/80 rounded-3xl p-8 lg:p-12 mb-12 max-w-4xl mx-auto shadow-lg backdrop-blur-sm">
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-white mb-4 drop-shadow-lg">
+                Kostenloses Assessment
+              </h3>
+              <p className="text-xl text-white mb-8 leading-relaxed drop-shadow-md">
+                <strong>Ihre Marktchancen, Aufwand und nächste Schritte</strong><br/>
+                Exklusiv für Schweizer KMU
+              </p>
+              
+              <a href="/kontakt" className="bg-aversis-orange hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block">
+                Erstgespräch buchen
+              </a>
             </div>
           </div>
 
