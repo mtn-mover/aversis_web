@@ -440,7 +440,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/industrial_building.jpg"
+            src="/images/Industrial_building.jpg"
             alt="Industrial Building Background"
             fill
             className="object-cover"
