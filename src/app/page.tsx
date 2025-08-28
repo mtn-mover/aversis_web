@@ -417,7 +417,7 @@ export default function Home() {
 
             <div className="relative">
               <Image 
-                src="/images/steph_low_res_new.jpg"
+                src="/images/Steph_low res new.jpg"
                 alt="Stephan Zwahlen"
                 width={600}
                 height={600}
