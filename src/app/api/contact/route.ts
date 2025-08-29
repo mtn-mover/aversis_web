@@ -75,11 +75,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Determine language from form data or referer
+    const isEnglish = formData.language === 'en' || 
+                     (typeof formData.referer === 'string' && formData.referer.includes('/en'))
+    
     // Send confirmation email to user
-    const confirmationContent = formatConfirmationEmail(formData)
+    const confirmationContent = formatConfirmationEmail(formData, isEnglish)
+    const subject = isEnglish 
+      ? 'Confirmation of Your U.S. Market Entry Inquiry - aversis'
+      : 'Bestätigung Ihrer U.S.-Marktaufbau Anfrage - aversis'
+    
     const confirmationResult = await sendEmail({
       to: formData.email,
-      subject: 'Bestätigung Ihrer U.S.-Marktaufbau Anfrage - aversis',
+      subject: subject,
       text: confirmationContent.text,
       html: confirmationContent.html
     })

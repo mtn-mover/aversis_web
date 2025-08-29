@@ -75,7 +75,7 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, captchaToken }),
+        body: JSON.stringify({ ...formData, captchaToken, language: 'en' }),
       })
       
       if (response.ok) {

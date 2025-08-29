@@ -33,7 +33,7 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: `"aversis Kontaktformular" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
+      from: `"aversis Contact Form" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
       to,
       subject,
       text,
@@ -145,7 +145,10 @@ Zeitpunkt: ${new Date().toLocaleString('de-CH')}
   }
 }
 
-export function formatConfirmationEmail(formData: any) {
+export function formatConfirmationEmail(formData: any, isEnglish: boolean = false) {
+  if (isEnglish) {
+    return formatConfirmationEmailEnglish(formData)
+  }
   const htmlContent = `
     <!DOCTYPE html>
     <html>
@@ -249,6 +252,118 @@ aversis GmbH
 
 ---
 Diese E-Mail wurde automatisch generiert. Bei Fragen können Sie direkt auf diese E-Mail antworten.
+  `.trim()
+  
+  return {
+    html: htmlContent,
+    text: textContent
+  }
+}
+
+export function formatConfirmationEmailEnglish(formData: any) {
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .header { background: linear-gradient(135deg, #1e5f99, #ff7f00); color: white; padding: 30px; text-align: center; }
+          .content { padding: 30px; }
+          .highlight-box { background-color: #e3f2fd; border-left: 4px solid #1e5f99; padding: 20px; margin: 20px 0; }
+          .steps { background-color: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+          .footer { background-color: #f5f5f5; padding: 20px; text-align: center; font-size: 12px; color: #666; }
+          .signature { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee; }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+          <h2>🇨🇭🇺🇸 Thank You for Your U.S. Market Entry Inquiry!</h2>
+        </div>
+        
+        <div class="content">
+          <p>Dear <strong>${formData.name}</strong>,</p>
+          
+          <p>Thank you for your interest in our U.S. market entry services!</p>
+          
+          <div class="highlight-box">
+            <p><strong>✅ Your inquiry has been successfully submitted</strong></p>
+            <p>We will contact you <strong>within 24 hours</strong>.</p>
+          </div>
+          
+          <h3 style="color: #1e5f99;">What happens next?</h3>
+          <div class="steps">
+            <p><strong>1. Analysis of Your Inquiry</strong><br>
+            Our team reviews your specific U.S. market entry requirements</p>
+            
+            <p><strong>2. Personal Contact</strong><br>
+            Stephan Zwahlen will personally reach out to you</p>
+            
+            <p><strong>3. Appointment Scheduling</strong><br>
+            Joint scheduling for your non-binding initial consultation</p>
+          </div>
+          
+          <p><strong>Your details overview:</strong></p>
+          <ul>
+            <li><strong>Company:</strong> ${formData.company}</li>
+            <li><strong>Position:</strong> ${formData.position}</li>
+            <li><strong>U.S. Interest:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
+          </ul>
+          
+          <div class="signature">
+            <p>Best regards</p>
+            <p><strong>Stephan Zwahlen</strong><br>
+            Interim Manager for U.S. Market Entry<br>
+            aversis GmbH</p>
+            
+            <p>
+              📧 <a href="mailto:info@aversis.com">info@aversis.com</a><br>
+              📞 <a href="tel:+41338230509">+41 33 823 05 09</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="footer">
+          <p>This email was automatically generated. You can reply directly to this email if you have any questions.</p>
+        </div>
+      </body>
+    </html>
+  `
+  
+  const textContent = `
+Dear ${formData.name},
+
+Thank you for your interest in our U.S. market entry services!
+
+✅ Your inquiry has been successfully submitted
+We will contact you within 24 hours.
+
+What happens next?
+
+1. Analysis of Your Inquiry
+   Our team reviews your specific U.S. market entry requirements
+
+2. Personal Contact  
+   Stephan Zwahlen will personally reach out to you
+
+3. Appointment Scheduling
+   Joint scheduling for your non-binding initial consultation
+
+Your details overview:
+- Company: ${formData.company}
+- Position: ${formData.position}  
+- U.S. Interest: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
+
+Best regards
+Stephan Zwahlen
+Interim Manager for U.S. Market Entry
+aversis GmbH
+
+📧 info@aversis.com
+📞 +41 33 823 05 09
+
+---
+This email was automatically generated. You can reply directly to this email if you have any questions.
   `.trim()
   
   return {
