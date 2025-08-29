@@ -399,6 +399,7 @@ export default function Contact() {
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    hl="en"
                     onChange={(token) => {
                       console.log('reCAPTCHA token received:', token ? 'Valid' : 'Null')
                       setCaptchaToken(token)
