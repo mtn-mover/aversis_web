@@ -86,7 +86,7 @@ export function formatContactEmail(formData: ContactFormData) {
     'andere': 'Andere Herausforderung'
   }
 
-  const challengeLabel = challengeLabels[formData.challenge] || formData.challenge || 'Nicht angegeben'
+  const challengeLabel = formData.challenge ? (challengeLabels[formData.challenge] || formData.challenge) : 'Nicht angegeben'
 
   const htmlContent = `
     <!DOCTYPE html>
