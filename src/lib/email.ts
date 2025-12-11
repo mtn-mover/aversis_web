@@ -219,7 +219,7 @@ export function formatConfirmationEmail(formData: ContactFormData, isEnglish: bo
 
           <div class="signature">
             <p>Freundliche Grüsse</p>
-            <p><strong>Stephan Wahlen</strong><br>
+            <p><strong>Stephan Zwahlen</strong><br>
             Managing Director<br>
             Aversis GmbH</p>
 
@@ -262,7 +262,7 @@ Ihre Angaben im Überblick:
 - Thema: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
 
 Freundliche Grüsse
-Stephan Wahlen
+Stephan Zwahlen
 Managing Director
 Aversis GmbH
 
@@ -331,7 +331,7 @@ export function formatConfirmationEmailEnglish(formData: ContactFormData) {
 
           <div class="signature">
             <p>Best regards</p>
-            <p><strong>Stephan Wahlen</strong><br>
+            <p><strong>Stephan Zwahlen</strong><br>
             Managing Director<br>
             Aversis GmbH</p>
 
@@ -374,7 +374,7 @@ Your details overview:
 - Topic: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
 
 Best regards
-Stephan Wahlen
+Stephan Zwahlen
 Managing Director
 Aversis GmbH
 

@@ -225,7 +225,7 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <p className="text-amber-600 font-medium tracking-wider uppercase mb-4">Über mich</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                Stephan Wahlen
+                Stephan Zwahlen
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 20+ Jahre operative Führungserfahrung in der Schweizer Industrie.
@@ -236,7 +236,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="bg-white p-4 rounded-lg border border-slate-200">
                   <p className="text-3xl font-bold text-amber-500">+80%</p>
-                  <p className="text-sm text-slate-600">Revenue Growth bei swissplast AG</p>
+                  <p className="text-sm text-slate-600">Revenue Growth erzielt</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-slate-200">
                   <p className="text-3xl font-bold text-amber-500">20+</p>
@@ -255,7 +255,7 @@ export default function Home() {
               <div className="space-y-3 text-slate-600">
                 <p className="flex items-center gap-2">
                   <span className="text-amber-500">▸</span>
-                  Post-Merger Integration AKIM AG erfolgreich geleitet
+                  Post-Merger Integration erfolgreich geleitet
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="text-amber-500">▸</span>
