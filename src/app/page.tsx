@@ -24,11 +24,15 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-        {/* Abstract background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/aversis 3D Kugeln.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-900/75"></div>
         </div>
 
         <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -270,15 +274,11 @@ export default function Home() {
 
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div className="bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl aspect-square flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 bg-slate-400 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-5xl text-white font-bold">SW</span>
-                    </div>
-                    <p className="text-slate-600 text-sm">Managing Director</p>
-                    <p className="text-slate-800 font-semibold">Aversis GmbH</p>
-                  </div>
-                </div>
+                <img
+                  src="/images/Steph_low res new.jpg"
+                  alt="Stephan Zwahlen - Managing Director Aversis GmbH"
+                  className="rounded-2xl shadow-xl object-cover w-full aspect-square"
+                />
                 <div className="absolute -bottom-4 -right-4 bg-amber-500 text-slate-900 px-6 py-3 rounded-lg font-medium shadow-lg">
                   Praxis statt Theorie
                 </div>
