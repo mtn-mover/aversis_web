@@ -23,6 +23,16 @@ interface EmailOptions {
   html?: string
 }
 
+interface ContactFormData {
+  name: string
+  position: string
+  company: string
+  email: string
+  phone: string
+  challenge?: string
+  usInterest: string
+}
+
 export async function sendEmail({ to, subject, text, html }: EmailOptions) {
   try {
     // Check if email configuration is available
@@ -66,8 +76,7 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function formatContactEmail(formData: any) {
+export function formatContactEmail(formData: ContactFormData) {
   const challengeLabels: Record<string, string> = {
     'post-merger': 'Post-Merger Integration',
     'stagnation': 'Stagnierender Umsatz',
@@ -155,8 +164,7 @@ Zeitpunkt: ${new Date().toLocaleString('de-CH')}
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function formatConfirmationEmail(formData: any, isEnglish: boolean = false) {
+export function formatConfirmationEmail(formData: ContactFormData, isEnglish: boolean = false) {
   if (isEnglish) {
     return formatConfirmationEmailEnglish(formData)
   }
@@ -271,8 +279,7 @@ Diese E-Mail wurde automatisch generiert. Bei Fragen können Sie direkt auf dies
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function formatConfirmationEmailEnglish(formData: any) {
+export function formatConfirmationEmailEnglish(formData: ContactFormData) {
   const htmlContent = `
     <!DOCTYPE html>
     <html>
