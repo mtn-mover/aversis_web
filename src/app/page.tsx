@@ -277,7 +277,7 @@ export default function Home() {
                 <img
                   src="/images/Stephan_new.png"
                   alt="Stephan Zwahlen - Managing Director Aversis GmbH"
-                  className="rounded-2xl shadow-xl object-cover w-full aspect-square"
+                  className="rounded-2xl shadow-xl object-cover w-full aspect-[3/4] object-top scale-90"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-amber-500 text-slate-900 px-6 py-3 rounded-lg font-medium shadow-lg">
                   Praxis statt Theorie
