@@ -31,20 +31,20 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
     }
 
     const transporter = createTransporter()
-    
+
     const mailOptions = {
-      from: `"aversis Contact" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
+      from: `"Aversis Contact" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
       to,
       subject,
       text,
       html: html || text
     }
-    
+
     console.log('Attempting to send email to:', to, 'from:', mailOptions.from)
-    
+
     const info = await transporter.sendMail(mailOptions)
     console.log('Email sent successfully:', info.messageId, 'to:', to)
-    
+
     return {
       success: true,
       messageId: info.messageId
@@ -58,7 +58,7 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
       EMAIL_USER: !!process.env.EMAIL_USER,
       EMAIL_PASS: !!process.env.EMAIL_PASS
     })
-    
+
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error'
@@ -66,7 +66,19 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function formatContactEmail(formData: any) {
+  const challengeLabels: Record<string, string> = {
+    'post-merger': 'Post-Merger Integration',
+    'stagnation': 'Stagnierender Umsatz',
+    'fuehrung': 'Führungswechsel / Change',
+    'marketing': 'Marketing & Digitalisierung',
+    'kultur': 'Kulturwandel',
+    'andere': 'Andere Herausforderung'
+  }
+
+  const challengeLabel = challengeLabels[formData.challenge] || formData.challenge || 'Nicht angegeben'
+
   const htmlContent = `
     <!DOCTYPE html>
     <html>
@@ -74,51 +86,50 @@ export function formatContactEmail(formData: any) {
         <meta charset="utf-8">
         <style>
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          .header { background-color: #1e5f99; color: white; padding: 20px; text-align: center; }
+          .header { background-color: #1e293b; color: white; padding: 20px; text-align: center; }
           .content { padding: 20px; }
           .section { margin-bottom: 25px; }
-          .label { font-weight: bold; color: #1e5f99; }
+          .label { font-weight: bold; color: #f59e0b; }
           .value { margin-bottom: 10px; }
           .footer { background-color: #f5f5f5; padding: 15px; text-align: center; font-size: 12px; color: #666; }
         </style>
       </head>
       <body>
         <div class="header">
-          <h2>🇨🇭🇺🇸 Neue U.S.-Marktaufbau Anfrage</h2>
+          <h2>Neue Beratungsanfrage</h2>
         </div>
-        
+
         <div class="content">
           <div class="section">
-            <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">Kontaktdaten</h3>
+            <h3 style="color: #1e293b; border-bottom: 2px solid #f59e0b; padding-bottom: 5px;">Kontaktdaten</h3>
             <div class="value"><span class="label">Name:</span> ${formData.name}</div>
             <div class="value"><span class="label">Position:</span> ${formData.position}</div>
             <div class="value"><span class="label">Unternehmen:</span> ${formData.company}</div>
             <div class="value"><span class="label">E-Mail:</span> <a href="mailto:${formData.email}">${formData.email}</a></div>
             <div class="value"><span class="label">Telefon:</span> <a href="tel:${formData.phone}">${formData.phone}</a></div>
           </div>
-          
+
           <div class="section">
-            <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">Unternehmensdaten</h3>
-            <div class="value"><span class="label">Unternehmensgrösse:</span> ${formData.companySize || 'Nicht angegeben'}</div>
-            <div class="value"><span class="label">Aktueller U.S.-Bezug:</span> ${formData.usExport || 'Nicht angegeben'}</div>
+            <h3 style="color: #1e293b; border-bottom: 2px solid #f59e0b; padding-bottom: 5px;">Herausforderung</h3>
+            <div class="value"><span class="label">Bereich:</span> ${challengeLabel}</div>
           </div>
-          
+
           <div class="section">
-            <h3 style="color: #1e5f99; border-bottom: 2px solid #ff7f00; padding-bottom: 5px;">U.S.-Interesse</h3>
-            <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #ff7f00; white-space: pre-wrap;">${formData.usInterest}</div>
+            <h3 style="color: #1e293b; border-bottom: 2px solid #f59e0b; padding-bottom: 5px;">Nachricht</h3>
+            <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #f59e0b; white-space: pre-wrap;">${formData.usInterest}</div>
           </div>
         </div>
-        
+
         <div class="footer">
-          <p>Diese Anfrage wurde über das Kontaktformular auf aversis-web.vercel.app gesendet.</p>
+          <p>Diese Anfrage wurde über das Kontaktformular auf aversis.com gesendet.</p>
           <p>Zeitpunkt: ${new Date().toLocaleString('de-CH')}</p>
         </div>
       </body>
     </html>
   `
-  
+
   const textContent = `
-Neue Anfrage für U.S.-Marktaufbau
+Neue Beratungsanfrage
 
 KONTAKTDATEN:
 Name: ${formData.name}
@@ -127,24 +138,24 @@ Unternehmen: ${formData.company}
 E-Mail: ${formData.email}
 Telefon: ${formData.phone}
 
-UNTERNEHMENSDATEN:
-Unternehmensgrösse: ${formData.companySize || 'Nicht angegeben'}
-Aktueller U.S.-Bezug: ${formData.usExport || 'Nicht angegeben'}
+HERAUSFORDERUNG:
+${challengeLabel}
 
-U.S.-INTERESSE:
+NACHRICHT:
 ${formData.usInterest}
 
 ---
-Diese Anfrage wurde über das Kontaktformular auf aversis-web.vercel.app gesendet.
+Diese Anfrage wurde über das Kontaktformular auf aversis.com gesendet.
 Zeitpunkt: ${new Date().toLocaleString('de-CH')}
   `.trim()
-  
+
   return {
     html: htmlContent,
     text: textContent
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function formatConfirmationEmail(formData: any, isEnglish: boolean = false) {
   if (isEnglish) {
     return formatConfirmationEmailEnglish(formData)
@@ -156,110 +167,111 @@ export function formatConfirmationEmail(formData: any, isEnglish: boolean = fals
         <meta charset="utf-8">
         <style>
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          .header { background: linear-gradient(135deg, #1e5f99, #ff7f00); color: white; padding: 30px; text-align: center; }
+          .header { background: linear-gradient(135deg, #1e293b, #f59e0b); color: white; padding: 30px; text-align: center; }
           .content { padding: 30px; }
-          .highlight-box { background-color: #e3f2fd; border-left: 4px solid #1e5f99; padding: 20px; margin: 20px 0; }
-          .steps { background-color: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+          .highlight-box { background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 20px 0; }
+          .steps { background-color: #f1f5f9; padding: 20px; border-radius: 8px; margin: 20px 0; }
           .footer { background-color: #f5f5f5; padding: 20px; text-align: center; font-size: 12px; color: #666; }
           .signature { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee; }
         </style>
       </head>
       <body>
         <div class="header">
-          <h2>🇨🇭🇺🇸 Vielen Dank für Ihre U.S.-Marktaufbau Anfrage!</h2>
+          <h2>Vielen Dank für Ihre Anfrage!</h2>
         </div>
-        
+
         <div class="content">
           <p>Liebe(r) <strong>${formData.name}</strong>,</p>
-          
-          <p>herzlichen Dank für Ihr Interesse an unserem U.S.-Marktaufbau-Service!</p>
-          
+
+          <p>herzlichen Dank für Ihr Interesse an einer Zusammenarbeit mit Aversis!</p>
+
           <div class="highlight-box">
-            <p><strong>✅ Ihre Anfrage wurde erfolgreich übermittelt</strong></p>
-            <p>Wir werden uns <strong>innerhalb von 24 Stunden</strong> bei Ihnen melden.</p>
+            <p><strong>Ihre Anfrage wurde erfolgreich übermittelt</strong></p>
+            <p>Ich werde mich <strong>innerhalb von 24 Stunden</strong> persönlich bei Ihnen melden.</p>
           </div>
-          
-          <h3 style="color: #1e5f99;">Was passiert als Nächstes?</h3>
+
+          <h3 style="color: #1e293b;">Was passiert als Nächstes?</h3>
           <div class="steps">
-            <p><strong>1. Analyse Ihrer Anfrage</strong><br>
-            Unser Team prüft Ihre spezifischen U.S.-Marktaufbau-Anforderungen</p>
-            
+            <p><strong>1. Analyse Ihrer Situation</strong><br>
+            Ich schaue mir Ihre Anfrage im Detail an</p>
+
             <p><strong>2. Persönliche Kontaktaufnahme</strong><br>
-            Stephan Zwahlen meldet sich persönlich bei Ihnen</p>
-            
-            <p><strong>3. Terminvereinbarung</strong><br>
-            Gemeinsame Terminplanung für Ihr unverbindliches Erstgespräch</p>
+            Ich melde mich telefonisch oder per E-Mail bei Ihnen</p>
+
+            <p><strong>3. Erstgespräch</strong><br>
+            30 Minuten unverbindliches Gespräch - wir finden heraus, ob und wie ich Ihnen helfen kann</p>
           </div>
-          
+
           <p><strong>Ihre Angaben im Überblick:</strong></p>
           <ul>
             <li><strong>Unternehmen:</strong> ${formData.company}</li>
             <li><strong>Position:</strong> ${formData.position}</li>
-            <li><strong>U.S.-Interesse:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
+            <li><strong>Thema:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
           </ul>
-          
+
           <div class="signature">
             <p>Freundliche Grüsse</p>
-            <p><strong>Stephan Zwahlen</strong><br>
-            Interim Manager für U.S.-Marktaufbau<br>
-            aversis GmbH</p>
-            
+            <p><strong>Stephan Wahlen</strong><br>
+            Managing Director<br>
+            Aversis GmbH</p>
+
             <p>
-              📧 <a href="mailto:info@aversis.com">info@aversis.com</a><br>
-              📞 <a href="tel:+41338230509">+41 33 823 05 09</a>
+              info@aversis.com<br>
+              +41 33 823 05 09
             </p>
           </div>
         </div>
-        
+
         <div class="footer">
           <p>Diese E-Mail wurde automatisch generiert. Bei Fragen können Sie direkt auf diese E-Mail antworten.</p>
         </div>
       </body>
     </html>
   `
-  
+
   const textContent = `
 Liebe(r) ${formData.name},
 
-vielen Dank für Ihr Interesse an unserem U.S.-Marktaufbau-Service!
+vielen Dank für Ihr Interesse an einer Zusammenarbeit mit Aversis!
 
-✅ Ihre Anfrage wurde erfolgreich übermittelt
-Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.
+Ihre Anfrage wurde erfolgreich übermittelt.
+Ich werde mich innerhalb von 24 Stunden persönlich bei Ihnen melden.
 
 Was passiert als Nächstes?
 
-1. Analyse Ihrer Anfrage
-   Unser Team prüft Ihre spezifischen U.S.-Marktaufbau-Anforderungen
+1. Analyse Ihrer Situation
+   Ich schaue mir Ihre Anfrage im Detail an
 
-2. Persönliche Kontaktaufnahme  
-   Stephan Zwahlen meldet sich persönlich bei Ihnen
+2. Persönliche Kontaktaufnahme
+   Ich melde mich telefonisch oder per E-Mail bei Ihnen
 
-3. Terminvereinbarung
-   Gemeinsame Terminplanung für Ihr unverbindliches Erstgespräch
+3. Erstgespräch
+   30 Minuten unverbindliches Gespräch - wir finden heraus, ob und wie ich Ihnen helfen kann
 
 Ihre Angaben im Überblick:
 - Unternehmen: ${formData.company}
-- Position: ${formData.position}  
-- U.S.-Interesse: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
+- Position: ${formData.position}
+- Thema: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
 
 Freundliche Grüsse
-Stephan Zwahlen
-Interim Manager für U.S.-Marktaufbau
-aversis GmbH
+Stephan Wahlen
+Managing Director
+Aversis GmbH
 
-📧 info@aversis.com
-📞 +41 33 823 05 09
+info@aversis.com
++41 33 823 05 09
 
 ---
 Diese E-Mail wurde automatisch generiert. Bei Fragen können Sie direkt auf diese E-Mail antworten.
   `.trim()
-  
+
   return {
     html: htmlContent,
     text: textContent
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function formatConfirmationEmailEnglish(formData: any) {
   const htmlContent = `
     <!DOCTYPE html>
@@ -268,104 +280,104 @@ export function formatConfirmationEmailEnglish(formData: any) {
         <meta charset="utf-8">
         <style>
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          .header { background: linear-gradient(135deg, #1e5f99, #ff7f00); color: white; padding: 30px; text-align: center; }
+          .header { background: linear-gradient(135deg, #1e293b, #f59e0b); color: white; padding: 30px; text-align: center; }
           .content { padding: 30px; }
-          .highlight-box { background-color: #e3f2fd; border-left: 4px solid #1e5f99; padding: 20px; margin: 20px 0; }
-          .steps { background-color: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+          .highlight-box { background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 20px 0; }
+          .steps { background-color: #f1f5f9; padding: 20px; border-radius: 8px; margin: 20px 0; }
           .footer { background-color: #f5f5f5; padding: 20px; text-align: center; font-size: 12px; color: #666; }
           .signature { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee; }
         </style>
       </head>
       <body>
         <div class="header">
-          <h2>🇨🇭🇺🇸 Thank You for Your U.S. Market Entry Inquiry!</h2>
+          <h2>Thank You for Your Inquiry!</h2>
         </div>
-        
+
         <div class="content">
           <p>Dear <strong>${formData.name}</strong>,</p>
-          
-          <p>Thank you for your interest in our U.S. market entry services!</p>
-          
+
+          <p>Thank you for your interest in working with Aversis!</p>
+
           <div class="highlight-box">
-            <p><strong>✅ Your inquiry has been successfully submitted</strong></p>
-            <p>We will contact you <strong>within 24 hours</strong>.</p>
+            <p><strong>Your inquiry has been successfully submitted</strong></p>
+            <p>I will personally contact you <strong>within 24 hours</strong>.</p>
           </div>
-          
-          <h3 style="color: #1e5f99;">What happens next?</h3>
+
+          <h3 style="color: #1e293b;">What happens next?</h3>
           <div class="steps">
-            <p><strong>1. Analysis of Your Inquiry</strong><br>
-            Our team reviews your specific U.S. market entry requirements</p>
-            
+            <p><strong>1. Analysis of Your Situation</strong><br>
+            I will review your inquiry in detail</p>
+
             <p><strong>2. Personal Contact</strong><br>
-            Stephan Zwahlen will personally reach out to you</p>
-            
-            <p><strong>3. Appointment Scheduling</strong><br>
-            Joint scheduling for your non-binding initial consultation</p>
+            I will reach out to you by phone or email</p>
+
+            <p><strong>3. Initial Consultation</strong><br>
+            30-minute non-binding conversation - we'll find out if and how I can help you</p>
           </div>
-          
+
           <p><strong>Your details overview:</strong></p>
           <ul>
             <li><strong>Company:</strong> ${formData.company}</li>
             <li><strong>Position:</strong> ${formData.position}</li>
-            <li><strong>U.S. Interest:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
+            <li><strong>Topic:</strong> ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}</li>
           </ul>
-          
+
           <div class="signature">
             <p>Best regards</p>
-            <p><strong>Stephan Zwahlen</strong><br>
-            Interim Manager for U.S. Market Entry<br>
-            aversis GmbH</p>
-            
+            <p><strong>Stephan Wahlen</strong><br>
+            Managing Director<br>
+            Aversis GmbH</p>
+
             <p>
-              📧 <a href="mailto:info@aversis.com">info@aversis.com</a><br>
-              📞 <a href="tel:+41338230509">+41 33 823 05 09</a>
+              info@aversis.com<br>
+              +41 33 823 05 09
             </p>
           </div>
         </div>
-        
+
         <div class="footer">
           <p>This email was automatically generated. You can reply directly to this email if you have any questions.</p>
         </div>
       </body>
     </html>
   `
-  
+
   const textContent = `
 Dear ${formData.name},
 
-Thank you for your interest in our U.S. market entry services!
+Thank you for your interest in working with Aversis!
 
-✅ Your inquiry has been successfully submitted
-We will contact you within 24 hours.
+Your inquiry has been successfully submitted.
+I will personally contact you within 24 hours.
 
 What happens next?
 
-1. Analysis of Your Inquiry
-   Our team reviews your specific U.S. market entry requirements
+1. Analysis of Your Situation
+   I will review your inquiry in detail
 
-2. Personal Contact  
-   Stephan Zwahlen will personally reach out to you
+2. Personal Contact
+   I will reach out to you by phone or email
 
-3. Appointment Scheduling
-   Joint scheduling for your non-binding initial consultation
+3. Initial Consultation
+   30-minute non-binding conversation - we'll find out if and how I can help you
 
 Your details overview:
 - Company: ${formData.company}
-- Position: ${formData.position}  
-- U.S. Interest: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
+- Position: ${formData.position}
+- Topic: ${formData.usInterest.length > 100 ? formData.usInterest.substring(0, 100) + '...' : formData.usInterest}
 
 Best regards
-Stephan Zwahlen
-Interim Manager for U.S. Market Entry
-aversis GmbH
+Stephan Wahlen
+Managing Director
+Aversis GmbH
 
-📧 info@aversis.com
-📞 +41 33 823 05 09
+info@aversis.com
++41 33 823 05 09
 
 ---
 This email was automatically generated. You can reply directly to this email if you have any questions.
   `.trim()
-  
+
   return {
     html: htmlContent,
     text: textContent

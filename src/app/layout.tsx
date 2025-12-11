@@ -3,9 +3,9 @@ import './globals.css'
 import CookieBanner from '@/components/CookieBanner'
 
 export const metadata: Metadata = {
-  title: 'Aversis GmbH - U.S.-Marktaufbau für Schweizer KMU',
-  description: 'Strukturierter U.S.-Marktaufbau mit erfahrenem Interim Management. Von der Machbarkeitsstudie bis zur operativen Selbstständigkeit.',
-  keywords: 'U.S.-Marktaufbau, Interim Management, Schweizer KMU, USA Expansion, Manufacturing Setup, Executive Transformation',
+  title: 'Aversis GmbH - Kulturwandel, der sich im Umsatz zeigt',
+  description: 'Unternehmensberatung für Schweizer KMUs. Wir verbinden Kulturwandel mit modernem Marketing - für nachhaltiges Wachstum und messbare Ergebnisse.',
+  keywords: 'Unternehmensberatung, Kulturwandel, Transformation, Interim Management, Marketing, KMU, Schweiz, Change Management, Coaching',
   authors: [{ name: 'Aversis GmbH' }],
   icons: {
     icon: [
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     title: 'Aversis',
   },
   openGraph: {
-    title: 'Aversis GmbH - U.S.-Marktaufbau für Schweizer KMU',
-    description: 'Strukturierter U.S.-Marktaufbau mit erfahrenem Interim Management',
+    title: 'Aversis GmbH - Kulturwandel, der sich im Umsatz zeigt',
+    description: 'Unternehmensberatung für Schweizer KMUs. Kulturwandel und Marketing vereint.',
     url: 'https://aversis.com',
     siteName: 'Aversis',
     locale: 'de_CH',

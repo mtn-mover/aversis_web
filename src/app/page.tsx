@@ -1,495 +1,462 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Image from 'next/image'
+'use client';
+
+import { useState, useEffect } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
       <Header />
-      
-      {/* Hero Section - US Manufacturing Focus */}
-      <section className="relative py-20 lg:py-32">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/countryside_lowres.jpg"
-            alt="Countryside Background"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/20"></div>
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="flex justify-center items-center mb-8">
-              {/* Swiss to US Flag Animation */}
-              <div className="flex items-center gap-4 bg-gray-100/80 px-6 py-3 rounded-full shadow-lg">
-                {/* Swiss Flag - Quadratisch */}
-                <div className="relative">
-                  <Image 
-                    src="/images/swiss_flag.jpg" 
-                    alt="Schweizer Fahne" 
-                    width={40}
-                    height={40}
-                    className="rounded-sm shadow-sm"
-                  />
-                </div>
-                {/* Arrow */}
-                <svg className="w-6 h-6 text-aversis-blue animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-                {/* US Flag - Rechteckig */}
-                <div className="relative">
-                  <Image 
-                    src="/images/us_flag.svg" 
-                    alt="U.S.-Amerikanische Fahne" 
-                    width={60}
-                    height={40}
-                    className="rounded-sm shadow-sm"
-                  />
-                </div>
-              </div>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg bg-gray-100/50 px-6 py-4 rounded-lg inline-block">
-              <span className="text-aversis-blue">U.S.-Marktaufbau für</span><br/>
-              <span className="text-aversis-orange">Schweizer KMU&apos;s</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-white mb-6 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
-              <strong>Machbarkeitsstudie, Standortwahl, Aufbau und Betriebsführung</strong><br/>
-              Strukturierte Projektbegleitung mit praktischer U.S.-Erfahrung - von der Marktanalyse über Standortaufbau bis zur operativen Selbstständigkeit
-            </p>
-            
-            {/* Key Credibility Stats */}
-            <div className="grid md:grid-cols-4 gap-6 mb-10 max-w-4xl mx-auto">
-              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-orange">12 Jahre</div>
-                <div className="text-sm text-gray-800">U.S.-Marktaufbau Erfahrung</div>
-              </div>
-              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-blue">#1</div>
-                <div className="text-sm text-gray-800">Profitabelste Niederlassung ausgebaut</div>
-              </div>
-              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-orange">Etabliertes</div>
-                <div className="text-sm text-gray-800">U.S.-Partnernetzwerk</div>
-              </div>
-              <div className="bg-gray-100/80 p-4 rounded-lg shadow">
-                <div className="text-2xl font-bold text-aversis-blue">Dual</div>
-                <div className="text-sm text-gray-800">Schweiz-USA Staatsbürger</div>
-              </div>
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <a href="/kontakt" className="btn-primary text-lg px-8 py-4 text-center flex items-center justify-center">
-                Unverbindliches Erstgespräch
-              </a>
-              <a href="/us-readiness-check" className="bg-aversis-blue text-white hover:bg-blue-700 font-semibold px-8 py-4 rounded-lg transition text-center inline-block text-lg hover:-translate-y-0.5 hover:shadow-lg">
-                Expansions-Readiness Check
-              </a>
-            </div>
-            
-            <p className="mt-6 text-sm text-white drop-shadow-md">
-              Limitierte Verfügbarkeit - Hands-on Begleitung mit intensiver Betreuung - kontaktieren Sie uns frühzeitig!
-            </p>
+      {/* Hero Section */}
+      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+        {/* Abstract background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-amber-400 font-medium tracking-wider uppercase mb-6">Aversis GmbH - Unternehmensberatung</p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            Kulturwandel,<br />
+            <span className="text-amber-400">der sich im Umsatz zeigt.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Ihr Unternehmen steckt fest? Wir verbinden operative Transformation mit modernem Marketing -
+            und setzen um, statt nur zu beraten.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => scrollToSection('kontakt')}
+              className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Erstgespräch vereinbaren
+            </button>
+            <button
+              onClick={() => scrollToSection('ansatz')}
+              className="px-8 py-4 border-2 border-slate-400 hover:border-white text-white font-semibold rounded-lg transition-all duration-300"
+            >
+              Unser Ansatz
+            </button>
           </div>
         </div>
-        
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
       </section>
 
-      {/* Problem/Opportunity Section */}
-      <section id="services" className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Problem Section */}
+      <section id="problem" className="py-24 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-              U.S.-Marktchancen strategisch nutzen
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Kennen Sie das?
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Lokale Präsenz schafft Vertrauen - amerikanische Kunden kaufen von amerikanischen Standorten
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Die meisten Schweizer KMUs stecken irgendwann fest. Die Frage ist nur: Erkennen Sie es rechtzeitig?
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Opportunities */}
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-aversis-dark">Strategische Chancen</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🔄',
+                title: 'Post-Merger Chaos',
+                description: 'Zwei Unternehmen zusammengeführt, aber die Kulturen prallen aufeinander. Teams ziehen nicht am gleichen Strang.'
+              },
+              {
+                icon: '📉',
+                title: 'Stagnierender Umsatz',
+                description: 'Das Produkt stimmt, aber neue Kunden bleiben aus. Marketing läuft, bringt aber nichts Messbares.'
+              },
+              {
+                icon: '🔀',
+                title: 'Führungswechsel',
+                description: 'Neue Führung, alte Strukturen. Widerstand im Team. Veränderung wird gebremst statt getragen.'
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </div>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-green-800">Marktposition:</strong><br/>
-                    <span className="text-gray-600">Von Exporteur zu lokalem Anbieter - nachhaltiger Wettbewerbsvorteil</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-green-800">Lokale Präsenz:</strong><br/>
-                    <span className="text-gray-600">Amerikanische Kunden bevorzugen U.S.-basierte Lieferanten</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-green-800">Skalierungsvorteile:</strong><br/>
-                    <span className="text-gray-600">Nordamerikanische Expansion von zentralem U.S.-Standort</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-green-800">Marktvorsprung:</strong><br/>
-                    <span className="text-gray-600">Etablierung während Konkurrenz noch zögert</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            ))}
+          </div>
 
-            {/* Proven Success */}
-            <div className="bg-gradient-to-br from-blue-50 to-orange-50 border border-blue-200 rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-aversis-blue rounded-xl flex items-center justify-center mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-aversis-dark">Bewährt & Erfolgreich</h3>
-              </div>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-aversis-orange">U.S.-Niederlassung:</strong><br/>
-                    <span className="text-gray-600">Zur profitabelsten Niederlassung weltweit entwickelt</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-aversis-orange">Krisenerprobt:</strong><br/>
-                    <span className="text-gray-600">Erfolgreiche U.S.-Marktführung durch Finanzkrise 2008/09</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-aversis-orange">Skalierungserfahrung:</strong><br/>
-                    <span className="text-gray-600">Teams von 0 auf 50+ Mitarbeiter aufgebaut</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-3 h-3 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong className="text-aversis-orange">Kulturbrücke:</strong><br/>
-                    <span className="text-gray-600">Schweiz-USA Doppelbürger, perfekte Marktkenntnis</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <div className="mt-16 bg-slate-900 rounded-2xl p-8 md:p-12 text-center">
+            <p className="text-2xl md:text-3xl text-white font-medium mb-4">
+              &quot;Wir haben alles versucht&quot; - höre ich oft.
+            </p>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              Meistens liegt es nicht am Willen. Sondern daran, dass Kultur und Marketing als getrennte Welten behandelt werden. Das ändern wir.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section - Interim Management Packages */}
-      <section id="projektablauf" className="py-20 lg:py-28 bg-gradient-to-r from-gray-50 to-slate-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-              Ihr erfahrener Partner für U.S.-Marktaufbau
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              U.S.-Erfolg braucht mehr als gute Produkte - kulturelles Verständnis und lokales Know-how machen den Unterschied
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Phase 1: Market Entry Assessment */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-aversis-dark">Phase 1</h3>
-                  <div className="text-sm text-green-600 font-semibold">3-6 Monate</div>
-                </div>
-              </div>
-              <h4 className="text-lg font-bold text-aversis-dark mb-4">Market Entry Assessment</h4>
-              <ul className="space-y-3 text-gray-600 text-sm">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Marktanalyse & Feasibility Study</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Standortevaluation & Kosten-Nutzen-Analyse</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Regulatory Requirements Mapping</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Business Case Development</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Risikobewertung & Mitigation-Strategien</span>
-                </li>
-              </ul>
-              <div className="mt-6 p-4 bg-green-50 rounded-lg">
-                <div className="text-sm font-semibold text-green-800">Ziel: Go/No-Go Entscheidung</div>
-                <div className="text-xs text-green-600 mt-1">Fundierte Basis für U.S.-Investment</div>
-              </div>
-            </div>
-
-            {/* Phase 2: Manufacturing Setup */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-aversis-orange text-white px-4 py-1 rounded-full text-xs font-semibold">
-                KERN-EXPERTISE
-              </div>
-              <div className="flex items-center mb-6 mt-2">
-                <div className="w-16 h-16 bg-aversis-orange rounded-xl flex items-center justify-center mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-aversis-dark">Phase 2</h3>
-                  <div className="text-sm text-aversis-orange font-semibold">6-18 Monate</div>
-                </div>
-              </div>
-              <h4 className="text-lg font-bold text-aversis-dark mb-4">Manufacturing Setup</h4>
-              <ul className="space-y-3 text-gray-600 text-sm">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Legal Entity Setup & Corporate Structure</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Facility Planning, Design & Equipment Setup</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Supply Chain Establishment & Vendor Qual.</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Quality System Implementation (ISO etc.)</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Initial Team Recruitment & Training</span>
-                </li>
-              </ul>
-              <div className="mt-6 p-4 bg-orange-50 rounded-lg">
-                <div className="text-sm font-semibold text-orange-800">Ziel: Produktionsstart</div>
-                <div className="text-xs text-orange-600 mt-1">Schweizer Qualität in U.S.-Produktion</div>
-              </div>
-            </div>
-
-            {/* Phase 3: Operations Scaling */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-aversis-blue rounded-xl flex items-center justify-center mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-aversis-dark">Phase 3</h3>
-                  <div className="text-sm text-aversis-blue font-semibold">12-24 Monate</div>
-                </div>
-              </div>
-              <h4 className="text-lg font-bold text-aversis-dark mb-4">Operations Scaling</h4>
-              <ul className="space-y-3 text-gray-600 text-sm">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Production Optimization & Lean Implementation</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Team Development & Leadership Training</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Customer Relationship Building & Sales Support</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Financial Controls & Reporting Systems</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-aversis-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Knowledge Transfer zu lokalem Management</span>
-                </li>
-              </ul>
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <div className="text-sm font-semibold text-blue-800">Ziel: Selbständiger Betrieb</div>
-                <div className="text-xs text-blue-600 mt-1">Nachhaltiger Wissenstransfer</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Success Timeline */}
-          <div className="mt-16 bg-gray-50 rounded-2xl p-8 shadow-lg">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-aversis-dark">Strukturierter Interim-Ansatz</h3>
-              <p className="text-gray-600 mt-2">Von der Machbarkeitsstudie bis zur profitablen U.S.-Produktion</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="text-center flex-1">
-                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mb-2 mx-auto">1</div>
-                <div className="text-sm font-semibold text-gray-600">Assessment</div>
-                <div className="text-xs text-green-600">3-6 Mon</div>
-              </div>
-              <div className="h-1 bg-gray-300 flex-1 mx-4"></div>
-              <div className="text-center flex-1">
-                <div className="w-12 h-12 bg-aversis-orange rounded-full flex items-center justify-center text-white font-bold mb-2 mx-auto">2</div>
-                <div className="text-sm font-semibold text-gray-600">Setup</div>
-                <div className="text-xs text-aversis-orange">6-18 Mon</div>
-              </div>
-              <div className="h-1 bg-gray-300 flex-1 mx-4"></div>
-              <div className="text-center flex-1">
-                <div className="w-12 h-12 bg-aversis-blue rounded-full flex items-center justify-center text-white font-bold mb-2 mx-auto">3</div>
-                <div className="text-sm font-semibold text-gray-600">Scaling</div>
-                <div className="text-xs text-aversis-blue">12-24 Mon</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Über Stephan Section */}
-      <section id="uber-stephan" className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* Ansatz Section */}
+      <section id="ansatz" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-aversis-dark mb-6">
-                Über uns
+              <p className="text-amber-600 font-medium tracking-wider uppercase mb-4">Unser Ansatz</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Transformation beginnt innen - und zeigt sich aussen.
               </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                &laquo;Mein Name ist Stephan Zwahlen. In 12 Jahren habe ich in den USA gelernt: U.S.-Erfolg braucht mehr als gute Produkte - kulturelle Brücken und lokales Verständnis sind entscheidend.&raquo;
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                Kulturwandel allein bringt keine Kunden. Marketing allein ändert keine Kultur.
+                Erst die Verbindung von beidem schafft nachhaltiges Wachstum.
               </p>
-              
+
               <div className="space-y-6">
-                <div className="border-l-4 border-aversis-orange pl-6">
-                  <h3 className="text-lg font-semibold text-aversis-dark mb-2">Mein Werdegang</h3>
-                  <p className="text-gray-600">
-                    12 Jahre U.S.-Marktaufbau-Erfahrung in verschiedenen Funktionen - von Product Manager über Area Sales Manager bis Managing Director. Aufbau von Distributorennetzwerken und Führung amerikanischer Teams. Duale Schweiz-USA Staatsbürgerschaft ermöglicht perfekte kulturelle Brückenfunktion.
-                  </p>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-1">Nicht nur beraten - umsetzen</h3>
+                    <p className="text-slate-600">Keine PowerPoints die verstauben. Wir arbeiten operativ mit, bis es läuft.</p>
+                  </div>
                 </div>
 
-                <div className="border-l-4 border-aversis-blue pl-6">
-                  <h3 className="text-lg font-semibold text-aversis-dark mb-2">Meine Erfahrung</h3>
-                  <p className="text-gray-600">
-                    &laquo;Ich habe Schweizer Unternehmen in den USA scheitern sehen - meist weil Produkte nicht für den amerikanischen Markt adaptiert wurden. Erfolgreiche U.S.-Expansion braucht strukturierte Herangehensweise.&raquo;
-                  </p>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-1">Digitale Tools sinnvoll einsetzen</h3>
+                    <p className="text-slate-600">KI und Automatisierung wo es Sinn macht - nicht als Selbstzweck, sondern für echte Effizienz.</p>
+                  </div>
                 </div>
 
-                <div className="border-l-4 border-gray-300 pl-6">
-                  <h3 className="text-lg font-semibold text-aversis-dark mb-2">Mein Ansatz</h3>
-                  <p className="text-gray-600">
-                    Projektbasierte Begleitung von der Machbarkeitsstudie bis zur operativen Selbstständigkeit. Hands-on Umsetzung kombiniert mit Wissenstransfer für nachhaltige lokale Führung.
-                  </p>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-1">Menschen mitnehmen</h3>
+                    <p className="text-slate-600">Veränderung funktioniert nur, wenn das Team sie trägt. Das ist kein Soft-Skill - das ist Erfolgsfaktor.</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl">
-                <p className="text-aversis-dark font-medium italic">
-                  &laquo;Ich helfe Schweizer KMU&apos;s dabei, nachhaltig und erfolgreich den amerikanischen Markt zu erschliessen - mit strukturierter Begleitung und kultureller Kompetenz.&raquo;
-                </p>
-                <div className="mt-3 text-sm text-gray-600">Stephan Zwahlen, U.S.-Marktaufbau-Spezialist</div>
               </div>
             </div>
 
             <div className="relative">
-              <Image 
-                src="/images/Steph_low res new.jpg"
-                alt="Stephan Zwahlen"
-                width={600}
-                height={600}
-                className="rounded-2xl shadow-xl object-cover"
-              />
-              
-              {/* Decorative elements - Logo Theme */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-aversis-orange rounded-full opacity-40"></div>
-              <div className="absolute -top-8 -right-12 w-6 h-6 bg-aversis-blue rounded-full opacity-50"></div>
-              <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-aversis-blue rounded-full opacity-35"></div>
-              <div className="absolute -bottom-8 -left-12 w-7 h-7 bg-aversis-orange rounded-full opacity-45"></div>
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 md:p-10">
+                <div className="space-y-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-3xl font-bold text-amber-400">1</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Analyse</h4>
+                      <p className="text-slate-400 text-sm">Wo stehen Sie wirklich?</p>
+                    </div>
+                  </div>
+                  <div className="w-px h-8 bg-slate-700 ml-8"></div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-3xl font-bold text-amber-400">2</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Strategie</h4>
+                      <p className="text-slate-400 text-sm">Kultur + Marketing verzahnt</p>
+                    </div>
+                  </div>
+                  <div className="w-px h-8 bg-slate-700 ml-8"></div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-3xl font-bold text-amber-400">3</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Umsetzung</h4>
+                      <p className="text-slate-400 text-sm">Hands-on bis zum Resultat</p>
+                    </div>
+                  </div>
+                  <div className="w-px h-8 bg-slate-700 ml-8"></div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Wachstum</h4>
+                      <p className="text-slate-400 text-sm">Messbar im Umsatz</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Über Stephan Section */}
+      <section id="ueber" className="py-24 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <p className="text-amber-600 font-medium tracking-wider uppercase mb-4">Über mich</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Stephan Wahlen
+              </h2>
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                20+ Jahre operative Führungserfahrung in der Schweizer Industrie.
+                Nicht Theorie aus Büchern - sondern aus der Praxis. Als Managing Director
+                habe ich Transformationen nicht geplant, sondern durchgezogen.
+              </p>
 
-      {/* Urgency CTA Section - US Manufacturing Setup */}
-      <section className="relative py-20 lg:py-28">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/Industrial_building.jpg"
-            alt="Industrial Building Background"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/20"></div>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="bg-white p-4 rounded-lg border border-slate-200">
+                  <p className="text-3xl font-bold text-amber-500">+80%</p>
+                  <p className="text-sm text-slate-600">Revenue Growth bei swissplast AG</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-slate-200">
+                  <p className="text-3xl font-bold text-amber-500">20+</p>
+                  <p className="text-sm text-slate-600">Jahre Führungserfahrung</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-slate-200">
+                  <p className="text-3xl font-bold text-amber-500">3</p>
+                  <p className="text-sm text-slate-600">Digitale Plattformen gebaut</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-slate-200">
+                  <p className="text-3xl font-bold text-amber-500">✓</p>
+                  <p className="text-sm text-slate-600">Certified Executive Coach</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 text-slate-600">
+                <p className="flex items-center gap-2">
+                  <span className="text-amber-500">▸</span>
+                  Post-Merger Integration AKIM AG erfolgreich geleitet
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-amber-500">▸</span>
+                  Hintergrund: Precision Engineering & Manufacturing
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-amber-500">▸</span>
+                  Dual Swiss/US Citizenship - internationale Perspektive
+                </p>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <div className="bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl aspect-square flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="w-32 h-32 bg-slate-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-5xl text-white font-bold">SW</span>
+                    </div>
+                    <p className="text-slate-600 text-sm">Managing Director</p>
+                    <p className="text-slate-800 font-semibold">Aversis GmbH</p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-amber-500 text-slate-900 px-6 py-3 rounded-lg font-medium shadow-lg">
+                  Praxis statt Theorie
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          
-          {/* Urgency Header */}
-          <div className="mb-12">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Starten Sie Ihre U.S.-Expansion<br/>
-              <span className="text-yellow-300">mit bewährter Expertise</span>
+      </section>
+
+      {/* Projekte Section */}
+      <section id="projekte" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-amber-600 font-medium tracking-wider uppercase mb-4">Referenzen</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Gebaut. Nicht nur geplant.
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Während Ihre Konkurrenz noch zögert, sichern Sie sich Ihren Wettbewerbsvorteil im U.S.-Markt. 
-              Mit 12 Jahren bewährter U.S.-Marktaufbau-Erfahrung und limitierter Verfügbarkeit.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Diese digitalen Projekte habe ich konzipiert und umgesetzt -
+              als Beweis, dass ich nicht nur berate, sondern liefere.
             </p>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group bg-slate-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                <span className="text-white text-4xl font-bold">TRC</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">TRC Training Academy</h3>
+                <p className="text-slate-600 mb-4">
+                  Learning Management System für Mitarbeitertraining. Von der Konzeption bis zum Rollout.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">LMS</span>
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">E-Learning</span>
+                </div>
+              </div>
+            </div>
 
-          {/* Main CTA */}
-          <div className="bg-gray-100/80 rounded-2xl p-6 lg:p-8 mb-12 max-w-3xl mx-auto shadow-lg backdrop-blur-sm">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-aversis-dark mb-3">
-                Kostenloses Erstgespräch
-              </h3>
-              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
-                <strong>Verstehen wir Ihre U.S.-Expansionsziele</strong><br/>
-                Erste Einschätzung zu Machbarkeit, Aufwand und Zeitrahmen<br/>
-                <span className="text-lg">Exklusiv für Schweizer KMU</span>
-              </p>
-              
-              <a href="/kontakt" className="bg-aversis-orange hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block">
-                Erstgespräch buchen
-              </a>
+            <div className="group bg-slate-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                <span className="text-white text-4xl font-bold">fläsch</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">fläsch.info</h3>
+                <p className="text-slate-600 mb-4">
+                  Community-Plattform für lokale Vernetzung. Konzept, Design und technische Umsetzung.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Community</span>
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Platform</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-slate-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                <span className="text-white text-4xl font-bold">H</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">Hostelopia</h3>
+                <p className="text-slate-600 mb-4">
+                  Booking-Plattform für Unterkünfte. Full-Stack Entwicklung mit modernem Tech-Stack.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Booking</span>
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm rounded-full">Full-Stack</span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 text-blue-100 opacity-80">
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-slate-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-amber-400 font-medium tracking-wider uppercase mb-4">Leistungen</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Was wir für Sie tun
+            </h2>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-amber-500/50 transition-colors">
+              <div className="w-14 h-14 bg-amber-500/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Interim Management</h3>
+              <p className="text-slate-400 mb-4">
+                Operative Führung auf Zeit. Für Übergangsphasen, Vakanzen oder gezielte Transformationen.
+              </p>
+              <ul className="space-y-2 text-slate-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Geschäftsführung ad interim
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Turnaround Management
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Post-Merger Integration
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-amber-500/50 transition-colors">
+              <div className="w-14 h-14 bg-amber-500/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Kulturwandel & Transformation</h3>
+              <p className="text-slate-400 mb-4">
+                Nachhaltige Veränderung, die vom Team getragen wird. Mit klarer Strategie und Begleitung.
+              </p>
+              <ul className="space-y-2 text-slate-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Change Management
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Führungskräfte-Coaching
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Organisationsentwicklung
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-amber-500/50 transition-colors">
+              <div className="w-14 h-14 bg-amber-500/20 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Marketing & Digitalisierung</h3>
+              <p className="text-slate-400 mb-4">
+                Moderne Marketing-Strategien umsetzen. Von der Website bis zur Lead-Generierung.
+              </p>
+              <ul className="space-y-2 text-slate-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Digital Marketing Setup
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Website & Plattformen
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">✓</span> Marketing Automation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="kontakt" className="py-24 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-amber-600 font-medium tracking-wider uppercase mb-4">Kontakt</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Lassen Sie uns sprechen.
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Unverbindliches Erstgespräch - 30 Minuten, in denen wir herausfinden,
+              ob und wie ich Ihnen helfen kann.
+            </p>
+          </div>
+
+          <ContactForm />
         </div>
       </section>
 
       <Footer />
-    </div>
-  )
+    </main>
+  );
 }

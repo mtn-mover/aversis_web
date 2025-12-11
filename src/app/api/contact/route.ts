@@ -4,7 +4,7 @@ import { sendEmail, formatContactEmail, formatConfirmationEmail } from '@/lib/em
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.json()
-    
+
     // CAPTCHA validation (only if configured)
     if (process.env.RECAPTCHA_SECRET_KEY) {
       if (!formData.captchaToken) {
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       })
 
       const captchaResult = await captchaResponse.json()
-      
+
       if (!captchaResult.success) {
         console.error('CAPTCHA verification failed:', captchaResult)
         return NextResponse.json(
@@ -33,11 +33,11 @@ export async function POST(request: NextRequest) {
         )
       }
     }
-    
+
     // Basic validation
     const requiredFields = ['name', 'position', 'company', 'email', 'phone', 'usInterest']
     const missingFields = requiredFields.filter(field => !formData[field]?.trim())
-    
+
     if (missingFields.length > 0) {
       return NextResponse.json(
         { success: false, error: 'Pflichtfelder fehlen: ' + missingFields.join(', ') },
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
     const contactContent = formatContactEmail(formData)
     const notificationResult = await sendEmail({
       to: 'info@aversis.com',
-      subject: `Anfrage U.S.-Marktaufbau - ${formData.company}`,
+      subject: `Anfrage Beratung - ${formData.company}`,
       text: contactContent.text,
       html: contactContent.html
     })
@@ -66,8 +66,8 @@ export async function POST(request: NextRequest) {
     if (!notificationResult.success) {
       console.error('Failed to send notification email:', notificationResult.error)
       return NextResponse.json(
-        { 
-          success: false, 
+        {
+          success: false,
           error: 'Fehler beim Senden der E-Mail: ' + notificationResult.error,
           details: notificationResult.error
         },
@@ -76,15 +76,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Determine language from form data or referer
-    const isEnglish = formData.language === 'en' || 
-                     (typeof formData.referer === 'string' && formData.referer.includes('/en'))
-    
+    const isEnglish = formData.language === 'en' ||
+      (typeof formData.referer === 'string' && formData.referer.includes('/en'))
+
     // Send confirmation email to user
     const confirmationContent = formatConfirmationEmail(formData, isEnglish)
-    const subject = isEnglish 
-      ? 'Confirmation of Your U.S. Market Entry Inquiry - aversis'
-      : 'Bestätigung Ihrer U.S.-Marktaufbau Anfrage - aversis'
-    
+    const subject = isEnglish
+      ? 'Confirmation of Your Inquiry - Aversis'
+      : 'Bestätigung Ihrer Anfrage - Aversis'
+
     const confirmationResult = await sendEmail({
       to: formData.email,
       subject: subject,

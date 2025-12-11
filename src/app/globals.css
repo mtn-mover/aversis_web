@@ -1,22 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-@theme {
-  --color-aversis-blue: #1e5f99;
-  --color-aversis-orange: #ff7f00;
-  --color-aversis-dark: #374151;
-  --color-blue-light: #3b82f6;
-  --color-blue-lighter: #93c5fd;
-}
-
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: #374151;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -25,57 +22,31 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
 
-/* Smooth animations */
-* {
-  transition: all 0.3s ease;
+/* Selection color */
+::selection {
+  background-color: #f59e0b;
+  color: #1e293b;
 }
 
-/* Custom button styles */
-.btn-primary {
-  background-color: #ff7f00;
-  color: white;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
 }
 
-.btn-primary:hover {
-  background-color: #e56b00;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+/* Smooth transitions for interactive elements */
+button, a, input, textarea, select {
+  transition: all 0.2s ease;
 }
 
-.btn-secondary {
-  border: 2px solid #1e5f99;
-  color: #1e5f99;
-  background-color: transparent;
-  font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: #1e5f99;
-  color: white;
-}
-
-/* Link hover effects */
-.nav-link {
-  color: #374151;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ff7f00;
+/* Offset for fixed header */
+section[id] {
+  scroll-margin-top: 80px;
 }
