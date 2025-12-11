@@ -275,7 +275,7 @@ export default function Home() {
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <img
-                  src="/images/Steph_low res new.jpg"
+                  src="/images/Stephan_new.png"
                   alt="Stephan Zwahlen - Managing Director Aversis GmbH"
                   className="rounded-2xl shadow-xl object-cover w-full aspect-square"
                 />
