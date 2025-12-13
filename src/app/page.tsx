@@ -153,9 +153,9 @@ export default function Home() {
 
             <div className="relative">
               <img
-                src="/images/Stephan_new.png"
+                src="/images/Stephan_new_bw.png"
                 alt="Stephan Zwahlen"
-                className="w-full grayscale"
+                className="w-full"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
                 <p className="text-2xl font-bold">Stephan Zwahlen</p>
