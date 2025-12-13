@@ -27,7 +27,7 @@ export default function Header() {
               alt="aversis Logo"
               width={100}
               height={40}
-              className="h-8 md:h-10 w-auto brightness-0 invert"
+              className="h-8 md:h-10 w-auto"
             />
           </Link>
 

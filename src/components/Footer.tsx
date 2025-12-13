@@ -26,7 +26,7 @@ export default function Footer() {
                 alt="aversis Logo"
                 width={100}
                 height={40}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-gray-500 mb-6 leading-relaxed">
