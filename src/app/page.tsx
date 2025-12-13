@@ -168,7 +168,6 @@ export default function Home() {
       {/* Proof Section */}
       <section id="proof" className="py-32 bg-gray-950 border-t border-gray-900">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-amber-400 font-mono text-sm mb-4 text-center">// GEBAUT UND DEPLOYED</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
             Systeme die laufen.
           </h2>

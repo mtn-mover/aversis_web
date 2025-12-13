@@ -43,7 +43,7 @@ export async function sendEmail({ to, subject, text, html }: EmailOptions) {
     const transporter = createTransporter()
 
     const mailOptions = {
-      from: `"Aversis Contact" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
+      from: `"aversis Contact" <${process.env.EMAIL_FROM || process.env.EMAIL_USER}>`,
       to,
       subject,
       text,
@@ -191,7 +191,7 @@ export function formatConfirmationEmail(formData: ContactFormData, isEnglish: bo
         <div class="content">
           <p>Liebe(r) <strong>${formData.name}</strong>,</p>
 
-          <p>herzlichen Dank für Ihr Interesse an einer Zusammenarbeit mit Aversis!</p>
+          <p>herzlichen Dank für Ihr Interesse an einer Zusammenarbeit mit aversis!</p>
 
           <div class="highlight-box">
             <p><strong>Ihre Anfrage wurde erfolgreich übermittelt</strong></p>
@@ -221,7 +221,7 @@ export function formatConfirmationEmail(formData: ContactFormData, isEnglish: bo
             <p>Freundliche Grüsse</p>
             <p><strong>Stephan Zwahlen</strong><br>
             Managing Director<br>
-            Aversis GmbH</p>
+            aversis GmbH</p>
 
             <p>
               info@aversis.com<br>
@@ -240,7 +240,7 @@ export function formatConfirmationEmail(formData: ContactFormData, isEnglish: bo
   const textContent = `
 Liebe(r) ${formData.name},
 
-vielen Dank für Ihr Interesse an einer Zusammenarbeit mit Aversis!
+vielen Dank für Ihr Interesse an einer Zusammenarbeit mit aversis!
 
 Ihre Anfrage wurde erfolgreich übermittelt.
 Ich werde mich innerhalb von 24 Stunden persönlich bei Ihnen melden.
@@ -264,7 +264,7 @@ Ihre Angaben im Überblick:
 Freundliche Grüsse
 Stephan Zwahlen
 Managing Director
-Aversis GmbH
+aversis GmbH
 
 info@aversis.com
 +41 33 823 05 09
@@ -303,7 +303,7 @@ export function formatConfirmationEmailEnglish(formData: ContactFormData) {
         <div class="content">
           <p>Dear <strong>${formData.name}</strong>,</p>
 
-          <p>Thank you for your interest in working with Aversis!</p>
+          <p>Thank you for your interest in working with aversis!</p>
 
           <div class="highlight-box">
             <p><strong>Your inquiry has been successfully submitted</strong></p>
@@ -333,7 +333,7 @@ export function formatConfirmationEmailEnglish(formData: ContactFormData) {
             <p>Best regards</p>
             <p><strong>Stephan Zwahlen</strong><br>
             Managing Director<br>
-            Aversis GmbH</p>
+            aversis GmbH</p>
 
             <p>
               info@aversis.com<br>
@@ -352,7 +352,7 @@ export function formatConfirmationEmailEnglish(formData: ContactFormData) {
   const textContent = `
 Dear ${formData.name},
 
-Thank you for your interest in working with Aversis!
+Thank you for your interest in working with aversis!
 
 Your inquiry has been successfully submitted.
 I will personally contact you within 24 hours.
@@ -376,7 +376,7 @@ Your details overview:
 Best regards
 Stephan Zwahlen
 Managing Director
-Aversis GmbH
+aversis GmbH
 
 info@aversis.com
 +41 33 823 05 09

@@ -82,8 +82,8 @@ export async function POST(request: NextRequest) {
     // Send confirmation email to user
     const confirmationContent = formatConfirmationEmail(formData, isEnglish)
     const subject = isEnglish
-      ? 'Confirmation of Your Inquiry - Aversis'
-      : 'Bestätigung Ihrer Anfrage - Aversis'
+      ? 'Confirmation of Your Inquiry - aversis'
+      : 'Bestätigung Ihrer Anfrage - aversis'
 
     const confirmationResult = await sendEmail({
       to: formData.email,

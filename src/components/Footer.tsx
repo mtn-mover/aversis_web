@@ -42,7 +42,7 @@ export default function Footer() {
             </h4>
             <div className="space-y-3 text-gray-500">
               <div className="mb-2">
-                <strong className="text-white">Aversis GmbH</strong>
+                <strong className="text-white">aversis GmbH</strong>
               </div>
               <div>
                 Untere Bönigstrasse 20<br />
@@ -117,7 +117,7 @@ export default function Footer() {
         <div className="border-t border-gray-900 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} Aversis GmbH
+              © {new Date().getFullYear()} aversis GmbH
             </div>
             <div className="text-gray-600 text-sm">
               KI. Automatisierung. Umsetzung.

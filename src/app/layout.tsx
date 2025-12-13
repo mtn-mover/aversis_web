@@ -3,10 +3,10 @@ import './globals.css'
 import CookieBanner from '@/components/CookieBanner'
 
 export const metadata: Metadata = {
-  title: 'Aversis GmbH - Kulturwandel, der sich im Umsatz zeigt',
-  description: 'Unternehmensberatung für Schweizer KMUs. Wir verbinden Kulturwandel mit modernem Marketing - für nachhaltiges Wachstum und messbare Ergebnisse.',
-  keywords: 'Unternehmensberatung, Kulturwandel, Transformation, Interim Management, Marketing, KMU, Schweiz, Change Management, Coaching',
-  authors: [{ name: 'Aversis GmbH' }],
+  title: 'aversis GmbH - KI-Integration für KMU',
+  description: 'KI-Integration und Automatisierung für Schweizer KMUs. Systeme die funktionieren - keine Theorie, keine Pilotprojekte.',
+  keywords: 'KI, AI, Automatisierung, Integration, KMU, Schweiz, Workflows, Custom Tools',
+  authors: [{ name: 'aversis GmbH' }],
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   appleWebApp: {
-    title: 'Aversis',
+    title: 'aversis',
   },
   openGraph: {
-    title: 'Aversis GmbH - Kulturwandel, der sich im Umsatz zeigt',
-    description: 'Unternehmensberatung für Schweizer KMUs. Kulturwandel und Marketing vereint.',
+    title: 'aversis GmbH - KI-Integration für KMU',
+    description: 'KI-Integration und Automatisierung für Schweizer KMUs. Systeme die funktionieren.',
     url: 'https://aversis.com',
-    siteName: 'Aversis',
+    siteName: 'aversis',
     locale: 'de_CH',
     type: 'website',
   },
