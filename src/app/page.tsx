@@ -37,7 +37,7 @@ export default function Home() {
 
         <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tight">
-            Kein Berater.<br />
+            Kein Schwätzer.<br />
             <span className="text-amber-400">Macher.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
@@ -66,12 +66,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Anti-Berater Section */}
+      {/* Problem Section */}
       <section id="problem" className="py-32 bg-black border-t border-gray-900">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-            <span className="text-gray-500 line-through">Beratung</span>{' '}
-            <span className="text-amber-400">Umsetzung</span>
+            <span className="text-gray-500 line-through">Reden</span>{' '}
+            <span className="text-amber-400">Machen</span>
           </h2>
 
           <div className="space-y-12">
@@ -80,7 +80,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold mb-3">CHF 50k für eine Präsentation?</h3>
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  Die meisten Berater liefern PowerPoints. Ich liefere Ergebnisse.
+                  Die meisten liefern PowerPoints. Ich liefere Ergebnisse.
                   Der Unterschied: Ich bleibe, bis es funktioniert.
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function Home() {
                 Ich liefere.
               </h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                20 Jahre in der Industrie. Nicht als Berater - als Macher.
+                20 Jahre in der Industrie. Immer als Macher.
                 Als Managing Director habe ich Firmen nach vorne gebracht, nicht analysiert.
               </p>
 
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="group p-8 border border-gray-800 hover:border-amber-400/50 transition-all duration-300">
               <div className="text-5xl font-bold text-amber-400 mb-4">+80%</div>
               <p className="text-xl font-bold mb-2">Revenue Growth</p>
-              <p className="text-gray-500">Als Managing Director. Nicht als Berater daneben.</p>
+              <p className="text-gray-500">Als Managing Director. Mittendrin, nicht daneben.</p>
             </div>
 
             <div className="group p-8 border border-gray-800 hover:border-amber-400/50 transition-all duration-300">

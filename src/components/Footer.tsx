@@ -30,7 +30,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-500 mb-6 leading-relaxed">
-              Kein Berater. Macher.<br />
+              Macher. Punkt.<br />
               20+ Jahre Umsetzung.
             </p>
           </div>
