@@ -155,7 +155,7 @@ export default function Home() {
               <img
                 src="/images/Stephan_new.png"
                 alt="Stephan Zwahlen"
-                className="w-full grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full grayscale"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
                 <p className="text-2xl font-bold">Stephan Zwahlen</p>
