@@ -37,25 +37,25 @@ export default function Home() {
 
         <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tight">
-            Kein Schwätzer.<br />
-            <span className="text-amber-400">Macher.</span>
+            KI für KMU.<br />
+            <span className="text-amber-400">Umgesetzt.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-            Ich übernehme. Ich setze um. Ich liefere Resultate.<br />
-            Keine Folien. Keine Ausreden.
+            Keine Theorie. Keine Pilotprojekte die versanden.<br />
+            KI-Systeme die ab Tag 1 funktionieren.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollToSection('kontakt')}
               className="px-8 py-4 bg-amber-400 hover:bg-amber-300 text-black font-bold rounded-none transition-all duration-300 uppercase tracking-wider text-sm"
             >
-              Klartext reden
+              Projekt starten
             </button>
             <button
               onClick={() => scrollToSection('problem')}
               className="px-8 py-4 border border-gray-600 hover:border-white text-white font-medium rounded-none transition-all duration-300 uppercase tracking-wider text-sm"
             >
-              Was ich anders mache
+              Was ich mache
             </button>
           </div>
         </div>
@@ -70,18 +70,18 @@ export default function Home() {
       <section id="problem" className="py-32 bg-black border-t border-gray-900">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-            <span className="text-gray-500 line-through">Reden</span>{' '}
-            <span className="text-amber-400">Machen</span>
+            <span className="text-gray-500 line-through">Hype</span>{' '}
+            <span className="text-amber-400">Realität</span>
           </h2>
 
           <div className="space-y-12">
             <div className="flex gap-6 items-start">
               <div className="text-amber-400 text-3xl font-bold">01</div>
               <div>
-                <h3 className="text-2xl font-bold mb-3">CHF 50k für eine Präsentation?</h3>
+                <h3 className="text-2xl font-bold mb-3">KI ist kein Spielzeug</h3>
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  Die meisten liefern PowerPoints. Ich liefere Ergebnisse.
-                  Der Unterschied: Ich bleibe, bis es funktioniert.
+                  ChatGPT ausprobieren kann jeder. Ich baue KI-Systeme, die in Ihre
+                  Prozesse integriert sind und echte Arbeit übernehmen.
                 </p>
               </div>
             </div>
@@ -91,10 +91,10 @@ export default function Home() {
             <div className="flex gap-6 items-start">
               <div className="text-amber-400 text-3xl font-bold">02</div>
               <div>
-                <h3 className="text-2xl font-bold mb-3">Change-Projekt ohne Change?</h3>
+                <h3 className="text-2xl font-bold mb-3">Automatisierung die skaliert</h3>
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  Transformation scheitert nicht an der Strategie. Sie scheitert an der Umsetzung.
-                  Ich kenne beide Seiten - als GL-Mitglied habe ich Veränderungen selbst durchgezogen.
+                  Workflows, die heute 10 Stunden brauchen, laufen morgen in Minuten.
+                  Keine Basteleien - produktionsreife Lösungen.
                 </p>
               </div>
             </div>
@@ -104,10 +104,10 @@ export default function Home() {
             <div className="flex gap-6 items-start">
               <div className="text-amber-400 text-3xl font-bold">03</div>
               <div>
-                <h3 className="text-2xl font-bold mb-3">Marketing ohne Wirkung?</h3>
+                <h3 className="text-2xl font-bold mb-3">Ihr Team kann es bedienen</h3>
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  Klicks sind keine Kunden. Ich baue Marketing-Systeme, die verkaufen -
-                  nicht solche, die nur gut aussehen.
+                  Keine Abhängigkeit von mir. Ich baue Systeme, die Ihr Team
+                  selbständig nutzen und weiterentwickeln kann.
                 </p>
               </div>
             </div>
@@ -122,31 +122,31 @@ export default function Home() {
             <div>
               <p className="text-amber-400 font-mono text-sm mb-4">// MODUS OPERANDI</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Ich komme rein.<br />
-                Ich übernehme.<br />
-                Ich liefere.
+                Analyse.<br />
+                Aufbau.<br />
+                Übergabe.
               </h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                20 Jahre in der Industrie. Immer als Macher.
-                Als Managing Director habe ich Firmen nach vorne gebracht, nicht analysiert.
+                20 Jahre in der Industrie. Technologie war immer mein Werkzeug -
+                jetzt ist KI das schärfste das es gibt.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-2 h-2 bg-amber-400"></div>
-                  <span className="text-gray-300">Interim-Führung wenn&apos;s brennt</span>
+                  <span className="text-gray-300">KI-Agenten für repetitive Aufgaben</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-2 h-2 bg-amber-400"></div>
-                  <span className="text-gray-300">Teams motivieren statt Folien zeigen</span>
+                  <span className="text-gray-300">Automatisierte Workflows</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-2 h-2 bg-amber-400"></div>
-                  <span className="text-gray-300">Marketing das Umsatz bringt</span>
+                  <span className="text-gray-300">Datenanalyse und Reporting</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-2 h-2 bg-amber-400"></div>
-                  <span className="text-gray-300">Digitale Systeme die funktionieren</span>
+                  <span className="text-gray-300">Custom Tools für Ihr Business</span>
                 </div>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function Home() {
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
                 <p className="text-2xl font-bold">Stephan Zwahlen</p>
-                <p className="text-gray-400">20+ Jahre Umsetzung</p>
+                <p className="text-gray-400">KI-Integration für KMU</p>
               </div>
             </div>
           </div>
@@ -169,28 +169,28 @@ export default function Home() {
       {/* Proof Section */}
       <section id="proof" className="py-32 bg-gray-950 border-t border-gray-900">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-amber-400 font-mono text-sm mb-4 text-center">// NICHT NUR GEREDET</p>
+          <p className="text-amber-400 font-mono text-sm mb-4 text-center">// GEBAUT UND DEPLOYED</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-            Gemacht. Geliefert.
+            Systeme die laufen.
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group p-8 border border-gray-800 hover:border-amber-400/50 transition-all duration-300">
-              <div className="text-5xl font-bold text-amber-400 mb-4">+80%</div>
-              <p className="text-xl font-bold mb-2">Revenue Growth</p>
-              <p className="text-gray-500">Als Managing Director. Mittendrin, nicht daneben.</p>
+              <div className="text-5xl font-bold text-amber-400 mb-4">3</div>
+              <p className="text-xl font-bold mb-2">Plattformen live</p>
+              <p className="text-gray-500">Full-Stack Entwicklung. Von der Idee bis zum Go-Live.</p>
             </div>
 
             <div className="group p-8 border border-gray-800 hover:border-amber-400/50 transition-all duration-300">
-              <div className="text-5xl font-bold text-amber-400 mb-4">3</div>
-              <p className="text-xl font-bold mb-2">Plattformen gebaut</p>
-              <p className="text-gray-500">LMS, Community, Booking. Konzipiert und deployed.</p>
+              <div className="text-5xl font-bold text-amber-400 mb-4">KI</div>
+              <p className="text-xl font-bold mb-2">Native Integration</p>
+              <p className="text-gray-500">Claude, GPT, Custom Models. Was zum Problem passt.</p>
             </div>
 
             <div className="group p-8 border border-gray-800 hover:border-amber-400/50 transition-all duration-300">
               <div className="text-5xl font-bold text-amber-400 mb-4">20+</div>
-              <p className="text-xl font-bold mb-2">Jahre Praxis</p>
-              <p className="text-gray-500">Precision Engineering. Manufacturing. Führung.</p>
+              <p className="text-xl font-bold mb-2">Jahre Industrie</p>
+              <p className="text-gray-500">Tech ist nur so gut wie das Business-Verständnis dahinter.</p>
             </div>
           </div>
 
@@ -199,7 +199,7 @@ export default function Home() {
                className="block p-6 bg-black border border-gray-800 hover:border-gray-600 transition-all group">
               <div className="text-gray-500 font-mono text-xs mb-2">PROJEKT 01</div>
               <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">TRC Academy</h3>
-              <p className="text-gray-500 text-sm">Learning Management System</p>
+              <p className="text-gray-500 text-sm">Learning Management System mit KI-Features</p>
             </a>
 
             <a href="https://flaesch.info" target="_blank" rel="noopener noreferrer"
@@ -213,7 +213,7 @@ export default function Home() {
                className="block p-6 bg-black border border-gray-800 hover:border-gray-600 transition-all group">
               <div className="text-gray-500 font-mono text-xs mb-2">PROJEKT 03</div>
               <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">Hostelopia</h3>
-              <p className="text-gray-500 text-sm">Booking Platform</p>
+              <p className="text-gray-500 text-sm">Booking Platform mit Automatisierung</p>
             </a>
           </div>
         </div>
@@ -224,11 +224,11 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Kein Bullshit.<br />
-              <span className="text-amber-400">Nur Resultate.</span>
+              KI einsetzen.<br />
+              <span className="text-amber-400">Nicht nur reden.</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              30 Minuten. Wir reden Klartext. Sie entscheiden, ob&apos;s passt.
+              30 Minuten. Wir schauen, wo KI in Ihrem Business Sinn macht.
             </p>
           </div>
 

@@ -30,8 +30,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-500 mb-6 leading-relaxed">
-              Macher. Punkt.<br />
-              20+ Jahre Umsetzung.
+              KI-Integration für KMU.<br />
+              Systeme die funktionieren.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Aversis GmbH
             </div>
             <div className="text-gray-600 text-sm">
-              Resultate. Keine Ausreden.
+              KI. Automatisierung. Umsetzung.
             </div>
           </div>
         </div>
