@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <Image
-                src="/images/aversis-logo.jpg"
+                src="/images/aversis-logo-dark.png"
                 alt="aversis Logo"
                 width={100}
                 height={40}
